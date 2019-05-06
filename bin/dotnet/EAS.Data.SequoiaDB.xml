@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Data.SequoiaDB</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Data.QueryableWarp`1">
+            <summary>
+            结构化数据访问Linq支持包装类。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <remarks>
+            为AgileEAS.NET SOA 中间件NoSQL数据访问
+            </remarks>
+        </member>
+        <member name="M:EAS.Data.QueryableWarp`1.Finalize">
+            <summary>
+            析构函数，释放资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.QueryableWarp`1.Dispose">
+            <summary>
+            释放资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.QueryableWarp`1.Queryable">
+            <summary>
+            Linq表达式。
+            </summary>
+        </member>
+        <member name="T:EAS.Data.SequoiaDbProvider">
+            <summary>
+            SequoiaDB提供者程序。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.#ctor">
+            <summary>
+            初始化MongoDbProvider对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Connect">
+            <summary>
+            打开连接。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Close">
+            <summary>
+            关闭连接。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.GetSequoiaDB">
+            <summary>
+            获取Sequoiadb连接。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.GetCollectionSpace(System.String)">
+            <summary>
+            取得集合空间。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.GetCollectionSpace(SequoiaDB.Driver.Sequoiadb,System.String)">
+            <summary>
+            求集合空间。
+            </summary>
+            <param name="db"></param>
+            <param name="csName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.GetCollection(SequoiaDB.Driver.CollectionSpace,System.String)">
+            <summary>
+            返回指定集合。
+            </summary>
+            <param name="cs">集盒空间。</param>
+            <param name="collectionName">集合名称。</param>
+            <returns>集合对象。</returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.GetCollection``1(SequoiaDB.Driver.CollectionSpace)">
+             <summary>
+             返回指定集合。
+             </summary>
+             <param name="cs">集盒空间。</param>
+            <typeparam name="T">类型。</typeparam>
+             <returns>集合对象。</returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.GetCollection``1(SequoiaDB.Driver.CollectionSpace,System.String)">
+            <summary>
+            返回指定集合。
+            </summary>
+            <param name="cs">集盒空间。</param>
+            <param name="collectionName">集合名称。</param>
+            <returns>集合对象。</returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Insert``1(``0)">
+            <summary>
+            插入单条记录。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="item">数据对象记录。</param>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.InsertBatch``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            插入多条记录。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="documents">数据对象集合。</param>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Update``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            更新记录操作。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="item">数据对象记录。</param>
+            <param name="func">更新表达式。</param>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Update``1(System.Linq.Expressions.Expression{System.Func{``0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            更新记录操作。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="updater">更新表达式。</param>
+            <param name="func">更新表达式。</param>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Delete``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            删除指定对象。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="func">条件表达式。</param>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.List``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            查询对象集合。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="where">条件表达式。</param>
+            <param name="skip">跳过记录。</param>
+            <param name="take">取记录。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Single``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            读取单条记录。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="where">查询表达式。</param>
+            <returns>数据对象记录。</returns>
+        </member>
+        <member name="M:EAS.Data.SequoiaDbProvider.Linq``1">
+            <summary>
+            转换为Linq自由查询。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <returns>查询表达式包装类。</returns>
+        </member>
+        <member name="P:EAS.Data.SequoiaDbProvider.ConnectionString">
+            <summary>
+            获取或设置数据库连接字符串。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.SequoiaDbProvider.UserName">
+            <summary>
+            用户名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.SequoiaDbProvider.Password">
+            <summary>
+            用户密码。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.SequoiaDbProvider.CollectionSpace">
+            <summary>
+            集合空间。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.SequoiaDbProvider.IsOpen">
+            <summary>
+            是否已关闭连接。
+            </summary>
+        </member>
+    </members>
+</doc>

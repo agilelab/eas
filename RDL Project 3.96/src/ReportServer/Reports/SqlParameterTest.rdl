@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Name="">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <DataSources>
+    <DataSource Name="DS1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Server=(local)\VSDotNet;DataBase=Northwind;Integrated Security=SSPI;Connect Timeout=5</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <ReportParameters>
+    <ReportParameter Name="OrderID">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>10248</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Please provide an order id</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM "Order Details" WHERE OrderID = @QOrderID</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="QOrderID">
+            <Value>=Parameters!OrderID</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="OrderID">
+          <DataField>OrderID</DataField>
+        </Field>
+        <Field Name="ProductID">
+          <DataField>ProductID</DataField>
+        </Field>
+        <Field Name="UnitPrice">
+          <DataField>UnitPrice</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="Discount">
+          <DataField>Discount</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>0.0pt</Height>
+  </PageHeader>
+  <Body>
+    <ReportItems>
+      <Table Name="Table1">
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>Solid</BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox1">
+                      <Value>OrderID</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox2">
+                      <Value>ProductID</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>UnitPrice</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>Quantity</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox5">
+                      <Value>Discount</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OrderID">
+                      <Value>=Fields!OrderID.Value</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>0pt</Left>
+                          <Right>1pt</Right>
+                          <Top>0pt</Top>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProductID">
+                      <Value>=Fields!ProductID.Value</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>0pt</Left>
+                          <Right>1pt</Right>
+                          <Top>0pt</Top>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="UnitPrice">
+                      <Value>=Fields!UnitPrice.Value</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>0pt</Left>
+                          <Right>1pt</Right>
+                          <Top>0pt</Top>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Quantity">
+                      <Value>=Fields!Quantity.Value</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>0pt</Left>
+                          <Right>1pt</Right>
+                          <Top>0pt</Top>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Discount">
+                      <Value>=Fields!Discount.Value</Value>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>0pt</Left>
+                          <Right>1pt</Right>
+                          <Top>0pt</Top>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox6">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox7">
+                      <Value>=sum(Fields!UnitPrice.Value * Fields!Quantity.Value * (1 - Fields!Discount.Value))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox8">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox9">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox10">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+    </ReportItems>
+    <Height>38.6pt</Height>
+  </Body>
+  <PageFooter>
+    <Height>0pt</Height>
+  </PageFooter>
+</Report>

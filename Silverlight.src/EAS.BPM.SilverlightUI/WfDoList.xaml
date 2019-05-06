@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="EAS.BPM.SilverlightUI.WfDoList"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:eas="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+             mc:Ignorable="d" d:DesignWidth="880" d:DesignHeight="366">
+
+    <UserControl.Resources>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="50"></Setter>
+            <Setter Property="TextAlignment" Value="Right"></Setter>
+        </Style>
+        <Style x:Key="DatePickerStyle" TargetType="sdk:DatePicker">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Margin" Value="3,0,0,0"></Setter>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Margin" Value="3,0,0,0"></Setter>
+        </Style>
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Margin" Value="3,0,0,0"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="#99bbe8" BorderThickness="1,1,1,0" Height="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <StackPanel Orientation="Horizontal" Height="30">
+                        <TextBlock Text="流程名称：" Style="{StaticResource TextBlockStyle}" Margin="5,0,0,0" />
+                        <TextBox Name="tbKey" Style="{StaticResource TextBoxStyle}" Height="23" Width="130" />
+                        <Button Content="选择" Height="23" Name="btnSelect" Width="75" Margin="5,0" Click="btnSelect_Click" />
+                        <CheckBox Content="已完成" Height="16" Name="checkBox1" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="30">
+                        <TextBlock Text="发起时间：" Style="{StaticResource TextBlockStyle}" Margin="5,0,0,0" />
+                        <sdk:DatePicker Name="dtpStart"  Style="{StaticResource DatePickerStyle}" SelectedDate="8/15/2012" Width="130" Height="23" />
+                        <TextBlock Text="--&gt;"  VerticalAlignment="Center" TextAlignment="Center" />
+                        <sdk:DatePicker Name="dtpEnd"  Style="{StaticResource DatePickerStyle}" Width="130" Height="23" SelectedDate="8/15/2012" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" Height="60">
+                        <Button Content="查询" Height="25" Name="btnQuery" Width="75" Click="btnQuery_Click" Margin="5,0,2,0" />
+                        <Button Content="流程监控" Height="25" Name="btnTrack" Width="75" Margin="2,0" Click="btnTrack_Click" />
+                        <Button Content="处理记录" Height="25" Name="btnExecute" Width="75" Margin="2,0" Click="btnExecute_Click" />
+                        <Button Content="打印" Height="25" Name="btnPrint" Width="75" Margin="2,0" Click="btnPrint_Click" />
+                        <Button Content="关闭" Height="25" Name="btnClose" Width="75" Margin="2,0" Click="btnClose_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="#99bbe8" BorderThickness="1,1,1,1">
+                <sdk:DataGrid  x:Name="dgFlow" AutoGenerateColumns="False" SelectionChanged="dgFlow_SelectionChanged" MouseLeftButtonDown="dgFlow_MouseLeftButtonDown">
+                    <sdk:DataGrid.Columns>                        
+                        <sdk:DataGridTextColumn Header="流程名称" IsReadOnly="True"  Width="140" Binding="{Binding FlowName}" />
+                        <sdk:DataGridTextColumn Header="主题" IsReadOnly="True"  Width="400" Binding="{Binding Subject}" />
+                        <sdk:DataGridTextColumn Header="当前状态" IsReadOnly="True"  Width="90" Binding="{Binding CurrentState}" />
+                        <sdk:DataGridTextColumn Header="是否完成" IsReadOnly="True"  Width="65" Binding="{Binding IsComplateText}" />
+                        <sdk:DataGridTextColumn Header="发起人" IsReadOnly="True"  Width="80" Binding="{Binding Sender}" />
+                        <sdk:DataGridTextColumn Header="最后处理者" IsReadOnly="True"  Width="120" Binding="{Binding Handler}" />
+                        <sdk:DataGridTextColumn Header="创建时间" IsReadOnly="True"  Width="125" Binding="{Binding CreateTime}" />
+                        <sdk:DataGridTextColumn Header="最后处理时间" IsReadOnly="True"  Width="125" Binding="{Binding ProcessTime}" />
+                        <sdk:DataGridTextColumn Header="实例ID" IsReadOnly="True"  Width="200" Binding="{Binding FlowID}" />
+                    </sdk:DataGrid.Columns>
+                </sdk:DataGrid>
+            </Border>
+            <Border Grid.Row="2" BorderBrush="#99bbe8" BorderThickness="1,0,1,1" Height="26">
+                <eas:DataPager x:Name="dataPager" Margin="0,0,0,0" Width="795" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center" PageChanged="dataPager_PageChanged"  />
+            </Border>
+    </Grid>
+</UserControl>

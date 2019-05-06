@@ -1,0 +1,37 @@
+﻿<eas:DataWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+xmlns:eas="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
+	x:Class="EAS.SilverlightClient.AddIn.AppSettingEditor"
+	Title="系统参数属性" Height="479" Width="448" >
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Button x:Name="btnCancel" Height="23" Width="75" TabIndex="2" Margin="343,416,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="取消" Click="btnCancel_Click" />
+		<Button x:Name="btnOK" Height="23" Width="75" TabIndex="1" Margin="252,416,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="确定" Click="btnOK_Click" />
+        <sdk:TabControl Name="tcMain"  Height="399" HorizontalAlignment="Left" Margin="11,6,0,0"  VerticalAlignment="Top" Width="407" d:LayoutOverrides="GridBox">
+			<sdk:TabItem Header ="基本信息">
+				<Grid>
+                    <TextBox Height="100" HorizontalAlignment="Right"  Margin="0,255,12,0" x:Name="tbDescription" TabIndex="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" />
+					<sdk:Label Content="导航说明：" HorizontalAlignment="Left" Margin="11,297,0,0" x:Name="labelType" TabIndex="2" VerticalAlignment="Top" Height="16" Width="55" />
+					<sdk:Label Height="2" HorizontalAlignment="Left" Margin="11,31,0,0" x:Name="hr1" TabIndex="1" VerticalAlignment="Top" Width="352" />
+					<TextBox Height="21" HorizontalAlignment="Left" Margin="71,14,0,0" x:Name="tbName" TabIndex="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" />
+                    <Image HorizontalAlignment="Left" Height="48" Width="48" Margin="11,-2,0,0" Source="Images2/config_boot.png" Stretch="Fill" VerticalAlignment="Top" />
+                    <TextBox Height="21" HorizontalAlignment="Right" Margin="0,70,13,0" x:Name="tbCategory" TabIndex="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" />
+                    <sdk:Label Content="参数目录：" Height="16" HorizontalAlignment="Left" Margin="10,73,0,0" Name="label1" TabIndex="2" VerticalAlignment="Top" Width="55" />
+                    <TextBox Height="100" HorizontalAlignment="Right" Margin="0,124,13,0" x:Name="tbValue" TabIndex="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" />
+                    <sdk:Label Content="参 数 值：" Height="16" HorizontalAlignment="Left" Margin="10,166,0,0" Name="label2" TabIndex="2" VerticalAlignment="Top" Width="55" />
+                    <Path Data="M11,61 L383,61" Fill="#FFF4F4F5" Height="1" Margin="11,53,11,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top"/>
+                    <Path Data="M11,61 L383,61" Fill="#FFF4F4F5" Height="1" Margin="11,109,11,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top"/>
+                    <Path Data="M11,61 L383,61" Fill="#FFF4F4F5" Margin="11,0,11,125" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Height="1" VerticalAlignment="Bottom"/>
+                </Grid>
+			</sdk:TabItem>		
+		</sdk:TabControl>
+    </Grid>
+</eas:DataWindow>

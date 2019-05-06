@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <RightMargin>0.25in</RightMargin>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <DataInstanceName>Row</DataInstanceName>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <DataSetName>Data</DataSetName>
+        <ReportItems>
+          <Rectangle Name="Rectangle1">
+            <Height>24.8pt</Height>
+            <Width>195.0pt</Width>
+            <Left>0.0pt</Left>
+            <Top>0.00pt</Top>
+            <DataElementOutput>ContentsOnly</DataElementOutput>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+                <Left>Solid</Left>
+                <Right>Solid</Right>
+                <Top>Solid</Top>
+                <Bottom>Solid</Bottom>
+              </BorderStyle>
+              <BorderColor>
+                <Default>Blue</Default>
+                <Left>Blue</Left>
+                <Right>Blue</Right>
+                <Top>Blue</Top>
+                <Bottom>Blue</Bottom>
+              </BorderColor>
+              <BorderWidth />
+              <BackgroundColor>Burlywood</BackgroundColor>
+            </Style>
+            <ReportItems>
+              <Textbox Name="Phone">
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingRight>2pt</PaddingRight>
+                  <FontFamily>Arial</FontFamily>
+                  <FontSize>10pt</FontSize>
+                  <Color>Black</Color>
+                  <FontWeight>Normal</FontWeight>
+                  <FontStyle>Normal</FontStyle>
+                  <TextDecoration>Underline</TextDecoration>
+                  <BackgroundColor>Aqua</BackgroundColor>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+                <ZIndex>1</ZIndex>
+                <CanGrow>false</CanGrow>
+                <Value>=Fields!Phone.Value</Value>
+                <Left>102.7pt</Left>
+                <Width>90.8pt</Width>
+                <Height>17.9pt</Height>
+                <Top>2.1pt</Top>
+                <DataElementStyle>Auto</DataElementStyle>
+              </Textbox>
+              <Textbox Name="ContactName">
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingRight>2pt</PaddingRight>
+                  <FontWeight>Normal</FontWeight>
+                  <FontStyle>Normal</FontStyle>
+                  <TextDecoration>Underline</TextDecoration>
+                  <FontFamily>Arial</FontFamily>
+                  <FontSize>10pt</FontSize>
+                  <Color>Black</Color>
+                  <BackgroundColor>Aqua</BackgroundColor>
+                  <BorderStyle />
+                  <BorderColor />
+                  <BorderWidth />
+                </Style>
+                <Width>96.5pt</Width>
+                <Height>17.7pt</Height>
+                <CanGrow>false</CanGrow>
+                <Value>=Fields!ContactName.Value</Value>
+                <Left>2.2pt</Left>
+                <Top>2.8pt</Top>
+                <DataElementStyle>ElementNormal</DataElementStyle>
+              </Textbox>
+            </ReportItems>
+          </Rectangle>
+        </ReportItems>
+      </List>
+    </ReportItems>
+    <Style />
+    <Height>35.7pt</Height>
+    <ColumnSpacing>0.25in</ColumnSpacing>
+    <Columns>3</Columns>
+  </Body>
+  <TopMargin>0.5in</TopMargin>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>SELECT ContactName, Phone FROM Customers ORDER BY 1</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ContactName">
+          <DataField>ContactName</DataField>
+          <TypeName>String</TypeName>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+          <TypeName>String</TypeName>
+        </Field>
+      </Fields>
+      <fyi:Rows xmlns:fyi="http://www.fyireporting.com/schemas">
+        <Row>
+          <ContactName>Zbyszek Piestrzeniewicz</ContactName>
+          <Phone>(26) 642-7012</Phone>
+        </Row>
+      </fyi:Rows>
+    </DataSet>
+  </DataSets>
+  <LeftMargin>0.25in</LeftMargin>
+  <BottomMargin>0.5in</BottomMargin>
+  <Width>2.5in</Width>
+  <PageHeader>
+    <Height>102.1pt</Height>
+    <PrintOnFirstPage>True</PrintOnFirstPage>
+    <PrintOnLastPage>True</PrintOnLastPage>
+    <ReportItems>
+      <Image Name="Image2">
+        <Height>54.2pt</Height>
+        <Width>159.6pt</Width>
+        <Left>178.42pt</Left>
+        <Top>28.61pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Source>Embedded</Source>
+        <Value>fyiReportingLogo</Value>
+      </Image>
+    </ReportItems>
+  </PageHeader>
+  <PageFooter>
+    <Height>0pt</Height>
+    <PrintOnFirstPage>True</PrintOnFirstPage>
+    <PrintOnLastPage>True</PrintOnLastPage>
+  </PageFooter>
+  <Author>
+  </Author>
+  <Description>
+  </Description>
+  <PageWidth>8.5 in</PageWidth>
+  <PageHeight>11 in</PageHeight>
+  <DataElementName>Report</DataElementName>
+  <DataSources>
+    <DataSource Name="DS1">
+      <DataSourceReference>northwind</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <EmbeddedImages>
+    <EmbeddedImage Name="fyiReportingLogo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAANQAAABICAMAAAC5pCsSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAwBQTFRFGgB8IAB5ezJwampqeHh3ekd4AACKGhqHMRuDICCNJCSRRzeVV0GaSUKdY0mVfV6jcG6xTEmjXXzJdo5ydLpnb6pje8JtHJnzNJTYV4DRVqLYdpTUcavXcbPjXbX0esH0ujRUnkl3m3pbgHd3q0hvs39/2Rwt0iE2zSU9+gUE+xsF7xIY+ycD+jcG+jMZ6Sgx9DIv6R4nyC5I5z1G+FcI+UwP+VIx+GcJ+3QG9W8W928u00hczlVr02R38E5P6Ftk93FQ9WVl7XByklSImWaVhGOchnWuoFaDvWqIsnGSqHykwmqG1XaI8H2Ahb96oaFeqKhksLBttrN1oZhkhcl5jNR/94YK/Ice+JcK9ZgW+5Y9+Ysw9qcN+aga+rcM9bkU+KQ59rcp+bQ88qwp941P+Ixu+qpM+add+LdZ9rhK+bd69a5u9MYT/tgC9NgV+cgN9Mco98g69Ngr+tQ87s4o/+kA8uUV//4A7eUd8uUl8uc23uhC98tZ+NFR+MZ59dRo+NZ6+MZp8+ZH8+lX9OZo9Ot3zN9xh4eHl5eXj5GOm4e0jIW6mq+WuI2UoYOuuZe2roqtpqamtra2tbWsko7BkpLEh5nRh7jckb7fjqfaqrbctKzNqLrhmrbklciLmNeMnNyQlcuKm+SOnuiQosmbrtKnpeyYqeyNreyhrvCisuyovO2ztfCqvPGznMLdmcXljsfxqcrkt8fjt9Pnrtbz1IqYyJuzz5Knz6e664WI5IuW7JSY9JiY95GG752k97CN7KOr9aSp/6mz9bi577OxzLTJ+LzE5rzE2dmWzdq6xOuRw/K6xe699MSZ99qY+M2J98qp98m299ip99e45Nmu9ueJ9OiX5+ad9+W59fCn9eitx8fH2Mva19fX087Hx9nq1tTkyc7ky+zEyfLB0enN2OjV1/TRz+Dty+P01uPt2ufx68PI6NXZ/sDK99fI9tnV5crT593l8N7h9ujI9ujX9vLX7+zI5+jo5uzy6vPp7PH09ero9vLp9/f38O3x////Ac3wrgAAAQB0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AFP3ByUAAA9TSURBVGhD7ZoLWJRVGsd7Vp7a1gpWt9o13XLzMcvSIpFLCUpaprhdrFRECR1QAU3FdbN1AC8EuG4GbplBDJdlSkVtGoNCCAVnWNeV2yxGwgy4yP3egHN1zr7v+b4ZZmCGmW9gfXx6emW++Wbm+853fuf/nve85xzvID9Bu+MnyERuIyjN9caTjF1qVo2qrW8XKO31Szk5OQB0wgimcZ7LLpTGoHW+dEfv1DczRCcvmQzOnZbLLpSj9RrNdU05xxGJAWqE17/hBV/8V+9cqbcBlLYRZbrU2EyJGqkh1ImcnBPO+aB9qPa2ljZjg910ruVGvEsPlQedGpspFGsU6mTOsWNNzjzROpRWPejP9WBsyRq1Wu3MQ0a6R3viGCAxXmdEajzZSAMhQAmdobIKpVW1D1a+RSwWs5/a29rGHAqYKJQJCV0QOxQyHT8mFDoRLqxBadXtZiXVi0TidqatW1rGHKrxGArFUhlDHwR2iOw5OcdBqSwnqKwqpYL+ebOFdRrtoDia9noWbwyd0GBQq/qa5HJ5YmJCUnxSPNrCpKSkgwkJiYmJ8csXneD8MFuBQlsvNvYkKPP/NVRByJYr/vP99/9Ee/3VxNdfe+3VV19d/sory+EMT1955Q8uAs7dygaUWvyV6JSYaaL2058wZ/VtYw3XDKV27vgza+vnG8/+PDsSTjdvhoOXS2Y2V6lsKVUvOmWEUk+efJoWKzotGtuYflMISn1jCfWnPyHZ7JBdrHm7CDhLZXOcEp0yup928uRPkKntEyMm15azdf11gCK9CLUZUUJ4yEOhnj4nlXZR8wMorlLZhFJDoBCLGP9jK9Umbh0rHKac7ExCFKUmpUIG3e/Z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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+</Report>

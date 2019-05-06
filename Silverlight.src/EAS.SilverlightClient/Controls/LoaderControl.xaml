@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="EAS.SilverlightClient.Controls.LoaderControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Grid.Resources>
+            <Storyboard x:Name="RotateLoading" RepeatBehavior="Forever">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Loader" Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)">
+                    <SplineDoubleKeyFrame KeyTime="0:0:1" Value="360" />
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Name="HideLayoutRoot">
+                <DoubleAnimation Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3" />
+            </Storyboard>
+        </Grid.Resources>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid x:Name="loading" Width="27" Height="30">
+                    <Grid RenderTransformOrigin="0.501,0.534" x:Name="Loader">
+                        <Grid.RenderTransform>
+                            <RotateTransform CenterX="0" />
+                        </Grid.RenderTransform>
+                        <Path Data="M13.500977,29.491211 C6.0566411,29.491211 0,23.433594 0,15.989258 C0,9.1621094 5.014648,3.47998 11.727051,2.608887 L11.727051,0 L12.393555,0.38281301 L19.355469,4.4013672 L20.018555,4.785645 L19.358398,5.1689448 L12.393555,9.1948242 L11.727051,9.5776367 L11.727051,7.2641602 C7.6235352,8.0917969 4.5874019,11.754883 4.5874019,15.989258 C4.5874019,20.904297 8.5859385,24.900391 13.500977,24.900391 C18.415039,24.900391 22.413086,20.904297 22.413086,15.989258 C22.413086,14.527344 22.045898,13.074707 21.352539,11.787109 L21.146484,11.406738 L21.521484,11.194336 L24.739258,9.3496094 L25.130859,9.1254883 L25.348633,9.5205078 C26.430664,11.493652 27,13.732422 27,15.989258 C27,23.433594 20.945313,29.491211 13.500977,29.491211 z" StrokeThickness="0.25" RenderTransformOrigin="0,0" Width="27" Height="30">
+                            <Path.Fill>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFF3CB32" />
+                                    <GradientStop Color="#FFD78A04" Offset="1" />
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+            <TextBlock x:Name="PercentageCounter" HorizontalAlignment="Center" FontFamily="Trebuchet MS" FontSize="12" Foreground="#FFF3CB32" Text="正在下载文件EAS.Explorer.AddIn.Assist.dll,下载进度50%" Margin="0,5,0,10" />
+        </StackPanel>
+    </Grid>
+</UserControl>

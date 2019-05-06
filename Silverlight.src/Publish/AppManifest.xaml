@@ -1,0 +1,43 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="EAS.SilverlightClient" EntryPointType="EAS.SilverlightClient.App" RuntimeVersion="5.0.61118.0">
+  <Deployment.InBrowserSettings>
+    <InBrowserSettings>
+      <InBrowserSettings.SecuritySettings>
+        <SecuritySettings ElevatedPermissions="Required" />
+      </InBrowserSettings.SecuritySettings>
+    </InBrowserSettings>
+  </Deployment.InBrowserSettings>
+  <Deployment.OutOfBrowserSettings>
+    <OutOfBrowserSettings ShortName="AgileEAS.NET SOA 平台" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+      <OutOfBrowserSettings.Blurb>AgileEAS.NET SOA 平台 Silverlight 客户端程序</OutOfBrowserSettings.Blurb>
+      <OutOfBrowserSettings.WindowSettings>
+        <WindowSettings Title="AgileEAS.NET SOA 平台" Height="768" Width="1366" />
+      </OutOfBrowserSettings.WindowSettings>
+      <OutOfBrowserSettings.Icons />
+    </OutOfBrowserSettings>
+  </Deployment.OutOfBrowserSettings>
+  <Deployment.Parts>
+    <AssemblyPart x:Name="EAS.SilverlightClient" Source="EAS.SilverlightClient.dll" />
+    <AssemblyPart x:Name="AsyncCtpLibrary_Silverlight5" Source="AsyncCtpLibrary_Silverlight5.dll" />
+    <AssemblyPart x:Name="EAS.Controls" Source="EAS.Controls.dll" />
+    <AssemblyPart x:Name="EAS.Data" Source="EAS.Data.dll" />
+    <AssemblyPart x:Name="EAS.Explorer.BLL.Contracts" Source="EAS.Explorer.BLL.Contracts.dll" />
+    <AssemblyPart x:Name="EAS.Explorer" Source="EAS.Explorer.dll" />
+    <AssemblyPart x:Name="EAS.Explorer.Entities" Source="EAS.Explorer.Entities.dll" />
+    <AssemblyPart x:Name="EAS.MicroKernel" Source="EAS.MicroKernel.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Data" Source="System.Windows.Controls.Data.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Data.Input" Source="System.Windows.Controls.Data.Input.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Input.Toolkit" Source="System.Windows.Controls.Input.Toolkit.dll" />
+    <AssemblyPart x:Name="System.Xml.Linq" Source="System.Xml.Linq.dll" />
+    <AssemblyPart x:Name="System.Xml.Serialization" Source="System.Xml.Serialization.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.DataAnnotations" Source="System.ComponentModel.DataAnnotations.dll" />
+    <AssemblyPart x:Name="System.Windows.Data" Source="System.Windows.Data.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Toolkit" Source="System.Windows.Controls.Toolkit.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.Data.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Controls.Data.Input.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Xml.Linq.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.ComponentModel.DataAnnotations.resources.dll" />
+    <AssemblyPart Source="zh-Hans/System.Windows.Data.resources.dll" />
+  </Deployment.Parts>
+</Deployment>

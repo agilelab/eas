@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="EAS.Demo.Res.Navigation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:common="clr-namespace:System.Windows;assembly=System.Windows.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="180">
+    <UserControl.Resources>
+        <!-- TreeViewItem风格设定 -->
+        <Style x:Key="PurpleItemStyle" TargetType="sdk:TreeViewItem">
+            <Setter Property="Foreground" Value="Purple" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <common:HierarchicalDataTemplate x:Key="NodeTemplate" ItemsSource="{Binding Items}">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Icon}" Width="16" Height="16"/>
+                <TextBlock Text="{Binding Name}"  Tag="{Binding Tag}" Foreground="Black" MouseLeftButtonUp="TbItem_MouseLeftButtonUp"/>
+            </StackPanel>
+        </common:HierarchicalDataTemplate>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <sdk:TreeView x:Name="Tree" ItemTemplate="{StaticResource NodeTemplate}">
+            <!-- 用来一次展开TreeView所有结点 -->
+            <sdk:TreeView.ItemContainerStyle>
+                <Style TargetType="sdk:TreeViewItem">
+                    <Setter Property="IsExpanded" Value="True" />
+                </Style>
+            </sdk:TreeView.ItemContainerStyle>
+        </sdk:TreeView>
+    </Grid>
+</UserControl>

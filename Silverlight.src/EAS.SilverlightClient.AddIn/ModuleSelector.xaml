@@ -1,0 +1,43 @@
+<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:my="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    x:Class="EAS.SilverlightClient.AddIn.ModuleSelector" Title="选择模块或插件"  mc:Ignorable="d" Height="510" Width="482">
+    <Grid>
+        <sdk:Label x:Name="labelResult"   TabIndex="1" Margin="13,143,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="搜索结果："/>
+        <Button x:Name="btnSeach" Height="23" Width="75" TabIndex="3" Margin="0,139,13,0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="搜索" Click="btnSearch_Click" />
+        <Button x:Name="btnOK" Height="23" Width="75" TabIndex="4" Margin="270,0,0,7" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="确定" Click="btnOK_Click" />
+        <Button x:Name="btnCancel" Height="23" Width="75" TabIndex="5" Margin="377,0,0,7" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="取消" Click="btnCancel_Click" />
+        <sdk:Label x:Name="labelMsg"   TabIndex="7" Margin="71,28,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="根据下面的搜索选项搜索模块，并从搜索结果中选择。" />
+        <sdk:Label x:Name="labelTip"   TabIndex="8" Margin="12,0,0,38" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="已经选中的用模块：" />
+        <TextBox x:Name="tbSelected" Height="21" Width="335" TabIndex="9" Margin="0,0,12,35" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" />
+        <Image Height="48" HorizontalAlignment="Left" Margin="15,10,0,0" Source="Images/Privileger.png" Stretch="Fill" VerticalAlignment="Top" Width="48" />
+        <my:GroupBox Height="67" HorizontalAlignment="Left" Margin="12,64,0,0" x:Name="groupBox1" Title="搜索选项" VerticalAlignment="Top" Width="440">
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="tbKey" Height="21" Width="254" TabIndex="4" Margin="52,11,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" d:LayoutOverrides="HorizontalAlignment" KeyDown="tbKey_KeyDown" />
+                <sdk:Label x:Name="label1" TabIndex="3" Margin="18,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="检索：" />
+            </Grid>
+        </my:GroupBox>
+        <sdk:DataGrid HorizontalAlignment="Left" Margin="12,166,0,0" x:Name="dataList" AutoGenerateColumns="False" VerticalAlignment="Top" Height="247" Width="440" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Header="" Width="20" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Checked, Mode=TwoWay}" VerticalAlignment="Center" ClickMode="Release" Click="CheckBox_Checked" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="名称" IsReadOnly="True"  Width="180" Binding="{Binding Name}" />
+                <sdk:DataGridTextColumn Header="程序集" IsReadOnly="True"  Width="150" Binding="{Binding Assembly}" />
+                <sdk:DataGridTextColumn Header="说明" IsReadOnly="True"  Width="280" Binding="{Binding Description}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</sdk:ChildWindow>

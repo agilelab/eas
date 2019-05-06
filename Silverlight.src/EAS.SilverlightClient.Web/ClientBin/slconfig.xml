@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eas>
+  <configurations>
+    <item name="Key" value="Value" />
+    <!--是否调试状态。-->
+    <item name="Debug" value="false" />
+    <!--调试程序集。-->
+    <item name="Assembly" value="EAS.SilverlightClient.AddIn" />
+    <!--外挂资源包。-->
+    <!--<item name="EAS.Explorer.Resource" value="EAS.Explorer.Res.xap,EAS.Explorer.Res.dll,EAS.Explorer.Res.Resources" />-->
+  </configurations>
+  <objects>
+    <!--分布式通信组件。-->
+    <object name="ServiceBridger" assembly="EAS.MicroKernel" type="EAS.Distributed.ServiceBridger" LifestyleType="Thread" >
+      <property name="ServiceUrl" type="string" value="http://localhost:6608/eas/services/EAS.RIAService" />
+    </object>
+    <object name="DataAccessor" assembly="EAS.Data" type="EAS.Data.Access.DataAccessor" LifestyleType="Thread">
+      <property name="ServiceBridger" type="object" value="ServiceBridger"/>
+    </object>
+    <object name="OrmAccessor" assembly="EAS.Data" type="EAS.Data.ORM.OrmAccessor" LifestyleType="Thread">
+      <property name="ServiceBridger" type="object" value="ServiceBridger"/>
+    </object>
+  </objects>
+</eas>

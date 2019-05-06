@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClientClasp>
+  <!--客户端钩子启动模块。-->
+  <item name="ClaspStart" value="EAS.ActiveXForm.ClaspStart,EAS.ActiveXForm.ClientClasp.AddIn" />
+  <!--应用系统名称。-->
+  <item name="ApplicationName" value="AgileEAS.Net SOA中间件" />
+  <!--是否开启升级。-->
+  <item name="AllowUpdate" value="true" />
+  <!--升级服务地址。-->
+  <item name="UpdateUrl" value="net.tcp://localhost:6607/eas/services/eas.updateservice" />
+</ClientClasp>

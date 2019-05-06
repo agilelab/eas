@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Name="">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <DataSources>
+    <DataSource Name="DS1">
+      <ConnectionProperties>
+        <DataProvider>WebService</DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <Width>7.5in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <ReportParameters>
+    <ReportParameter Name="symbol">
+      <DataType>String</DataType>
+      <Nullable>False</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>IBM</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>False</AllowBlank>
+      <Prompt>Enter stock symbol</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>Url=http://services.xmethods.net/soap/urn:xmethods-delayed-quotes.wsdl;Service=netxmethodsservicesstockquoteStockQuoteService;Operation=getQuote</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="result">
+          <DataField>result</DataField>
+          <TypeName>System.Single</TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Table Name="Table1">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>158.3pt</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox1">
+                      <Value>result</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="result">
+                      <Value>=Fields!result.Value</Value>
+                      <CanGrow>false</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingRight>2 pt</PaddingRight>
+                        <TextAlign>right</TextAlign>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+      </Table>
+    </ReportItems>
+    <Height>36pt</Height>
+  </Body>
+  <PageFooter>
+    <Height>14 pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox2">
+        <Top>1 pt</Top>
+        <Left>10 pt</Left>
+        <Height>12 pt</Height>
+        <Width>3in</Width>
+        <Value>=Globals!PageNumber.Value + ' of ' + Globals!TotalPages.Value</Value>
+        <Style>
+          <FontSize>10pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageFooter>
+  <PageHeader>
+    <Height>0pt</Height>
+  </PageHeader>
+</Report>

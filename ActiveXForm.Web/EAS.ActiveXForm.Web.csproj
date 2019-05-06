@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{746D8512-4325-4665-8071-9D380763EDA7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EAS.ActiveXForm.Web</RootNamespace>
+    <AssemblyName>EAS.ActiveXForm.Web</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EAS.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Distributed, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.Distributed.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Explorer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.Explorer.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Explorer.BLL.Contracts, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.Explorer.BLL.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Explorer.Entities, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.Explorer.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Explorer.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.Explorer.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.MicroKernel, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\dotnet\EAS.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="biz\baseStyle.css" />
+    <Content Include="biz\MenuContainer.aspx" />
+    <Content Include="biz\MenuContainer.js" />
+    <Content Include="biz\TabContainer.aspx" />
+    <Content Include="biz\TopContainer.js" />
+    <Content Include="biz\css\css.css" />
+    <Content Include="biz\css\dhtmlXTabbar.css" />
+    <Content Include="biz\css\StyleSheet.css" />
+    <Content Include="biz\Default.aspx" />
+    <Content Include="biz\images\col.gif" />
+    <Content Include="biz\images\exp.gif" />
+    <Content Include="biz\images\folder.gif" />
+    <Content Include="biz\images\left06.jpg" />
+    <Content Include="biz\images\lines\dash.gif" />
+    <Content Include="biz\images\lines\dashminus.gif" />
+    <Content Include="biz\images\lines\dashplus.gif" />
+    <Content Include="biz\images\lines\i.gif" />
+    <Content Include="biz\images\lines\l.gif" />
+    <Content Include="biz\images\lines\lminus.gif" />
+    <Content Include="biz\images\lines\lplus.gif" />
+    <Content Include="biz\images\lines\minus.gif" />
+    <Content Include="biz\images\lines\noexpand.gif" />
+    <Content Include="biz\images\lines\plus.gif" />
+    <Content Include="biz\images\lines\r.gif" />
+    <Content Include="biz\images\lines\rminus.gif" />
+    <Content Include="biz\images\lines\rplus.gif" />
+    <Content Include="biz\images\lines\t.gif" />
+    <Content Include="biz\images\lines\tminus.gif" />
+    <Content Include="biz\images\lines\tplus.gif" />
+    <Content Include="biz\images\tab\bottom\a_left.gif" />
+    <Content Include="biz\images\tab\bottom\a_middle.gif" />
+    <Content Include="biz\images\tab\bottom\a_right.gif" />
+    <Content Include="biz\images\tab\bottom\p_left.gif" />
+    <Content Include="biz\images\tab\bottom\p_left_skos.gif" />
+    <Content Include="biz\images\tab\bottom\p_middle.gif" />
+    <Content Include="biz\images\tab\bottom\p_right.gif" />
+    <Content Include="biz\images\tab\bottom\p_right_skos.gif" />
+    <Content Include="biz\images\tab\close.gif" />
+    <Content Include="biz\images\tab\close_hover.gif" />
+    <Content Include="biz\images\tab\left\a_left.gif" />
+    <Content Include="biz\images\tab\left\a_middle.gif" />
+    <Content Include="biz\images\tab\left\a_right.gif" />
+    <Content Include="biz\images\tab\left\p_left.gif" />
+    <Content Include="biz\images\tab\left\p_middle.gif" />
+    <Content Include="biz\images\tab\left\p_right.gif" />
+    <Content Include="biz\images\tab\loading.gif" />
+    <Content Include="biz\images\tab\right\a_left.gif" />
+    <Content Include="biz\images\tab\right\a_middle.gif" />
+    <Content Include="biz\images\tab\right\a_right.gif" />
+    <Content Include="biz\images\tab\right\p_left.gif" />
+    <Content Include="biz\images\tab\right\p_middle.gif" />
+    <Content Include="biz\images\tab\right\p_right.gif" />
+    <Content Include="biz\images\tab\samples\label31.gif" />
+    <Content Include="biz\images\tab\samples\label32.gif" />
+    <Content Include="biz\images\tab\samples\label41.gif" />
+    <Content Include="biz\images\tab\samples\label42.gif" />
+    <Content Include="biz\images\tab\samples\p1.gif" />
+    <Content Include="biz\images\tab\samples\p2.gif" />
+    <Content Include="biz\images\tab\samples\p3.gif" />
+    <Content Include="biz\images\tab\samples\pro_bottom.gif" />
+    <Content Include="biz\images\tab\samples\pro_multi.gif" />
+    <Content Include="biz\images\tab\samples\pro_right.gif" />
+    <Content Include="biz\images\tab\samples\pro_scroll.gif" />
+    <Content Include="biz\images\tab\samples\pro_scrolling.png" />
+    <Content Include="biz\images\tab\scrl_b.gif" />
+    <Content Include="biz\images\tab\scrl_l.gif" />
+    <Content Include="biz\images\tab\scrl_l01.gif" />
+    <Content Include="biz\images\tab\scrl_l02.gif" />
+    <Content Include="biz\images\tab\scrl_r.gif" />
+    <Content Include="biz\images\tab\scrl_r01.gif" />
+    <Content Include="biz\images\tab\scrl_r02.gif" />
+    <Content Include="biz\images\tab\scrl_t.gif" />
+    <Content Include="biz\images\tab\th_dhtmlxtabbar.gif" />
+    <Content Include="biz\images\tab\top\a_left.gif" />
+    <Content Include="biz\images\tab\top\a_middle.gif" />
+    <Content Include="biz\images\tab\top\a_right.gif" />
+    <Content Include="biz\images\tab\top\circuses\a_left.gif" />
+    <Content Include="biz\images\tab\top\circuses\a_middle.gif" />
+    <Content Include="biz\images\tab\top\circuses\a_right.gif" />
+    <Content Include="biz\images\tab\top\circuses\p_left.gif" />
+    <Content Include="biz\images\tab\top\circuses\p_middle.gif" />
+    <Content Include="biz\images\tab\top\circuses\p_middle_over.gif" />
+    <Content Include="biz\images\tab\top\circuses\p_right.gif" />
+    <Content Include="biz\images\tab\top\circuses\_p_middle_over.gif" />
+    <Content Include="biz\images\tab\top\p_left.gif" />
+    <Content Include="biz\images\tab\top\p_left_skos.gif" />
+    <Content Include="biz\images\tab\top\p_middle.gif" />
+    <Content Include="biz\images\tab\top\p_right.gif" />
+    <Content Include="biz\images\tab\top\p_right_skos.gif" />
+    <Content Include="biz\images\tab\top\with_bg\a_left.gif" />
+    <Content Include="biz\images\tab\top\with_bg\a_left_skos.gif" />
+    <Content Include="biz\images\tab\top\with_bg\a_middle.gif" />
+    <Content Include="biz\images\tab\top\with_bg\a_right.gif" />
+    <Content Include="biz\images\tab\top\with_bg\a_right_skos.gif" />
+    <Content Include="biz\images\tab\top\with_bg\p_left.gif" />
+    <Content Include="biz\images\tab\top\with_bg\p_left_skos.gif" />
+    <Content Include="biz\images\tab\top\with_bg\p_middle.gif" />
+    <Content Include="biz\images\tab\top\with_bg\p_middle_over.gif" />
+    <Content Include="biz\images\tab\top\with_bg\p_right.gif" />
+    <Content Include="biz\images\tab\top\with_bg\p_right_skos.gif" />
+    <Content Include="biz\images\top01.jpg" />
+    <Content Include="biz\images\top04.jpg" />
+    <Content Include="biz\images\top06.jpg" />
+    <Content Include="biz\images\tree.jpg" />
+    <Content Include="biz\images\yw_menu.gif" />
+    <Content Include="biz\images\yw_menu.jpg" />
+    <Content Include="biz\images\复件 yw_menu.jpg" />
+    <Content Include="biz\inc\window.js" />
+    <Content Include="biz\inc\xmlHttpHelper.js" />
+    <Content Include="biz\js\dhtmlXCommon.js" />
+    <Content Include="biz\js\dhtmlXTabbar.js" />
+    <Content Include="biz\js\dhtmlXTabbar_start.js" />
+    <Content Include="biz\js\标签页图示.jpg" />
+    <Content Include="biz\navStyle.css" />
+    <Content Include="biz\PageManager.js" />
+    <Content Include="biz\treeStyle.css" />
+    <Content Include="biz\BottomContainer.js" />
+    <Content Include="biz\ClientClasp.js" />
+    <Content Include="client\date.js" />
+    <Content Include="client\platform_1_0\_calendar.js" />
+    <Content Include="client\platform_1_0\_common.js" />
+    <Content Include="client\platform_1_0\_list.js" />
+    <Content Include="client\platform_1_0\_selemps.js" />
+    <Content Include="client\platform_1_0\_tailorflow.js" />
+    <Content Include="client\platform_1_0\_tailorflow_old.js" />
+    <Content Include="client\platform_1_0\_tfselemps.js" />
+    <Content Include="client\platform_1_0\_word.js" />
+    <Content Include="client\regexp.txt" />
+    <Content Include="css\css.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\logo.png" />
+    <Content Include="MainContainer.aspx" />
+    <Content Include="biz\mainContainer.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xClient\config\clientclasp.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="xClient\downloads\EAS.ActiveXForm.cab" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="biz\Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="biz\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="biz\MenuContainer.aspx.cs">
+      <DependentUpon>MenuContainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="biz\MenuContainer.aspx.designer.cs">
+      <DependentUpon>MenuContainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="biz\TabContainer.aspx.cs">
+      <DependentUpon>TabContainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="biz\TabContainer.aspx.designer.cs">
+      <DependentUpon>TabContainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\WebContext.cs" />
+    <Compile Include="MainContainer.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>MainContainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainContainer.aspx.designer.cs">
+      <DependentUpon>MainContainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebMsgBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xClient\config\activexform.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="biz\images\lines\vssver2.scc" />
+    <None Include="biz\images\tab\bottom\vssver2.scc" />
+    <None Include="biz\images\tab\left\vssver2.scc" />
+    <None Include="biz\images\tab\right\vssver2.scc" />
+    <None Include="biz\images\tab\samples\vssver2.scc" />
+    <None Include="biz\images\tab\top\circuses\vssver2.scc" />
+    <None Include="biz\images\tab\top\vssver2.scc" />
+    <None Include="biz\images\tab\top\with_bg\vssver2.scc" />
+    <None Include="biz\images\tab\vssver2.scc" />
+    <None Include="biz\images\Thumbs.db" />
+    <None Include="biz\images\vssver2.scc" />
+    <Content Include="css\defautl.css" />
+    <Content Include="images\0020_01.jpg" />
+    <Content Include="images\0020_02.jpg" />
+    <Content Include="images\0020_03.jpg" />
+    <Content Include="images\0020_04.jpg" />
+    <Content Include="images\0020_05.jpg" />
+    <Content Include="images\0020_06.jpg" />
+    <Content Include="images\0020_07.jpg" />
+    <Content Include="images\0020_08.jpg" />
+    <Content Include="images\0020_09.jpg" />
+    <Content Include="images\03.gif" />
+    <Content Include="images\arrow-l.gif" />
+    <Content Include="images\arrow-r.gif" />
+    <Content Include="images\barchart.gif" />
+    <Content Include="images\bgMain2.jpg" />
+    <Content Include="images\bgMain21.jpg" />
+    <Content Include="images\bgMain22.jpg" />
+    <Content Include="images\bgMain32.jpg" />
+    <Content Include="images\bj3.jpg" />
+    <Content Include="images\collapsebtn2.gif" />
+    <Content Include="images\expandbtn2.gif" />
+    <Content Include="images\foot.gif" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\item1.gif" />
+    <Content Include="images\login.gif" />
+    <Content Include="images\loginlogo.jpg" />
+    <Content Include="images\login_bj.gif" />
+    <Content Include="images\login_foot.gif" />
+    <Content Include="images\login_left.gif" />
+    <Content Include="images\login_right.gif" />
+    <Content Include="images\login_top.gif" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\lolo.gif" />
+    <Content Include="images\signMenu.gif" />
+    <Content Include="images\topback.gif" />
+    <Content Include="images\top_1.gif" />
+    <Content Include="images\top_2.gif" />
+    <Content Include="images\top_bj.gif" />
+    <None Include="xClient\downloads\EAS.ActiveXForm.msi" />
+    <None Include="xClient\downloads\eRoot.cer" />
+    <None Include="xClient\downloads\eRoot.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EAS.Explorer\Explorer\EAS.Explorer.csproj">
+      <Project>{115111BB-C183-4ADD-9395-48A7BB38E069}</Project>
+      <Name>EAS.Explorer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8091</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ActiveXForm.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

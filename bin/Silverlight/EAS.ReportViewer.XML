@@ -1,0 +1,996 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.ReportViewer</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Reporting.Silverlight.LoadCompletedHander">
+            <summary>
+            报表加载完成委托。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.LoadCompletedEventArgs">
+            <summary>
+            加载完成参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.LoadCompletedEventArgs.Error">
+            <summary>
+            错误。
+            </summary>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.PageSizes">
+            <summary>
+            页号定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PageSizes.A3">
+            <summary>
+            A3纸张。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PageSizes.A4">
+            <summary>
+            A4纸张。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PageSizes.B5">
+            <summary>
+            B5纸张。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PageSizes.B5_Landscape">
+            <summary>
+            B5横向。
+            </summary>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.PrintPageSize">
+            <summary>
+            打印页大小。
+            </summary>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PageViewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.PaperSize">
+            <summary>
+            纸张大小枚举。
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LETTER">
+            <summary>
+            Letter, 8 1/2- by 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LEGAL">
+            <summary>
+            Legal, 8 1/2- by 14-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_9X11">
+            <summary>
+            9- by 11-inch sheet
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_10X11">
+            <summary>
+            10- by 11-inch sheet
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_10X14">
+            <summary>
+            10- by 14-inch sheet
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_15X11">
+            <summary>
+            15- by 11-inch sheet
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_11X17">
+            <summary>
+            11- by 17-inch sheet
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_12X11">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: 12- by 11-inch sheet
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A2">
+            <summary>
+            A2 sheet, 420 x 594-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A3">
+            <summary>
+            A3 sheet, 297- by 420-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A3_EXTRA">
+            <summary>
+            A3 Extra 322 x 445-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A3_EXTRA_TRANSVERSE">
+            <summary>
+            A3 Extra Transverse 322 x 445-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A3_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: A3 rotated sheet, 420- by 297-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A3_TRANSVERSE">
+            <summary>
+            A3 Transverse 297 x 420-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A4">
+            <summary>
+            A4 sheet, 210- by 297-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A4_EXTRA">
+            <summary>
+            A4 sheet, 9.27 x 12.69 inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A4_PLUS">
+            <summary>
+            A4 Plus 210 x 330-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A4_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: A4 rotated sheet, 297- by 210-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A4SMALL">
+            <summary>
+            A4 small sheet, 210- by 297-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A4_TRANSVERSE">
+            <summary>
+            A4 Transverse 210 x 297 millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A5">
+            <summary>
+            A5 sheet, 148- by 210-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A5_EXTRA">
+            <summary>
+            A5 Extra 174 x 235-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A5_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: A5 rotated sheet, 210- by 148-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A5_TRANSVERSE">
+            <summary>
+            A5 Transverse 148 x 210-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A6">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: A6 sheet, 105- by 148-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A6_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: A6 rotated sheet, 148- by 105-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_A_PLUS">
+            <summary>
+            SuperA/A4 227 x 356 -millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B4">
+            <summary>
+            B4 sheet, 250- by 354-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B4_JIS_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: B4 (JIS) rotated sheet, 364- by 257-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B5">
+            <summary>
+            B5 sheet, 182- by 257-millimeter paper
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B5_EXTRA">
+            <summary>
+            B5 (ISO) Extra 201 x 276-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B5_TRANSVERSE">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: B5 (JIS) transverse sheet, 182- by 257-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B5_JIS_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: B5 (JIS) rotated sheet, 257- by 182-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B6_JIS">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: B6 (JIS) sheet, 128- by 182-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B6_JIS_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: B6 (JIS) rotated sheet, 182- by 128-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_B_PLUS">
+            <summary>
+            SuperB/A3 305 x 487-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_CSHEET">
+            <summary>
+            C Sheet, 17- by 22-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_DBL_JAPANESE_POSTCARD">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Double Japanese Postcard, 200- by 148-millimeters 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_DBL_JAPANESE_POSTCARD_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Double Japanese Postcard Rotated, 148- by 200-millimeters 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_DSHEET">
+            <summary>
+            D Sheet, 22- by 34-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_9">
+            <summary>
+            #9 Envelope, 3 7/8- by 8 7/8-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_10">
+            <summary>
+            #10 Envelope, 4 1/8- by 9 1/2-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_11">
+            <summary>
+            #11 Envelope, 4 1/2- by 10 3/8-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_12">
+            <summary>
+            #12 Envelope, 4 3/4- by 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_14">
+            <summary>
+            #14 Envelope, 5- by 11 1/2-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_C5">
+            <summary>
+            C5 Envelope, 162- by 229-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_C3">
+            <summary>
+            C3 Envelope, 324- by 458-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_C4">
+            <summary>
+            C4 Envelope, 229- by 324-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_C6">
+            <summary>
+            C6 Envelope, 114- by 162-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_C65">
+            <summary>
+            C65 Envelope, 114- by 229-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_B4">
+            <summary>
+            B4 Envelope, 250- by 353-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_B5">
+            <summary>
+            B5 Envelope, 176- by 250-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_B6">
+            <summary>
+            B6 Envelope, 176- by 125-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_DL">
+            <summary>
+            DL Envelope, 110- by 220-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_INVITE">
+            <summary>
+            Envelope Invite 220 x 220 mm
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_ITALY">
+            <summary>
+            Italy Envelope, 110- by 230-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_MONARCH">
+            <summary>
+            Monarch Envelope, 3 7/8- by 7 1/2-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ENV_PERSONAL">
+            <summary>
+            6 3/4 Envelope, 3 5/8- by 6 1/2-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ESHEET">
+            <summary>
+            E Sheet, 34- by 44-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_EXECUTIVE">
+            <summary>
+            Executive, 7 1/4- by 10 1/2-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_FANFOLD_US">
+            <summary>
+            US Std Fanfold, 14 7/8- by 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_FANFOLD_STD_GERMAN">
+            <summary>
+            German Std Fanfold, 8 1/2- by 12-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_FANFOLD_LGL_GERMAN">
+            <summary>
+            German Legal Fanfold, 8 - by 13-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_FOLIO">
+            <summary>
+            Folio, 8 1/2- by 13-inch paper
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_ISO_B4">
+            <summary>
+            B4 (ISO) 250- by 353-millimeters paper
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JAPANESE_POSTCARD">
+            <summary>
+            Japanese Postcard, 100- by 148-millimeters 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JAPANESE_POSTCARD_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Postcard Rotated, 148- by 100-millimeters 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_CHOU3">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Chou #3
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_CHOU3_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Chou #3 Rotated
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_CHOU4">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Chou #4
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_CHOU4_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Chou #4 Rotated
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_KAKU2">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Kaku #2
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_KAKU2_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Kaku #2 Rotated
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_KAKU3">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Kaku #3
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_KAKU3_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope Kaku #3 Rotated
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_YOU4">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope You #4
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_JENV_YOU4_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: Japanese Envelope You #4 Rotated
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LAST">
+            <summary>
+            Windows 2000/XP: DMPAPER_PENV_10_ROTATED
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LEDGER">
+            <summary>
+            Ledger, 17- by 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LEGAL_EXTRA">
+            <summary>
+            Legal Extra 9 1/2 x 15 inches. 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LETTER_EXTRA">
+            <summary>
+            Letter Extra 9 1/2 x 12 inches. 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LETTER_EXTRA_TRANSVERSE">
+            <summary>
+            Letter Extra Transverse 9 1/2 x 12 inches.
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LETTER_ROTATED">
+            <summary>
+            Letter Rotated 11 by 8 1/2 inches 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LETTERSMALL">
+            <summary>
+            Letter Small, 8 1/2- by 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_LETTER_TRANSVERSE">
+            <summary>
+            Letter Transverse 8 1/2 x 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_NOTE">
+            <summary>
+            Note, 8 1/2- by 11-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_P16K">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC 16K, 146- by 215-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_P16K_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC 16K Rotated, 215- by 146-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_P32K">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC 32K, 97- by 151-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_P32K_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC 32K Rotated, 151- by 97-millimeters 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_P32KBIG">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC 32K(Big) 97- by 151-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_P32KBIG_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC 32K(Big) Rotated, 151- by 97-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_1">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #1, 102- by 165-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_1_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #1 Rotated, 165- by 102-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_2">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #2, 102- by 176-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_2_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #2 Rotated, 176- by 102-millimeters 
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_3">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #3, 125- by 176-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_3_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #3 Rotated, 176- by 125-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_4">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #4, 110- by 208-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_4_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #4 Rotated, 208- by 110-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_5">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #5, 110- by 220-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_5_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #5 Rotated, 220- by 110-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_6">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #6, 120- by 230-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_6_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #6 Rotated, 230- by 120-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_7">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #7, 160- by 230-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_7_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #7 Rotated, 230- by 160-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_8">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #8, 120- by 309-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_8_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #8 Rotated, 309- by 120-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_9">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #9, 229- by 324-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_9_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #9 Rotated, 324- by 229-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_10">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #10, 324- by 458-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_PENV_10_ROTATED">
+            <summary>
+            Windows 98/Me, Windows NT 4.0 and later: PRC Envelope #10 Rotated, 458- by 324-millimeters
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_QUARTO">
+            <summary>
+            Quarto, 215- by 275-millimeter paper
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_STATEMENT">
+            <summary>
+            Statement, 5 1/2- by 8 1/2-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_TABLOID">
+            <summary>
+            Tabloid, 11- by 17-inches
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PaperSize.DMPAPER_TABLOID_EXTRA">
+            <summary>
+            Tabloid, 11.69 x 18-inches
+            </summary>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.PrintOrientation">
+            <summary>
+            打印方向。
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PrintOrientation.Portrait">
+            <summary>
+            纵向打印。
+            </summary>
+        </member>
+        <member name="F:EAS.Reporting.Silverlight.PrintOrientation.Landscape">
+            <summary>
+            横向打印。
+            </summary>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.PrinterSettings">
+            <summary>
+            用于设置打印机方向和选择纸张大小。Silverlight只有在权限提升时，此类才有用。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrinterSettings.IsEmpty">
+            <summary>
+            是否为空。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrinterSettings.PaperSize">
+            <summary>
+            纸张大小。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrintWindow.AutoReszie">
+            <summary>
+            自动适应大小。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrintWindow.PageIndex">
+            <summary>
+            当前页码。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrintWindow.PageCount">
+            <summary>
+            获取总页数。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrintWindow.MultiPage">
+            <summary>
+            是否多页显示。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrintWindow.DirectPrint">
+            <summary>
+            直接打印，不显示打印选择对话框，需提权才能使用。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.PrintWindow.ToolbarPosition">
+            <summary>
+            工具条位置：0/显示在顶部,1/显示在底部。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.PrintWindow.LoadCompleted">
+            <summary>
+            报表加载完成后触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.PrintWindow.BeginPrint">
+            <summary>
+            开始打印之前触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.PrintWindow.EndPrint">
+            <summary>
+            完成打印之后触发。
+            </summary>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.LoadReport(System.Windows.Controls.UserControl)">
+            <summary>
+            加载报表/自定义报表。
+            </summary>
+            <param name="reportUI"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.LoadReport``1(System.String,System.String,System.Object[])">
+            <summary>
+            加载报表/调用特定服务方法
+            </summary>
+            <typeparam name="TService"></typeparam>
+            <param name="name">报表名称。</param>
+            <param name="method">服务方法。</param>
+            <param name="args">调用参数。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.LoadReport``1(System.String,System.Collections.Generic.IList{``0})">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="dataList">实体集合。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.LoadReport``1(System.String,System.Linq.IQueryable{``0})">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="queryable">Linq查询。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.LoadReport``1(System.String,EAS.Data.ORM.Condition)">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="condition">查询条件。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.LoadReport``1(System.String,EAS.Data.ORM.Condition,System.Int32,System.Int32)">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="condition">查询条件。</param>
+            <param name="skip">跳过M条记录。</param>
+            <param name="count">读取N条记录。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.Print(System.Boolean)">
+            <summary>
+            打印报表。
+            </summary>
+            <param name="useDefaultPrinter">是否使用默认打印机打印。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.PrintWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EAS.Reporting.Silverlight.ReportViewer">
+            <summary>
+            报表预览控件。
+            </summary>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.#ctor">
+            <summary>
+            初始化ReportViewer实例。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.ReportViewer.VerticalScrollChanged">
+            <summary>
+            滚动条事件。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.XamlRoot">
+            <summary>
+            Xmal定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.Busy">
+            <summary>
+            是否繁忙。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.PrintIndex">
+            <summary>
+            当前打印页码。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.PageIndex">
+            <summary>
+            当前页码。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.PageCount">
+            <summary>
+            获取总页数。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.MultiPage">
+            <summary>
+            是否多页显示。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.DirectPrint">
+            <summary>
+            直接打印，不显示打印选择对话框，需提权才能使用。
+            </summary>
+        </member>
+        <member name="P:EAS.Reporting.Silverlight.ReportViewer.ToolbarPosition">
+            <summary>
+            工具条位置：0/显示在顶部,1/显示在底部。
+            </summary>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.CompileXmal">
+            <summary>
+            编译Xmal/多线程编译。
+            </summary>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.CompileXmal(System.Int32,System.Boolean)">
+            <summary>
+            编译指定页。
+            </summary>
+            <param name="pageIndex">页码。</param>
+            <param name="enforce">是否强制编译。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadXaml">
+            <summary>
+            加载Xaml到预览窗口。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.ReportViewer.LoadCompleted">
+            <summary>
+            报表加载完成后触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.ReportViewer.BeginPrint">
+            <summary>
+            开始打印之前触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Reporting.Silverlight.ReportViewer.EndPrint">
+            <summary>
+            完成打印之后触发。
+            </summary>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadReport(System.Windows.Controls.UserControl)">
+            <summary>
+            加载报表/自定义报表。
+            </summary>
+            <param name="reportUI"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadReport``1(System.String,System.String,System.Object[])">
+            <summary>
+            加载报表/调用特定服务方法
+            </summary>
+            <typeparam name="TService"></typeparam>
+            <param name="name">报表名称。</param>
+            <param name="method">服务方法。</param>
+            <param name="args">调用参数。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadReport``1(System.String,System.Collections.Generic.IList{``0})">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="dataList">实体集合。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadReport``1(System.String,System.Linq.IQueryable{``0})">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="queryable">Linq查询。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadReport``1(System.String,EAS.Data.ORM.Condition)">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="condition">查询条件。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.LoadReport``1(System.String,EAS.Data.ORM.Condition,System.Int32,System.Int32)">
+            <summary>
+            加载报表。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="name">报表名称。</param>
+            <param name="condition">查询条件。</param>
+            <param name="skip">跳过M条记录。</param>
+            <param name="count">读取N条记录。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.Print(System.Boolean)">
+            <summary>
+            打印报表。
+            </summary>
+            <param name="useDefaultPrinter">是否使用默认打印机打印。</param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.btnFirst_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            第一页。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.btnPrevious_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            前一页。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.btnNext_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            后一页。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.btnLast_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            最后一页。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.ChangeIndex(System.Int32)">
+            <summary>
+            改变页码。
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.PrintPreview_VerticalScrollChanged(System.Object,System.EventArgs)">
+            <summary>
+            滚动条。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.layout_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            调整布局。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.slider_ValueChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Double})">
+            <summary>
+            缩放。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.btnSetup_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            页面设置。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.btnPrint_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            打印。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Reporting.Silverlight.ReportViewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

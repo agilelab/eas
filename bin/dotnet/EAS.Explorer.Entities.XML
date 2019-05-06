@@ -1,0 +1,2747 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Explorer.Entities</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.BPM.Entities.WFDefine">
+            <summary>
+            实体对象 WFDefine(流程定义信息)。
+            </summary>    
+            <summary>
+            实体对象 WFDefine(流程定义信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.VersionText">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.FlowID">
+            <summary>
+            流程ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Name">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Desctiption">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Creator">
+            <summary>
+            创建者 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Modifier">
+            <summary>
+            修改者 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.LMTime">
+            <summary>
+            修改时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.StartTime">
+            <summary>
+            开始时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.EndTime">
+            <summary>
+            结束时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.InitialState">
+            <summary>
+            初始状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.CompletedState">
+            <summary>
+            完成状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Xoml">
+            <summary>
+            流程定义 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Rules">
+            <summary>
+            流程规则 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Layout">
+            <summary>
+            流程布局 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Variables">
+            <summary>
+            流程变量 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Module">
+            <summary>
+            业务模块 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.MType">
+            <summary>
+            组件类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.DataType">
+            <summary>
+            实体类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.SilverMType">
+            <summary>
+            组件类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.SilverModule">
+            <summary>
+            业务模块 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.IsPublish">
+            <summary>
+            状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.IsEnable">
+            <summary>
+            是否禁用 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Publisher">
+            <summary>
+            发布人 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.PublishTime">
+            <summary>
+            发布日期 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Version">
+            <summary>
+            版本号 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Photo">
+            <summary>
+            图片 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefine.Statues">
+            <summary>
+            状态集合 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Certificate">
+            <summary>
+            实体对象 Certificate(证书记录)。
+            </summary>
+            <summary>
+            实体对象 Certificate(证书记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.StateName">
+            <summary>
+            状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.Guid">
+            <summary>
+            Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.Name">
+            <summary>
+            证书名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.PrivateKey">
+            <summary>
+            私匙 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.CertInfo">
+            <summary>
+            证书信息 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.StartTime">
+            <summary>
+            启用时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.EndTime">
+            <summary>
+            终止时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.CertState">
+            <summary>
+            状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Certificate.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.CacheItem">
+            <summary>
+            实体对象 CacheItem(缓存记录)。
+            </summary>
+            <summary>
+            实体对象 CacheItem(缓存记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.Name">
+            <summary>
+            实体名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.Type">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.Assembly">
+            <summary>
+            程序集 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.UpdateFiled">
+            <summary>
+            更新属性 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.UpdateCycle">
+            <summary>
+            更新周期 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.PRI">
+            <summary>
+            优先级 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheItem.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.AccountCrowd">
+            <summary>
+            实体对象 AccountCrowd(群组成员)。
+            </summary>
+            <summary>
+            实体对象 AccountCrowd(群组成员)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountCrowd.ID">
+            <summary>
+            记录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountCrowd.CrowdID">
+            <summary>
+            群组ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountCrowd.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountCrowd.LmTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFExecute">
+            <summary>
+            实体对象 WFExecute(流程执行信息)。
+            </summary>
+            <summary>
+            实体对象 WFExcute(流程执行信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.FlowID">
+            <summary>
+            流程ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.InstanceID">
+            <summary>
+            实例ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.StateID">
+            <summary>
+            状态ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.StateName">
+            <summary>
+            状态名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.Action">
+            <summary>
+            动作 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.LoginID">
+            <summary>
+            处理账号 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.ExecuteTime">
+            <summary>
+            执行时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.Result">
+            <summary>
+            处理结果 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.Comment">
+            <summary>
+            处理意见 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.ActionName">
+            <summary>
+            动作名称。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFExecute.ResultText">
+            <summary>
+            处理结果。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Report">
+            <summary>
+            实体对象 Report(报表定义信息)。
+            </summary>
+            <summary>
+            实体对象 Report(报表定义信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Guid">
+            <summary>
+            报表Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Name">
+            <summary>
+            报表名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Alias">
+            <summary>
+            别名 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Metadata">
+            <summary>
+            元数据 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Explain">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Attributes">
+            <summary>
+            属性 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.InputCode">
+            <summary>
+            输入码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.Module">
+            <summary>
+            发布为模块
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Report.LocalPrinter">
+            <summary>
+            本地打印机 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Organization">
+            <summary>
+            实体对象 Organization(机构部门)。
+            </summary>
+            <summary>
+            实体对象 Organization(机构部门)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Guid">
+            <summary>
+            Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.ParentID">
+            <summary>
+            上级机构 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Name">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Address">
+            <summary>
+            地址 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Contact">
+            <summary>
+            联系人 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Tel">
+            <summary>
+            电话 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Fax">
+            <summary>
+            传真 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Email">
+            <summary>
+            邮件 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Homepage">
+            <summary>
+            主页 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.DataID">
+            <summary>
+            数据编码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Module">
+            <summary>
+            属性模块 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Remarks">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.OrganCode">
+            <summary>
+            组织机构代码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Totals">
+            <summary>
+            总人数。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Organization.Onlines">
+            <summary>
+            在线人数。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.ModuleGroup">
+            <summary>
+            实体对象 ModuleGroup(模块分组信息)。
+            </summary>
+            <summary>
+            实体对象 ModuleGroup(模块分组信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ModuleGroup.ObjectID">
+            <summary>
+            模块GUID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ModuleGroup.GroupID">
+            <summary>
+            分组ID 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.JobLog">
+            <summary>
+            实体对象 JobLog(作业日志)。
+            </summary>
+            <summary>
+            实体对象 JobLog(作业日志)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.ID">
+            <summary>
+            日志ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.JobID">
+            <summary>
+            作业ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.ScheduleID">
+            <summary>
+            调度ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.Name">
+            <summary>
+            作业名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.RunTime">
+            <summary>
+            执行时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.Statues">
+            <summary>
+            状态，0成功，-1失败。 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.StatuesText">
+            <summary>
+            状态文本 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobLog.Job">
+            <summary>
+            计划任务 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.MetaSpace">
+            <summary>
+            实体对象 MetaSpace(元数据空间)。
+            </summary>
+            <summary>
+            实体对象 MetaSpace(元数据空间)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.SpaceID">
+            <summary>
+            空间ID。 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.ParentID">
+            <summary>
+            上级ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.Name">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.Explain">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.LMtime">
+            <summary>
+            修改时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaSpace.NameSpace">
+            <summary>
+            命名空间 。
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFState">
+            <summary>
+            实体对象 WFState(流程状态定义)。
+            </summary>
+            <summary>
+            实体对象 WFState(流程状态定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFState.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFState.FlowID">
+            <summary>
+            流程ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFState.Name">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFState.Description">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFState.AddLimit">
+            <summary>
+            附加权限 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.ErrorLog">
+            <summary>
+            实体对象 ErrorLog(错误日志记录)。
+            </summary>
+            <summary>
+            实体对象 ErrorLog(错误日志记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.Type">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.Time">
+            <summary>
+            时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.Message">
+            <summary>
+            错误消息 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.Source">
+            <summary>
+            错误来源 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.TargetSite">
+            <summary>
+            异常方法 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ErrorLog.StackTrace">
+            <summary>
+            错误堆栈 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.DbEntities">
+            <summary>
+            数据上下文。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Entities.DbEntities.#ctor">
+            <summary>
+            初始化DbEntities对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Entities.DbEntities.#ctor(EAS.Data.Access.IDbProvider)">
+            <summary>
+            初始化DbEntities对象实例。
+            </summary>
+            <param name="dbProvider">数据库访问程序提供者。</param>
+        </member>
+        <member name="M:EAS.Explorer.Entities.DbEntities.#ctor(EAS.Data.Access.IDataAccessor)">
+            <summary>
+            初始化DbEntities对象实例。
+            </summary>
+            <param name="dataAccessor">数据访问器。</param>
+        </member>
+        <member name="M:EAS.Explorer.Entities.DbEntities.#ctor(EAS.Data.Access.IDataAccessor,EAS.Data.ORM.IOrmAccessor)">
+            <summary>
+            初始化DbEntities对象实例。
+            </summary>
+            <param name="dataAccessor">数据访问器。</param>
+            <param name="ormAccessor">Orm访问器。</param>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.AccountGroupings">
+            <summary>
+            帐户分组。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Accounts">
+            <summary>
+            系统账户。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.ACLs">
+            <summary>
+            访问控制列表。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.AppSettings">
+            <summary>
+            系统参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.NavigateGroups">
+            <summary>
+            导航分组。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Logs">
+            <summary>
+            登录日志记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.ErrorLogs">
+            <summary>
+            错误日志记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.ModuleGroups">
+            <summary>
+            模块分组信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Modules">
+            <summary>
+            模块信息表。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.MetaSpaces">
+            <summary>
+            元数据空间。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Reports">
+            <summary>
+            报表定义信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Roles">
+            <summary>
+            角色信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Certificates">
+            <summary>
+            证书记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Organizations">
+            <summary>
+            机构部门。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Messages">
+            <summary>
+            离线消息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Bugs">
+            <summary>
+            Bug记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.DesktopItems">
+            <summary>
+            桌面定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.InputDicts">
+            <summary>
+            输入字典。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Variables">
+            <summary>
+            内部变量定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.CacheItems">
+            <summary>
+            缓存记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.EventSubscribes">
+            <summary>
+            订阅项目。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.EventStores">
+            <summary>
+            订阅事件(离线)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.DbCommands">
+            <summary>
+            数据库命令记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.CacheDeleteds">
+            <summary>
+            缓存删除记录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.LuaFunctions">
+            <summary>
+            Lua函数注册。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Scripts">
+            <summary>
+            脚本定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Jobs">
+            <summary>
+            作业/任务。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.JobLogs">
+            <summary>
+            作业日志。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.JobSchedules">
+            <summary>
+            作业调度。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.WFDefines">
+            <summary>
+            流程定义信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.WFStates">
+            <summary>
+            流程状态定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.WFInstances">
+            <summary>
+            流程实例信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.WFExecutes">
+            <summary>
+            流程执行信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.WFInstanceStates">
+            <summary>
+            流程持久化。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.DataObjects">
+            <summary>
+            数据实体。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Metadatas">
+            <summary>
+            元数据定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.MetaVersionTags">
+            <summary>
+            元数据版本历史。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.EnumObjects">
+            <summary>
+            枚举定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.EnumSubItems">
+            <summary>
+            枚举项定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.OfflineFiles">
+            <summary>
+            离线文件。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Crowds">
+            <summary>
+            群组。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.AccountCrowds">
+            <summary>
+            钔组成员。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.Friends">
+            <summary>
+            好友。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbEntities.FriendGroups">
+            <summary>
+            好友分组。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Log">
+            <summary>
+            实体对象 Log(登录日志记录)。
+            </summary>
+            <summary>
+            实体对象 LoginLog(登录日志记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Log.ID">
+            <summary>
+            记录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Log.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Log.Event">
+            <summary>
+            事件 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Log.EventTime">
+            <summary>
+            时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Log.HostName">
+            <summary>
+            主机 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Log.IpAddress">
+            <summary>
+            IP地址 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Friend">
+            <summary>
+            实体对象 Friend(好友)。
+            </summary>
+            <summary>
+            实体对象 Friend(好友)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Friend.ID">
+            <summary>
+            记录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Friend.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Friend.FriendID">
+            <summary>
+            FriendID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Friend.GroupID">
+            <summary>
+            分组ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Friend.LmTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFInstanceState">
+            <summary>
+            实体对象 WFInstanceState(流程持久化)。
+            </summary>
+            <summary>
+            实体对象 WFInstanceState(流程持久化)。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstanceState.InstanceId">
+            <summary>
+            实例ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstanceState.Info">
+            <summary>
+            序列化信息 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstanceState.State">
+            <summary>
+            实例状态 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.EventSubscribe">
+            <summary>
+            实体对象 EventSubscribe(事件订阅)。
+            </summary>
+            <summary>
+            实体对象 EventSubscribe(事件订阅)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventSubscribe.Guid">
+            <summary>
+            GUID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventSubscribe.Subscriber">
+            <summary>
+            订阅者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventSubscribe.Topic">
+            <summary>
+            主题 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventSubscribe.SubscribeTime">
+            <summary>
+            订阅时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.AppSetting">
+            <summary>
+            实体对象 AppSetting(系统参数)。
+            </summary>
+            <summary>
+            实体对象 AppSetting(系统参数)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AppSetting.Category">
+            <summary>
+            参数目录 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AppSetting.Key">
+            <summary>
+            参数名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AppSetting.Description">
+            <summary>
+            参数说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AppSetting.Value">
+            <summary>
+            参数值 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AppSetting.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.EventStore">
+            <summary>
+            实体对象 EventStore(事件存储)。
+            </summary>
+            <summary>
+            实体对象 EventStore(事件存储)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventStore.Guid">
+            <summary>
+            GUID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventStore.Subscriber">
+            <summary>
+            订阅者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventStore.Topic">
+            <summary>
+            主题 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventStore.Body">
+            <summary>
+            消息数据 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EventStore.FCTime">
+            <summary>
+            建立时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.MetaVersionTag">
+            <summary>
+            实体对象 MetaVersionTag(元数据版本历史)。
+            </summary>
+            <summary>
+            实体对象 MetaVersionTag(元数据版本历史)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.MetaID">
+            <summary>
+            元数据ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.Version">
+            <summary>
+            版本 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.Tag">
+            <summary>
+            标签 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.MetaVersionTag.LMtime">
+            <summary>
+            修改/签入/时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.AccountGrouping">
+            <summary>
+            实体对象 AccountGrouping(帐户分组)。
+            </summary>
+            <summary>
+            实体对象 AccountGrouping(帐户分组)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountGrouping.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountGrouping.RoleName">
+            <summary>
+            角色名称 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.CacheDeleted">
+            <summary>
+            实体对象 CacheDeleted(缓存删除记录)。
+            </summary>
+            <summary>
+            实体对象 CacheDeleted(缓存删除记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheDeleted.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheDeleted.Type">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheDeleted.LMTime">
+            <summary>
+            最后更新时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.CacheDeleted.LDTime">
+            <summary>
+            最后删除时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Variable">
+            <summary>
+            实体对象 Variable(内部变量定义)。
+            </summary>
+            <summary>
+            实体对象 Variable(内部变量定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Variable.Value">
+            <summary>
+            值 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Variable.TextValue">
+            <summary>
+            文本值。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Variable.Guid">
+            <summary>
+            变量Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Variable.Name">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Variable.Description">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Variable.TargetExpression">
+            <summary>
+            目标表达式 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Job">
+            <summary>
+            实体对象 Job(作业/任务)。
+            </summary>
+            <summary>
+            实体对象 Job(作业/任务)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Forbidden">
+            <summary>
+            禁用 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.RunUI">
+            <summary>
+            客户端运行 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.JobID">
+            <summary>
+            作业ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Name">
+            <summary>
+            作业名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.LMTime">
+            <summary>
+            修改时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Description">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Actions">
+            <summary>
+            业务动作 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Attribute">
+            <summary>
+            属性,0x00000001:禁用,0x00000010:在客户端运行 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Type">
+            <summary>
+            类型:0/C#,1/Lua,2/javaScript 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Schedules">
+            <summary>
+            调度计划 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Job.Logs">
+            <summary>
+            计费日志 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Metadata">
+            <summary>
+            实体对象 Metadata(元数据定义)。
+            </summary>
+            <summary>
+            实体对象 Metadata(元数据定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.SpaceID">
+            <summary>
+            空间ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.MetaID">
+            <summary>
+            元数据ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.Name">
+            <summary>
+            编码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.Caption">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.MetaType">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.Status">
+            <summary>
+            状态：0/正常,1/签出。 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.Version">
+            <summary>
+            版本 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.LMtime">
+            <summary>
+            修改时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.FullPath">
+            <summary>
+            全路径 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.XMetaType">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Metadata.MetaTypeName">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.EnumSubItem">
+            <summary>
+            实体对象 EnumItem(枚举项定义)。
+            </summary>
+            <summary>
+            实体对象 EnumItem(枚举项定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumSubItem.ID">
+            <summary>
+            ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumSubItem.MetaID">
+            <summary>
+            元数据ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumSubItem.Name">
+            <summary>
+            枚举项名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumSubItem.Caption">
+            <summary>
+            标题/说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumSubItem.Value">
+            <summary>
+            枚举值 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Role">
+            <summary>
+            实体对象 Role(角色信息)。
+            </summary>
+            <summary>
+            实体对象 Role(角色信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Role.Name">
+            <summary>
+            角色名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Role.Description">
+            <summary>
+            角色说明 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.OfflineFile">
+            <summary>
+            实体对象 OfflineFile(离线文件)。
+            </summary>
+            <summary>
+            实体对象 OfflineFile(离线文件)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.OfflineFile.ID">
+            <summary>
+            离线ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.OfflineFile.Sender">
+            <summary>
+            发送者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.OfflineFile.Receiver">
+            <summary>
+            接收者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.OfflineFile.Content">
+            <summary>
+            内容 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.OfflineFile.SendTime">
+            <summary>
+            发送时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFDefineRoot">
+            <summary>
+            流程定义聚合根。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefineRoot.States">
+            <summary>
+            状态定义。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFDefineRoot.Permissions">
+            <summary>
+            权限定义。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.JobSchedule">
+            <summary>
+            实体对象 JobSchedule(作业调度)。
+            </summary>
+            <summary>
+            实体对象 JobSchedule(作业调度)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.Forbidden">
+            <summary>
+            禁用 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.LastTime">
+            <summary>
+            最后执行时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.ScheduleID">
+            <summary>
+            调度ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.JobID">
+            <summary>
+            作业ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.Name">
+            <summary>
+            调度名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.Type">
+            <summary>
+            调度方式,1/轮循,0/定时 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.LMTime">
+            <summary>
+            修改时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.TimeValue">
+            <summary>
+            时间间隔 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.Expression">
+            <summary>
+            表达式 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.Attribute">
+            <summary>
+            属性,0/启用,-1/禁用 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.JobSchedule.Job">
+            <summary>
+            计划任务 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.DesktopItem">
+            <summary>
+            实体对象 DesktopItem(桌面定义)。
+            </summary>
+            <summary>
+            实体对象 Desktop(桌面定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DesktopItem.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DesktopItem.PObject">
+            <summary>
+            模块GUID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DesktopItem.Counter">
+            <summary>
+            访问计数 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DesktopItem.SortCode">
+            <summary>
+            排序码 。
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFInstance">
+            <summary>
+            实体对象 WFInstance(流程实例信息)。
+            </summary>
+            <summary>
+            实体对象 WFInstance(流程实例信息)。
+            </summary>
+        </member>
+        <member name="M:EAS.BPM.Entities.WFInstance.GetDataEntity">
+            <summary>
+            获取工作流实例相关联的业务数据对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.ID">
+            <summary>
+            实例ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.FlowID">
+            <summary>
+            工作流ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.FlowName">
+            <summary>
+            流程名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Subject">
+            <summary>
+            标题 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.CreateTime">
+            <summary>
+            创建日期 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.ProcessTime">
+            <summary>
+            操作日期 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.ComplateTime">
+            <summary>
+            完成日期 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Sender">
+            <summary>
+            发起人 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Handler">
+            <summary>
+            最后处理者 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Handlers">
+            <summary>
+            最后参与者 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Partner">
+            <summary>
+            参与者 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.PreviousState">
+            <summary>
+            上一状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.CurrentState">
+            <summary>
+            流程状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.DataType">
+            <summary>
+            数据类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.DataXML">
+            <summary>
+            业务数据 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.IsComplate">
+            <summary>
+            是否完成 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Error">
+            <summary>
+            错误 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Note">
+            <summary>
+            备注 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.CStateID">
+            <summary>
+            当前状态ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.AddLimit">
+            <summary>
+            状态附加权限 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Flow">
+            <summary>
+            流程定义 。
+            </summary>
+        </member>
+        <member name="P:EAS.BPM.Entities.WFInstance.Executes">
+            <summary>
+            执行记录 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.CertState">
+            <summary>
+            证书状态。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.CertState.Applying">
+            <summary>
+            证书申请中。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.CertState.Audited">
+            <summary>
+            审核已通过。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.CertState.Refused">
+            <summary>
+            申请未通过。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.CertState.Obsolete">
+            <summary>
+            证书已作废。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.FriendGroup">
+            <summary>
+            实体对象 FriendGroup(好友分组)。
+            </summary>
+            <summary>
+            实体对象 FriendGroup(好友分组)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.FriendGroup.GroupID">
+            <summary>
+            组ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.FriendGroup.Name">
+            <summary>
+            分组名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.FriendGroup.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.FriendGroup.LmTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.NavigateModule">
+            <summary>
+            实体对象 GroupModule(模块信息/分组)。
+            </summary>
+            <summary>
+            实体对象 NavigateModule(模块/分组信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Guid">
+            <summary>
+            模块Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Name">
+            <summary>
+            模块名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Assembly">
+            <summary>
+            程序集 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Type">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Version">
+            <summary>
+            版本 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Developer">
+            <summary>
+            开发者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Description">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Url">
+            <summary>
+            Url 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.MvcUrl">
+            <summary>
+            MVC地址 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.OpenTarget">
+            <summary>
+            打开目标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.CssIcon">
+            <summary>
+            css图标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.SortCode">
+            <summary>
+            排序码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Package">
+            <summary>
+            模块包 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Icon">
+            <summary>
+            图标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.GroupID">
+            <summary>
+            分组ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.GroupName">
+            <summary>
+            分组名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateModule.Attributes">
+            <summary>
+            属性 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Message">
+            <summary>
+            实体对象 Message(离线消息)。
+            </summary>
+            <summary>
+            实体对象 Message(离线消息)。
+            </summary>
+            <summary>
+            实体对象 Message(离线消息)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.ID">
+            <summary>
+            消息ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.Sender">
+            <summary>
+            发送者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.Receiver">
+            <summary>
+            接收者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.Content">
+            <summary>
+            内容 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.SendTime">
+            <summary>
+            发送时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.MType">
+            <summary>
+            消息类型:1/消息;0/通知 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Message.CrowdID">
+            <summary>
+            群号 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.MetaType">
+            <summary>
+            枚举定义 MetaType(元数据类型)。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.ACL">
+            <summary>
+            实体对象 ACL(访问控制列表)。
+            </summary>
+            <summary>
+            实体对象 ACL(访问控制列表)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ACL.PObject">
+            <summary>
+            模块/功能 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ACL.Privileger">
+            <summary>
+            权限所有者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ACL.PType">
+            <summary>
+            所有者类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.ACL.PValue">
+            <summary>
+            权限值 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.ReportType">
+            <summary>
+            证书状态。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.ReportType.RDL">
+            <summary>
+            RDL报表。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.ReportType.GReport">
+            <summary>
+            Grid++。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Module">
+            <summary>
+            实体对象 Module(模块信息表)。
+            </summary>
+            <summary>
+            实体对象 Module(模块信息表)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.MTName">
+            <summary>
+            模块类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Used">
+            <summary>
+            常用模块。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.WorkFlowAddIn">
+            <summary>
+            工作流插件。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Guid">
+            <summary>
+            模块Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Name">
+            <summary>
+            模块名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Assembly">
+            <summary>
+            程序集 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Type">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Method">
+            <summary>
+            方法 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Version">
+            <summary>
+            版本 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Developer">
+            <summary>
+            开发者 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Description">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Url">
+            <summary>
+            Url 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.SortCode">
+            <summary>
+            排序码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Attributes">
+            <summary>
+            属性 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Package">
+            <summary>
+            模块包 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.Icon">
+            <summary>
+            图标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.MvcUrl">
+            <summary>
+            MVC地址 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.OpenTarget">
+            <summary>
+            打开目标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.CssIcon">
+            <summary>
+            css图标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Module.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Script">
+            <summary>
+            实体对象 Script(脚本定义)。
+            </summary>
+            <summary>
+            实体对象 Script(脚本定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.Guid">
+            <summary>
+            参数Guid 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.Category">
+            <summary>
+            参数目录 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.Key">
+            <summary>
+            参数名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.Description">
+            <summary>
+            参数说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.Value">
+            <summary>
+            参数值 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.Type">
+            <summary>
+            类型:0/C#,1/Lua,2/javaScript 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Script.TypeText">
+            <summary>
+            类型:0/C#,1/Lua,2/javaScript 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.InputDict">
+            <summary>
+            实体对象 InputDict(输入字典)。
+            </summary>
+            <summary>
+            实体对象 InputDict(输入字典)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.InputID">
+            <summary>
+            字典ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.Name">
+            <summary>
+            名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.DataType">
+            <summary>
+            数据类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.Define">
+            <summary>
+            定义 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.InputCode">
+            <summary>
+            输入码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.FCTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.InputDict.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.DataObject">
+            <summary>
+            实体对象 DataObject(数据实体)。
+            </summary>
+            <summary>
+            实体对象 DataObject(数据实体)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.MetaID">
+            <summary>
+            实体ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.ClassName">
+            <summary>
+            实体名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.Caption">
+            <summary>
+            标题 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.TextPropertie">
+            <summary>
+            主显示属性 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.MapTable">
+            <summary>
+            数据表名 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.NameSpace">
+            <summary>
+            命名空间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.Metadata">
+            <summary>
+            元数据 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DataObject.SpaceID">
+            <summary>
+            模块包 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.LineState">
+            <summary>
+            枚举定义 LineState(在线状态)。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.LuaFunction">
+            <summary>
+            实体对象 LuaFunction(Lua函数注册)。
+            </summary>
+            <summary>
+            实体对象 LuaFunction(Lua函数注册)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.FuncID">
+            <summary>
+            函数ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.FuncName">
+            <summary>
+            函数名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.FuncHeader">
+            <summary>
+            函数头 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.Assembly">
+            <summary>
+            程序集 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.Type">
+            <summary>
+            类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.Method">
+            <summary>
+            方法 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.Description">
+            <summary>
+            函数说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.FuncDocument">
+            <summary>
+            参数说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.LMTime">
+            <summary>
+            更新时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.SR">
+            <summary>
+            服务段注册 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.LuaFunction.CR">
+            <summary>
+            客户段注册 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.NavigateGroup">
+            <summary>
+            实体对象 NavigateGroup(导航分组)。
+            </summary>
+            <summary>
+            实体对象 INavigateGroup(功能分组/导航信息)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.ID">
+            <summary>
+            分组ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.Name">
+            <summary>
+            分组名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.Description">
+            <summary>
+            说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.Attributes">
+            <summary>
+            属性 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.ParentID">
+            <summary>
+            上级ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.SortCode">
+            <summary>
+            排序码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.WFModule">
+            <summary>
+            流程图 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.Icon">
+            <summary>
+            图标 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.NavigateGroup.CssIcon">
+            <summary>
+            css图标 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Crowd">
+            <summary>
+            实体对象 Crowd(群组)。
+            </summary>
+            <summary>
+            实体对象 Crowd(群组)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.ID">
+            <summary>
+            消息ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.Name">
+            <summary>
+            群组名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.Creator">
+            <summary>
+            创建人 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.FcTime">
+            <summary>
+            创建时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.Avatar">
+            <summary>
+            头像 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.Master">
+            <summary>
+            群主 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.Description">
+            <summary>
+            群说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Crowd.LastWords">
+            <summary>
+            最后一句。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.DbCommand">
+            <summary>
+            实体对象 DbCommand(数据库命令记录)。
+            </summary>
+            <summary>
+            实体对象 DbCommand(数据库命令记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbCommand.EventID">
+            <summary>
+            事件ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbCommand.EventClass">
+            <summary>
+            事件类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbCommand.CommandText">
+            <summary>
+            命令文本 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbCommand.StartTime">
+            <summary>
+            开始时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbCommand.IPAddress">
+            <summary>
+            IP地址 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.DbCommand.HostName">
+            <summary>
+            主机名称 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Bug">
+            <summary>
+            实体对象 Bug(Bug记录)。
+            </summary>
+            <summary>
+            实体对象 Bug(Bug记录)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.StateName">
+            <summary>
+            状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.ID">
+            <summary>
+            BugID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.Subject">
+            <summary>
+            主题 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.Content">
+            <summary>
+            Bug内容 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.Environment">
+            <summary>
+            环境 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.Author">
+            <summary>
+            提交人 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.SubmitTime">
+            <summary>
+            提交时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.Recever">
+            <summary>
+            接受人 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Bug.BugState">
+            <summary>
+            Bug状态 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.AccountAttributes">
+            <summary>
+            账号属性。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Entities.AccountAttributes.#ctor(System.Int32)">
+            <summary>
+            使用属性值初始化AccountAttributes对象实体。
+            </summary>
+            <param name="value">属性值。</param>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountAttributes.Value">
+            <summary>
+            值。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountAttributes.MustChangePasswordForNextLogin">
+            <summary>
+            用户下次登录必须更改密码 0x00000001
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountAttributes.CannotChangePassword">
+            <summary>
+            用户不能修改密码 0x00000002
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountAttributes.PasswordNeverExpires">
+            <summary>
+            密码永不过期 0x00000004
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.AccountAttributes.AccountDisabled">
+            <summary>
+            账户已禁用 0x00000008
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.EnumObject">
+            <summary>
+            实体对象 EnumObject(枚举定义)。
+            </summary>
+            <summary>
+            实体对象 EnumObject(枚举定义)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.MetaID">
+            <summary>
+            元数据ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.Name">
+            <summary>
+            枚举名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.Caption">
+            <summary>
+            标题 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.BaseType">
+            <summary>
+            数据类型 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.NameSpace">
+            <summary>
+            命名空间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.SpaceID">
+            <summary>
+            空间ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.EnumObject.Items">
+            <summary>
+            枚举项目 。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Entities.Account">
+            <summary>
+            实体对象 Account(系统账户)。
+            </summary>
+            <summary>
+            实体对象 Account(系统账户)。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LoginID">
+            <summary>
+            登录ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Name">
+            <summary>
+            账户名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Password">
+            <summary>
+            密码 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Attributes">
+            <summary>
+            属性信息 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LoginCount">
+            <summary>
+            登录计数 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Description">
+            <summary>
+            账户说明 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.OriginalID">
+            <summary>
+            原型信息 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Certificate">
+            <summary>
+            证书信息 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.OrganID">
+            <summary>
+            机构ID 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.OrganName">
+            <summary>
+            机构名称 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Leader">
+            <summary>
+            是否主管 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Sex">
+            <summary>
+            性别 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Birthday">
+            <summary>
+            生日 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Address">
+            <summary>
+            地址 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Phone">
+            <summary>
+            电话 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Mail">
+            <summary>
+            邮件 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Avatar">
+            <summary>
+            头像 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LineState">
+            <summary>
+            在线状态 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Master">
+            <summary>
+            主账号 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LoginTime">
+            <summary>
+            登录时间 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LoginRetry">
+            <summary>
+            登录重试次数 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.XLineState">
+            <summary>
+            在线状态：1/在线，2/离开，3/忙碌，4/请勿打扰，5/隐身,6/离线 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LineText">
+            <summary>
+            在线状态：1/在线，2/离开，3/忙碌，4/请勿打扰，5/隐身,6/离线 。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.Organization">
+            <summary>
+            组织机构。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Entities.Account.LastWords">
+            <summary>
+            最后一句。
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFVariable">
+            <summary>
+            实体对象 WFVariable(流程变量)。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.GoComType">
+            <summary>
+            构件类型。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.WinUI">
+            <summary>
+            Win UI构件。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.WebUI">
+            <summary>
+            Web UI构件。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.SilverUI">
+            <summary>
+            Silverlight UI构件。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.Business">
+            <summary>
+            业务逻辑构件。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.Function">
+            <summary>
+            功能/函数构件。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.UIBiz">
+            <summary>
+            界面代理。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GoComType.Report">
+            <summary>
+            报表构件。 
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.GroupType">
+            <summary>
+            导航属性。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GroupType.Windows">
+            <summary>
+            Windows导航。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GroupType.Web">
+            <summary>
+            Web导航。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GroupType.Silverlight">
+            <summary>
+            Silverlight导航。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.GroupType.Expend">
+            <summary>
+            展开。 
+            </summary>
+        </member>
+        <member name="T:EAS.BPM.Entities.WFInstanceRoot">
+            <summary>
+            流程实例聚合根。
+            </summary>
+        </member>
+    </members>
+</doc>

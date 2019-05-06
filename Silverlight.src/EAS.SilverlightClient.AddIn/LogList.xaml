@@ -1,0 +1,55 @@
+﻿<UserControl xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"  
+             x:Class="EAS.SilverlightClient.AddIn.LogList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:MyCtrl="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+             xmlns:SL="clr-namespace:EAS.SilverlightClient;assembly=EAS.SilverlightClient.AddIn"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="800">
+    <UserControl.Resources>
+        <SL:DateConverter x:Key="dc"/>
+        <SL:DateTimeConverter x:Key="dtc"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="#99bbe8" BorderThickness="1,1,1,0" Height="75">
+            <Grid>
+                <TextBox Name="tbIp" Height="21" Width="101" TabIndex="3" Margin="244,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbLoginID" Height="21" Width="101" TabIndex="1" Margin="73,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+                <sdk:Label Name="label4" Height="16" Width="53"   TabIndex="2" Margin="199,0,0,43" HorizontalAlignment="Left" VerticalAlignment="Bottom" >IP地址：</sdk:Label>
+                <sdk:Label Name="label3" Height="16" Width="20"   TabIndex="6" Margin="199,0,0,14" HorizontalAlignment="Left" VerticalAlignment="Bottom" >-&gt;</sdk:Label>
+                <sdk:Label Name="label2" Height="16" Width="65"   TabIndex="4" Margin="19,0,0,14" HorizontalAlignment="Left" VerticalAlignment="Bottom" >事件时间：</sdk:Label>
+                <sdk:Label Name="label5" Height="16" Width="65"   TabIndex="0" Margin="19,0,0,43" HorizontalAlignment="Left" VerticalAlignment="Bottom" >系统账号：</sdk:Label>
+                <sdk:Label Name="label1" Height="21" Width="69"   TabIndex="8" Foreground="Teal" Margin="0,0,52,39" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Verdana" FontSize="16" FontWeight="Bold" Content="登录日志"></sdk:Label>
+                <Button Name="btnSeach" Height="23" Width="70" TabIndex="9" Click="btnSeach_Click" Margin="0,0,90,11" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="检索"></Button>
+                <Button Name="btnClose" Height="23" Width="70" TabIndex="10" Click="btnClose_Click" Margin="0,0,14,11" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="关闭"></Button>
+                <sdk:DatePicker HorizontalAlignment="Left" Margin="73,40,0,0" x:Name="dpStart" VerticalAlignment="Top" Width="119" />
+                <sdk:DatePicker HorizontalAlignment="Left" Margin="225,40,0,0" x:Name="dpEnd" VerticalAlignment="Top" Width="120" />
+                <!--<Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="422,26,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+                <Button Content="Button" Height="23" HorizontalAlignment="Right" Margin="0,26,209,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />-->
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="#99bbe8" BorderThickness="1,1,1,1">
+            <sdk:DataGrid  x:Name="dataList" AutoGenerateColumns="False">
+            	<sdk:DataGrid.Columns>                    
+                    <sdk:DataGridTextColumn Header="账号" IsReadOnly="True"  Width="100" Binding="{Binding LoginID}" />
+                    <sdk:DataGridTextColumn Header="内容" IsReadOnly="True"  Width="150" Binding="{Binding Event}" />
+                    <sdk:DataGridTextColumn Header="时间 " IsReadOnly="True"  Width="140" Binding="{Binding EventTime, Converter={StaticResource dtc}}" />
+                    <sdk:DataGridTextColumn Header="IP" IsReadOnly="True"  Width="120" Binding="{Binding IpAddress}" />
+                    <sdk:DataGridTextColumn Header="主机" IsReadOnly="True"  Width="120" Binding="{Binding HostName}" />
+                    <sdk:DataGridTextColumn Header="ID" IsReadOnly="True"  Width="240" Binding="{Binding ID}" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        </Border>        
+        <Border Grid.Row="2" BorderBrush="#99bbe8" BorderThickness="1,0,1,1" Height="30">
+            <MyCtrl:VisualPager x:Name="pager" HorizontalAlignment="Left"  PageCount="15" Margin="5"  />
+        </Border>
+    </Grid>
+</UserControl>

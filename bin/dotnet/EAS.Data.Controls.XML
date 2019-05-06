@@ -1,0 +1,2249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Data.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Windows.UI.Controls.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataCache.GetDataSource(System.Guid,EAS.Metadatas.InputMetadata,System.String)">
+            <summary>
+            获取指定GUID的检索数据源。
+            </summary>
+            <param name="inputID">ID。</param>
+            <param name="metadata"></param>
+            <param name="inputText">检索条件。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataCache.GetDataItem(System.Guid,System.Object)">
+            <summary>
+            求指定码值对应的数据对象。
+            </summary>
+            <param name="inputID"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataCache.GetDataSource(System.Guid)">
+            <summary>
+            获取指定GUID的检索数据源。
+            </summary>
+            <param name="inputID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataCache.FilteredData(EAS.Metadatas.InputMetadata,System.Collections.IList)">
+            <summary>
+            筛选数据。
+            </summary>
+            <param name="mmd"></param>
+            <param name="vList"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataCache.GetPrimaryKeys(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            求主键。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.DataGridViewAdapter">
+            <summary>
+            DataGridView扩展适配器组件。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.DataGridViewAdapter.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.#ctor">
+            <summary>
+            初始化DataGridViewAdapter对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            初始化DataGridViewAdapter对象实例。
+            </summary>
+            <param name="container">组件容器。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.GetAllowExpand(System.Windows.Forms.DataGridView)">
+            <summary>
+            获取DataGridView控件的数据输入扩展。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+            <returns>是否充许数据扩展。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.SetAllowExpand(System.Windows.Forms.DataGridView,System.Boolean)">
+            <summary>
+            设置DataGridView控件的数据输入扩展。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+            <param name="expand">是否充许数据扩展。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.GetLayoutID(System.Windows.Forms.DataGridView)">
+            <summary>
+            获取指定DataGridView控件的布局元数据ID。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+            <returns>布局元数据ID。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.SetLayoutID(System.Windows.Forms.DataGridView,System.Guid)">
+            <summary>
+            获取指定DataGridView控件的布局元数据ID。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+            <param name="value">布局元数据ID。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.CreateLayout(System.Windows.Forms.DataGridView)">
+            <summary>
+            创建初始化DataGridView控件的列布局定义。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAdapter.GetDataGridViewLayout2(System.Windows.Forms.DataGridView)">
+            <summary>
+            仅内部使用。
+            </summary>
+            <param name="dataGridView"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAdapter.OrmAccessor">
+            <summary>
+            获取/设置ORM访问器。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAdapter.CellUpdate">
+            <summary>
+            数据保存机制是否为单元格数据发生改变立刻保存，默认为True。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.SelectingEventArgs">
+            <summary>
+            Selecting事件参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.SelectingEventArgs.Item">
+            <summary>
+            选择项目。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.SelectingEventArgs.Cancel">
+            <summary>
+            是否取消。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.SelectingEventArgs.SelectedIndex">
+            <summary>
+            选择项索引。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.SelectingEventArgs.Handled">
+            <summary>
+            是否已处理。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.SelectedEventArgs">
+            <summary>
+            Selected事件参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.SelectedEventArgs.Item">
+            <summary>
+            选择项目。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.SelectedEventArgs.Control">
+            <summary>
+            目标文本录入控件。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.HoveredEventArgs">
+            <summary>
+            Hovered事件参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.HoveredEventArgs.Item">
+            <summary>
+            选择项目。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.PaintItemEventArgs">
+            <summary>
+            绘图参数。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.PaintItemEventArgs.#ctor(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            
+            </summary>
+            <param name="graphics"></param>
+            <param name="clipRect"></param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.PaintItemEventArgs.TextRect">
+            <summary>
+            绘图区域。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.PaintItemEventArgs.StringFormat">
+            <summary>
+            格式。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.PaintItemEventArgs.Font">
+            <summary>
+            字体。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.PaintItemEventArgs.IsSelected">
+            <summary>
+            是否选中。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.PaintItemEventArgs.IsHovered">
+            <summary>
+            光标是否在其之中。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.WrapperNeededEventArgs">
+            <summary>
+            包装事件。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.WrapperNeededEventArgs.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            初始化WrapperNeededEventArgs对象实例。
+            </summary>
+            <param name="targetControl"></param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.WrapperNeededEventArgs.TargetControl">
+            <summary>
+            目标文本录入控件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.WrapperNeededEventArgs.Wrapper">
+            <summary>
+            文本录入控件包装接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.SetInputDict(System.Guid,System.Boolean,System.Boolean,System.Func{System.String,System.Object})">
+            <summary>
+            设定录入字典。
+            </summary>
+            <param name="metadataID"></param>
+            <param name="defaultFirstValue"></param>
+            <param name="selectAll"></param>
+            <param name="seachFunc"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.OnTextChanged(System.EventArgs)">
+            <summary>
+            重写基类(MakedTextBox)的OnTextChanged方法。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.GetEditingControlFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)">
+            <summary>
+            获取控件的Text值
+            </summary>
+            <param name="context">错误上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.EditingControlWantsInputKey(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            编辑键盘
+            </summary>
+            <param name="keyData"></param>
+            <param name="dataGridViewWantsInputKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)">
+            <summary>
+            设置样式
+            </summary>
+            <param name="dataGridViewCellStyle"></param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.EditingPanelCursor">
+            <summary>
+            在Cell被编辑的时候光标显示
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.EditingControlDataGridView">
+            <summary>
+            获取或设置所在的DataGridView
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.EditingControlFormattedValue">
+            <summary>
+            获取或设置格式化后的值
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.EditingControlRowIndex">
+            <summary>
+            控件所在行
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewAutoCompleteControl.EditingControlValueChanged">
+            <summary>
+            是否值发生了变化
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextBoxAutoComplete">
+            <summary>
+            文本框自动完成扩展组件，用于实现文本框的输入自动匹配过程。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.TextBoxAutoComplete.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.#ctor">
+            <summary>
+            初始化TextBoxAutoComplete对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            初始化TextBoxAutoComplete对象实例。
+            </summary>
+            <param name="container">组件容器。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetNextControl(System.Windows.Forms.TextBox)">
+            <summary>
+            获取选择完成之后的下一个焦点控件。
+            </summary>
+            <param name="control">当前控件。</param>
+            <returns>下一个焦点控件。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetNextControl(System.Windows.Forms.TextBox,System.Windows.Forms.Control)">
+            <summary>
+            设置选择完成之后的下一个焦点控件。
+            </summary>
+            <param name="control">当前控件。</param>
+            <param name="nextControl">下一个焦点控件。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetMetadataID(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定TextBox自动完成元数据ID。
+            </summary>
+            <param name="control">输入控件。</param>
+            <returns>输入字典ID。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetMetadataID(System.Windows.Forms.TextBox,System.Guid)">
+            <summary>
+            设置指定TextBox自动完成元数据ID。
+            </summary>
+            <param name="control">输入控件。</param>
+            <param name="value">输入字典ID。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.AddListen(System.Windows.Forms.TextBox,EAS.Windows.UI.Controls.InputStruct)">
+            <summary>
+            注册事件坚挺。
+            </summary>
+            <param name="control"></param>
+            <param name="inputStruct"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.RemoveListen(System.Windows.Forms.TextBox,EAS.Windows.UI.Controls.InputStruct)">
+            <summary>
+            移除事件坚挺。
+            </summary>
+            <param name="control"></param>
+            <param name="inputStruct"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.RemoveDropDownListen(System.Windows.Forms.TextBox,EAS.Windows.UI.Controls.InputStruct)">
+            <summary>
+            卸载弹出事件。
+            </summary>
+            <param name="control"></param>
+            <param name="inputStruct"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.AddDropDownListen(System.Windows.Forms.TextBox,EAS.Windows.UI.Controls.InputStruct)">
+            <summary>
+            注册弹出事件。
+            </summary>
+            <param name="control"></param>
+            <param name="inputStruct"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetAutoDropDown(System.Windows.Forms.TextBox)">
+            <summary>
+            获取焦点后是否自动弹开DataWindow。
+            </summary>
+            <param name="control">输入控件。</param>
+            <returns>自动弹开返回true，否则返回false。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetAutoDropDown(System.Windows.Forms.TextBox,System.Boolean)">
+            <summary>
+            设置焦点后是否自动弹开DataWindow。
+            </summary>
+            <param name="control">输入控件。</param>
+            <param name="value">自动弹开值。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.OpenDropDown(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            弹开下拉式输入框。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.ShowPopup(EAS.Windows.UI.Controls.InputStruct,System.Object)">
+            <summary>
+            弹出选择框。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetInputContext(EAS.Windows.UI.Controls.InputStruct,System.Object)">
+            <summary>
+            设置输入界面状态。
+            </summary>
+            <param name="inputStruct"></param>
+            <param name="dataSource"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetTake(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox相联的输入字典的显示记录条数/参数。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>对应输入字典的显示记录条数。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetCondition(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox相关联的输入字典的检索条件。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>对应输入字典的检索条件。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetConditions(System.Windows.Forms.TextBox,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            设置筛选条件。
+            </summary>
+            <param name="textBox">TextBox控件。</param>
+            <param name="conditions">筛选条件。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetDataSource``1(System.Windows.Forms.TextBox,System.Collections.Generic.IList{``0})">
+            <summary>
+            显示的设置数据源。
+            </summary>
+            <param name="textBox">TextBox控件。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetSeachFunc(System.Windows.Forms.TextBox,System.Func{System.String,System.Object})">
+            <summary>
+            显示高级的数据检索方法。
+            </summary>
+            <param name="textBox">TextBox控件。</param>
+            <param name="seachFunc">数据检索方法。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.AutoCompleteIsShow(System.Windows.Forms.TextBox)">
+            <summary>
+            判断当前自动完成控件是否显示。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <returns>自动完成控件显示返回true，事则返回false。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetSelectedItem(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox的选择项。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>当前选定对象。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetSelectedValue(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox的选择值。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>当前选定值。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetSelectedText(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox的选择文本。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>当前选定文本。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetSelectedItem(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            设置指定Textbox的选择项。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <param name="value">对象值。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SetSelectedValue(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            获取指定Textbox的选择编码值。
+            </summary>
+            <param name="control">Textbox控件。</param>
+            <param name="value">编码值。</param>
+            <returns>当前选定值。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SafeSetText(System.Windows.Forms.TextBox)">
+            <summary>
+            安全的设置文本框值。
+            </summary>
+            <param name="tb"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SafeSetText(System.Windows.Forms.TextBox,System.String)">
+            <summary>
+            安全的设置文本框值。
+            </summary>
+            <param name="tb"></param>
+            <param name="Text"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SafeEmptySetText(System.Windows.Forms.TextBox)">
+            <summary>
+            安全的设置文本框值。
+            </summary>
+            <param name="tb"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetInputStruct2(System.Windows.Forms.TextBox)">
+            <summary>
+            仅内部使用。
+            </summary>
+            <param name="textBox"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.SeachDataSource(System.Guid,EAS.Metadatas.InputMetadata,System.Object,System.String)">
+            <summary>
+            处理数据源。
+            </summary>
+            <param name="inputID"></param>
+            <param name="metadata"></param>
+            <param name="vData"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.Seach(EAS.Windows.UI.Controls.InputStruct,EAS.Metadatas.InputMetadata,System.String)">
+            <summary>
+            检索数据。
+            </summary>
+            <param name="inputStruct"></param>
+            <param name="mmd"></param>
+            <param name="inputKey"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetTake(EAS.Metadatas.InputMetadata,System.Object)">
+            <summary>
+            求Top/Take运算。
+            </summary>
+            <param name="mmd"></param>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.CloseHost">
+            <summary>
+            此方法监听鼠标位置，当鼠标不在控件范围内，则自动关闭PopupControlHost
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.CanExtend(System.Object)">
+            <summary>
+            指定此对象是否可以将其扩展程序属性提供给指定的对象
+            </summary>
+            <param name="extendee">要接收扩展程序属性的 System.Object。</param>
+            <returns>如果此对象可以扩展程序属性提供给指定对象，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoComplete.GetFocus(System.Windows.Forms.TextBox)">
+            <summary>
+            获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoComplete.Enabled">
+            <summary>
+            是否启用。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoComplete.DefaultFirstValue">
+            <summary>
+            是否选中第一行记录做为默认值。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoComplete.SelectAll">
+            <summary>
+            控件获得焦点之后是否全部选中。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoComplete.IsOpen">
+            <summary>
+            自动完成是否已经打开。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextBoxAutoComplete.InputComplete">
+            <summary>
+            自动输入完成后触发，即通过智能输入自动完成获得相应的字典值之后触发本事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextBoxAutoComplete.InputCancel">
+            <summary>
+            自动输入放弃后触发，即放弃智能输入自动完成获得相应的字典值之后触发本事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextBoxAutoComplete.NoDataFound">
+            <summary>
+            检索不到数据触发，即进行数据检索时找不到匹配数据项时触发本事件。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.LoadMetadata(EAS.Data.Caching.CacheMetadata)">
+            <summary>
+            提取指定GUID的报表元数据。
+            </summary>
+            <param name="cacheMetadata">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.UpdateMetadata(EAS.Data.Caching.CacheMetadata)">
+            <summary>
+            更新指定GUID的报表元数据。
+            </summary>
+            <param name="cacheMetadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.UpdateCustomSettings(System.Guid,EAS.Metadatas.InputMetadata)">
+            <summary>
+            更新自定义设置。
+            </summary>
+            <param name="inputID"></param>
+            <param name="metadata"></param>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.MessageFilter.MouseClickEvent">
+            <summary>
+            鼠标单击事件。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.FormDisplay.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.FormDisplay.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.FormDisplay.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStruct.View_RowValidating(System.Object,System.Windows.Forms.DataGridViewCellCancelEventArgs)">
+            <summary>
+            执行更新验证。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStruct.GetColumn(EAS.Data.ORM.IDataEntity,System.String)">
+            <summary>
+            求指定属性。
+            </summary>
+            <param name="item"></param>
+            <param name="dataPropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct.View">
+            <summary>
+            表格。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct.AllowExpand">
+            <summary>
+            充许扩展。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct.CanChanged">
+            <summary>
+            数据绑定是否完成。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct.CellChanged">
+            <summary>
+            数据绑定是否完成。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct.OrmAccessor">
+            <summary>
+            ORM访问器。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.AutoCompleteDataGrid">
+            <summary>
+            支持输入字典并能实现回车向右并换行的表格控件。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.AutoCompleteDataGrid.#ctor">
+            <summary>
+            初始化AutoCompleteDataGrid对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.AutoCompleteDataGrid.ProcessDataGridViewKey(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            重获取，该值指示是否应进一步处理某键。 
+            </summary>
+            <param name="e">包含有关所按键的信息。 </param>
+            <returns>如果应处理该键，则为 true；否则为 false。 </returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.AutoCompleteDataGrid.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>
+            重获取，该值指示是否应进一步处理某键。 
+            </summary>
+            <param name="keyData">一个 Keys，它包含有关被按下键的数据。 </param>
+            <returns>如果应处理该键，则为 true；否则为 false。 </returns>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.LookupContext">
+            <summary>
+            弹出PopupControlHost
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.LookupContext.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.LookupContext.PopupHost">
+            <summary>
+            添加对PopupControlHost的引用
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.ConvertData(System.Object)">
+            <summary>
+            显示前的转换。
+            </summary>
+            <param name="vData">数据源。</param>
+            <returns>转换后的数据源。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.SetFocusValue(System.Object)">
+            <summary>
+            设置DataWindow焦点值。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.ContainsValueIndex(System.Object,EAS.Data.ORM.IDataEntity)">
+            <summary>
+            判断值是否存在于数据清单之中。
+            </summary>
+            <param name="dataSource"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.InitializeColumns">
+            <summary>
+            初始化列显示。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.dataGridView_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            回车事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.dataGridView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标双击事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.AddListen(System.Windows.Forms.TextBox)">
+            <summary>
+            添加侦听事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.RemoveListen(System.Windows.Forms.TextBox)">
+            <summary>
+            移除侦听事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.sender_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            侦听键盘回车事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.sender_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            键盘上移和下移
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.SelectNextRow(System.Int32)">
+            <summary>
+            选择下一行
+            </summary>
+            <param name="step"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.btnExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            //关闭弹出选择框
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.LookupContext.btnSet_Click(System.Object,System.EventArgs)">
+            <summary>
+            设置。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.LookupContext.GoNext">
+            <summary>
+            向下一个焦点移动。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.LookupContext.Closed">
+            <summary>
+            关闭事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.LookupContext.Closed2">
+            <summary>
+            关闭事件,关闭不返回值。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.LookupContext.Configured">
+            <summary>
+            设置事件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.Metadata">
+            <summary>
+            对数据字段的绑定
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.DefaultFirstValue">
+            <summary>
+            默认选中第一行。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.ContextValue">
+            <summary>
+            对象返回值。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.ContextValue2">
+            <summary>
+            对象返回值【第一行的值】。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.InputID">
+            <summary>
+            字典ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.InputStruct">
+            <summary>
+            输入字典结构。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.LookupContext.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.ToolStripDropDownEx.Show(System.Windows.Forms.Control,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            返回屏幕位置
+            </summary>
+            <param name="control"></param>
+            <param name="rect"></param>
+            <param name="center"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.ITextAutoCompleteListView">
+            <summary>
+            文本自动补齐,项目显示ListView控件。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.ITextAutoCompleteListView.ShowToolTip(EAS.Windows.UI.Controls.TextAutoCompleteItem,System.Windows.Forms.Control)">
+            <summary>
+            显示提示。
+            </summary>
+            <param name="autoCompleteItem">项目。</param>
+            <param name="control">控件。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.ITextAutoCompleteListView.GetItemRectangle(System.Int32)">
+            <summary>
+            获取项目的绘图区域。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextAutoCompleteListView.ImageList">
+            <summary>
+            图标清单。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextAutoCompleteListView.SelectedItemIndex">
+            <summary>
+            当前选择项目索引。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextAutoCompleteListView.VisibleItems">
+            <summary>
+            可见项目。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextAutoCompleteListView.ToolTipDuration">
+            <summary>
+            提示显示时间。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextAutoCompleteListView.ItemSelected">
+            <summary>
+            项目选中后触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextAutoCompleteListView.ItemHovered">
+            <summary>
+            在项目上时触发。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.AutocompleteListView.ToolTipDuration">
+            <summary>
+            Duration (ms) of tooltip showing
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.AutocompleteListView.ItemSelected">
+            <summary>
+            Occurs when user selected item for inserting into text
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.AutocompleteListView.ItemHovered">
+            <summary>
+            Occurs when current hovered item is changing
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn">
+            <summary>
+            输入字典|自动完列。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.#ctor">
+            <summary>
+            实粒化一个Masked对象
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.OnInputComplete(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            触发输入完成事件。
+            </summary>
+            <param name="tb">文本输入控件。</param>
+            <param name="item">当前选中项目。</param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.CellTemplate">
+            <summary>
+            Cell模版
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.DefaultFirstValue">
+            <summary>
+            是否选中第一行记录做为默认值。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.SelectAll">
+            <summary>
+            控件获得焦点之后是否全部选中。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.AutoDropDown">
+            <summary>
+            字典是否自动弹开。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.MetadataID">
+            <summary>
+            输入字典元数据ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.SeachFunc">
+            <summary>
+            搜索函数。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.InputComplete">
+            <summary>
+            输入完成事件。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.InputDictArgs">
+            <summary>
+            输入完成事件参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.InputDictArgs.SelectedItem">
+            <summary>
+            当前选定的项目。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteColumn.InputDictArgs.TextBox">
+            <summary>
+            输入文本框。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextBoxAutoCompleteCell">
+            <summary>
+            输入字典|自动完成单元格。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoCompleteCell.#ctor">
+            <summary>
+            初始化DataGridViewInputDictCell对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextBoxAutoCompleteCell.InitializeEditingControl(System.Int32,System.Object,System.Windows.Forms.DataGridViewCellStyle)">
+            <summary>
+            编辑在用户编辑单元格时
+            </summary>
+            <param name="rowIndex">当前行</param>
+            <param name="initialFormattedValue">值</param>
+            <param name="dataGridViewCellStyle">Cell样式</param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxAutoCompleteCell.EditType">
+            <summary>
+            设置编辑状态单元格类型
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.PopCloseHandler">
+            <summary>
+            关闭弹出PopupControlHost的委托
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter">
+            <summary>
+            DataGridView扩展适配器组件。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.#ctor">
+            <summary>
+            初始化DataGridViewAdapter2对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            初始化DataGridViewAdapter对象实例。
+            </summary>
+            <param name="container">组件容器。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.GetAllowExpand(System.Windows.Forms.DataGridView)">
+            <summary>
+            获取DataGridView控件的数据输入扩展。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+            <returns>是否充许数据扩展。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.SetAllowExpand(System.Windows.Forms.DataGridView,System.Boolean)">
+            <summary>
+            设置DataGridView控件的数据输入扩展。
+            </summary>
+            <param name="control">DataGridView控件。</param>
+            <param name="expand">是否充许数据扩展。</param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.DbProvider">
+            <summary>
+            获取/设置NoSQL访问器。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStructDbAdapter.CellUpdate">
+            <summary>
+            数据保存机制是否为单元格数据发生改变立刻保存，默认为True。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.BxDataGridView">
+            <summary>
+            重写列头和行头样式GridView
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.BxDataGridView.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.BxDataGridView.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.BxDataGridView.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.BxDataGridView.DataGridView_CellMouseDown(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            右键事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.BxDataGridView.DrawColumnRow(System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+            <summary>
+            Column和RowHeader绘制
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.BxDataGridView.ShowContextMenu">
+            <summary>
+            弹出右键菜单
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.DataGridViewExtensions">
+            <summary>
+            DataGridView扩展方法类。
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.DataGridViewExtensions.CreateColumns(System.Windows.Forms.DataGridView,System.Guid)">
+            <summary>
+            根据输入字典动态创建DataGridView表格列。
+            </summary>
+            <param name="dataGridView">DataGridView表格控件。</param>
+            <param name="inputID">输入字典ID。</param>
+        </member>
+        <member name="M:System.Windows.Forms.DataGridViewExtensions.GetTake(System.Windows.Forms.DataGridView,System.Guid)">
+            <summary>
+            根据输入字典动态求出需要显示的记录数。
+            </summary>
+            <param name="dataGridView">DataGridView表格控件。</param>
+            <param name="inputID">输入字典ID。</param>
+            <returns>记录数。</returns>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextConrolWrapper">
+            <summary>
+            Wrapper over the control like TextBox.
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.ITextConrolWrapper">
+            <summary>
+            文本录入控件包装接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.ITextConrolWrapper.GetPositionFromCharIndex(System.Int32)">
+            <summary>
+            求字符位置的坐标。
+            </summary>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextConrolWrapper.TargetControl">
+            <summary>
+            目标控件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextConrolWrapper.Text">
+            <summary>
+            文本。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextConrolWrapper.SelectedText">
+            <summary>
+            选择文本。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextConrolWrapper.SelectionLength">
+            <summary>
+            选区长度。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextConrolWrapper.SelectionStart">
+            <summary>
+            选区开始位置。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.ITextConrolWrapper.Readonly">
+            <summary>
+            是否只读。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextConrolWrapper.LostFocus">
+            <summary>
+            失去焦点事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextConrolWrapper.Scroll">
+            <summary>
+            滚动事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextConrolWrapper.KeyDown">
+            <summary>
+            KeyDown事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextConrolWrapper.KeyPress">
+            <summary>
+            KeyPress事件。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.ITextConrolWrapper.MouseDown">
+            <summary>
+            MouseDown事件。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.DictInputDialog">
+            <summary>
+            字典录入通用界面。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.#ctor">
+            <summary>
+            初始化FormDictInput对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.OnLoad(System.EventArgs)">
+            <summary>
+            已重载，OnLoad方法，完成初始化加载。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.InitializeColumns">
+            <summary>
+            初始化列显示。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.dataGridView_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            回车事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.dataGridView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标双击事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.AddListen(System.Windows.Forms.TextBox)">
+            <summary>
+            添加侦听事件
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.sender_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            侦听键盘回车事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.sender_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            键盘上移和下移。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.SelectNextRow(System.Int32)">
+            <summary>
+            选择下一行。
+            </summary>
+            <param name="step"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.btnExit_Click(System.Object,System.EventArgs)">
+            <summary>
+            //关闭弹出选择框
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            设置。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.Seach(System.String)">
+            <summary>
+            检索数据。
+            </summary>
+            <param name="inputKey"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.SeachData(System.Object)">
+            <summary>
+            调用内部检索进行数据筛选，便于外部seachFunc调用。
+            </summary>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.SeachData(System.Object,System.String)">
+            <summary>
+            调用内部检索进行数据筛选，便于外部seachFunc调用。
+            </summary>
+            <param name="dataSource">数据源。</param>
+            <param name="condition">检索条件。</param>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.DictInputDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DictInputDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.InputID">
+            <summary>
+            设计或获取输入字典元数据ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.SeachFunc">
+            <summary>
+            设置或获取自定义检索条件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.DefaultFirstValue">
+            <summary>
+            是否默认选中第一行。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.SelectedValue">
+            <summary>
+            对象返回值。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.SeachText">
+            <summary>
+            检索文本。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.Metadata">
+            <summary>
+            对数据字段的绑定
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.ScriptEngine">
+            <summary>
+            脚本引擎。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.ContextValue2">
+            <summary>
+            对象返回值【第一行的值】。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DictInputDialog.DataSource">
+            <summary>
+            数据源。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.IReportDesigner">
+            <summary>
+            报表设计器接口。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.IReportDesigner.ReportName">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.IReportDesigner.ConnectionString">
+            <summary>
+            连接字符串。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.IReportDesigner.QueryText">
+            <summary>
+            查询文本。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.IReportDesigner.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.IReportDesigner.Saved">
+            <summary>
+            事件，保存事件。
+            </summary>
+        </member>
+        <member name="T:System.Windows.Forms.TextBoxExtensions">
+            <summary>
+            TextBox扩展方法。
+            </summary>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.AutoCompleteIsShow(System.Windows.Forms.TextBox)">
+            <summary>
+            判断当前自动完成控件是否显示。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <returns>自动完成控件显示返回true，事则返回false。</returns>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.GetTake(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox相联的输入字典的显示记录条数/参数。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>对应输入字典的显示记录条数。</returns>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.GetCondition(System.Windows.Forms.TextBox)">
+            <summary>
+            获取指定Textbox相关联的输入字典的检索条件。
+            </summary>
+            <param name="textBox">Textbox控件。</param>
+            <returns>对应输入字典的检索条件。</returns>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.GetSelectedItem(System.Windows.Forms.TextBox)">
+            <summary>
+            获取文本框的绑定对像。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <returns>当前选定对象。</returns>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.GetSelectedValue(System.Windows.Forms.TextBox)">
+            <summary>
+            获取文本框的绑定对编码值。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <returns>当前选定对象。</returns>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.SetSelectedItem(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            设置文本框的绑定对像。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <param name="value">对像。</param>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.SetSelectedValue(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            设置文本框的绑定编码值。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <param name="value">对像。</param>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.OpenAutoComplete(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            手工打开自动完成。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.SeachData(System.Windows.Forms.TextBox,System.Object)">
+            <summary>
+            调用内部检索进行数据筛选，便于外部seachFunc调用。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:System.Windows.Forms.TextBoxExtensions.SeachData(System.Windows.Forms.TextBox,System.Object,System.String)">
+            <summary>
+            调用内部检索进行数据筛选，便于外部seachFunc调用。
+            </summary>
+            <param name="textBox">文本框。</param>
+            <param name="dataSource">数据源。</param>
+            <param name="condition">检索条件。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewLayout.InitializeColumns">
+            <summary>
+            初始化列显示。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewLayout.DataGrid">
+            <summary>
+            DataGridView。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewLayout.LayoutID">
+            <summary>
+            布局ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewLayout.Metadata">
+            <summary>
+            对数据字段的绑定
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStruct2.View_RowValidating(System.Object,System.Windows.Forms.DataGridViewCellCancelEventArgs)">
+            <summary>
+            执行更新验证。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.DataGridViewStruct2.GetColumn(EAS.Data.ORM.IDataEntity,System.String)">
+            <summary>
+            求指定属性。
+            </summary>
+            <param name="item"></param>
+            <param name="dataPropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct2.View">
+            <summary>
+            表格。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct2.AllowExpand">
+            <summary>
+            充许扩展。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct2.CanChanged">
+            <summary>
+            数据绑定是否完成。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct2.CellChanged">
+            <summary>
+            数据绑定是否完成。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.DataGridViewStruct2.DbProvider">
+            <summary>
+            ORM访问器。
+            </summary>
+        </member>
+        <member name="T:EAS.Data.Caching.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Data.Caching.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextRange">
+            <summary>
+            文本范围。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextRange.#ctor(EAS.Windows.UI.Controls.ITextConrolWrapper)">
+            <summary>
+            初始化Range对象。
+            </summary>
+            <param name="targetWrapper"></param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextRange.TargetWrapper">
+            <summary>
+            文本录入控件包装接口。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextRange.Start">
+            <summary>
+            开始位置。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextRange.End">
+            <summary>
+            结束位置。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextRange.Text">
+            <summary>
+            文本。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MetadataHelper.GetMetadata(System.Guid)">
+            <summary>
+            获取指定GUID的报表元数据。
+            </summary>
+            <param name="inputID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MetadataHelper.GetScriptEngine(System.Guid)">
+            <summary>
+            求脚本引擎。
+            </summary>
+            <param name="inputID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MetadataHelper.UpdateCustomSettings(System.Guid,EAS.Metadatas.InputMetadata)">
+            <summary>
+            更新元数据/自定义设置。
+            </summary>
+            <param name="inputID"></param>
+            <param name="metadata">ID。</param>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextBoxInputEventAgrs">
+            <summary>
+            文本框输入完成事件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxInputEventAgrs.TextBox">
+            <summary>
+            输入文本框。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextBoxInputEventAgrs.InputID">
+            <summary>
+            字典ID。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.CompareResult">
+            <summary>
+            比对结果。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.CompareResult.Hidden">
+            <summary>
+            隐藏项目。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.CompareResult.Visible">
+            <summary>
+            显示项目。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.CompareResult.VisibleAndSelected">
+            <summary>
+            显示项目并选中。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextAutoCompleteItem">
+            <summary>
+            文本自动补齐项目。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.#ctor">
+            <summary>
+            初始化TextAutoCompleteItem对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.#ctor(System.String)">
+            <summary>
+            初始化TextAutoCompleteItem对象实例。
+            </summary>
+            <param name="text">文本。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.#ctor(System.String,System.Int32)">
+            <summary>
+            初始化TextAutoCompleteItem对象实例。
+            </summary>
+            <param name="text">文本。</param>
+            <param name="imageIndex">图像索引。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            初始化TextAutoCompleteItem对象实例。
+            </summary>
+            <param name="text">文本。</param>
+            <param name="imageIndex">图像索引。</param>
+            <param name="menuText">菜单文本。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.#ctor(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            初始化TextAutoCompleteItem对象实例。
+            </summary>
+            <param name="text">文本。</param>
+            <param name="imageIndex">图像索引。</param>
+            <param name="menuText">菜单文本。</param>
+            <param name="toolTipTitle">提示标题。</param>
+            <param name="toolTipText">提示文本。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.GetTextForReplace">
+            <summary>
+            获取要插入到录入控件的文本。
+            </summary>
+            <returns>文本。</returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.Compare(System.String)">
+            <summary>
+            比对片段文本。
+            </summary>
+            <param name="fragmentText">片段文本。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.ToString">
+            <summary>
+            转换成字符串表示。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.OnSelected(EAS.Windows.UI.Controls.SelectedEventArgs)">
+            <summary>
+            文本插入到录入控件之后执行。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoCompleteItem.OnPaint(EAS.Windows.UI.Controls.PaintItemEventArgs)">
+            <summary>
+            绘图方法。
+            </summary>
+            <param name="e">绘图参数。</param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.Tag">
+            <summary>
+            Tag对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.Parent">
+            <summary>
+            TextAutoComplete对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.Text">
+            <summary>
+            要插入到文本录入控件的文本。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.ImageIndex">
+            <summary>
+            用于显示的图像索引。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.ToolTipTitle">
+            <summary>
+            项目提示标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.ToolTipText">
+            <summary>
+            项目提示文本。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoCompleteItem.MenuText">
+            <summary>
+            菜单文本，显示在下拉菜单之中的文本。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.MethodTextAutoCompleteItem">
+            <summary>
+            自动成员补齐，按.后提示。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MethodTextAutoCompleteItem.#ctor(System.String)">
+            <summary>
+            初始化MethodAutoCompleteItem对象实例。
+            </summary>
+            <param name="text">文本。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MethodTextAutoCompleteItem.Compare(System.String)">
+            <summary>
+            比对文本片段。
+            </summary>
+            <param name="fragmentText">文本片段。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MethodTextAutoCompleteItem.GetTextForReplace">
+            <summary>
+            获取要插入到录入控件的文本。
+            </summary>
+            <returns>文本。</returns>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.SnippetTextAutoCompleteItem">
+            <summary>
+            代码段自动插入，VS代码段插入。
+            </summary>
+            <remarks>
+            代码段内容以^标记。
+            </remarks>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SnippetTextAutoCompleteItem.#ctor(System.String)">
+            <summary>
+            初始化SnippetTextAutoCompleteItem类对象实例。
+            </summary>
+            <param name="snippet"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SnippetTextAutoCompleteItem.ToString">
+            <summary>
+            转换为字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SnippetTextAutoCompleteItem.GetTextForReplace">
+            <summary>
+            获取文本显示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SnippetTextAutoCompleteItem.OnSelected(EAS.Windows.UI.Controls.SelectedEventArgs)">
+            <summary>
+            文本插入到录入控件之后执行。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SnippetTextAutoCompleteItem.Compare(System.String)">
+            <summary>
+            比对文本片段。
+            </summary>
+            <param name="fragmentText">文本片段。</param>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.SubstringTextAutoCompleteItem">
+            <summary>
+            子字符串查找、即关键字查找。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.SubstringTextAutoCompleteItem.lowercaseText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.SubstringTextAutoCompleteItem.ignoreCase">
+            <summary>
+            忽略大小写。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SubstringTextAutoCompleteItem.#ctor(System.String,System.Boolean)">
+            <summary>
+            初始化SubstringTextAutoCompleteItem对象实例。
+            </summary>
+            <param name="text"></param>
+            <param name="ignoreCase"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.SubstringTextAutoCompleteItem.Compare(System.String)">
+            <summary>
+            比对文本片段。
+            </summary>
+            <param name="fragmentText">文本片段。</param>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem">
+            <summary>
+            多列显示项目。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem.#ctor(System.String[],System.String,System.Boolean,System.Boolean)">
+            <summary>
+            初始化MulticolumnAutoCompleteItem对象实例。
+            </summary>
+            <param name="menuTextByColumns">显示文本。</param>
+            <param name="insertingText">插入文本。</param>
+            <param name="compareBySubstring">是否使用子字符串查找。</param>
+            <param name="ignoreCase">是否忽略大小写。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem.Compare(System.String)">
+            <summary>
+            比对文本片段。
+            </summary>
+            <param name="fragmentText">文本片段。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem.OnPaint(EAS.Windows.UI.Controls.PaintItemEventArgs)">
+            <summary>
+            绘图函数。
+            </summary>
+            <param name="e">绘图参数。</param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem.CompareBySubstring">
+            <summary>
+            是否使用子字符串查找。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem.MenuTextByColumns">
+            <summary>
+            显示文本集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.MulticolumnAutoCompleteItem.ColumnWidth">
+            <summary>
+            列宽。
+            </summary>
+        </member>
+        <member name="T:EAS.Windows.UI.Controls.TextAutoComplete">
+            <summary>
+            文本录入控件自动补齐扩展组件，用于实现文本框的自动补齐、智能联想录入。
+            </summary>
+        </member>
+        <member name="F:EAS.Windows.UI.Controls.TextAutoComplete.m_LastFragmentText">
+            <summary>
+            上次一的最后计算文本。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.#ctor">
+            <summary>
+            初始化TextAutoComplete对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.Dispose(System.Boolean)">
+            <summary>
+            已重写，释放资源。
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.OnWrapperNeeded(EAS.Windows.UI.Controls.WrapperNeededEventArgs)">
+            <summary>
+            触发WrapperNeeded事件。
+            </summary>
+            <param name="args">事件参数。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.Update">
+            <summary>
+            更新录入界面大小。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.GetItemRectangle(System.Int32)">
+            <summary>
+            获取当前项目区域。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.GetCanAutoComplete(System.Windows.Forms.Control)">
+            <summary>
+            获取/设置是否使用自动补齐功能。
+            </summary>
+            <param name="control">文本录入控件。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.SetCanAutoComplete(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            获取/设置是否使用自动补齐功能。
+            </summary>
+            <param name="control">文本录入控件。</param>
+            <param name="canPopup"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.Close">
+            <summary>
+            关闭录入。
+            </summary>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.SetAutocompleteItems(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            设计自动补齐项目。
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.SetAutocompleteItems(System.Collections.Generic.IEnumerable{EAS.Windows.UI.Controls.TextAutoCompleteItem})">
+            <summary>
+            设置自动补齐项目。
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.AddItem(System.String)">
+            <summary>
+            添加项目。
+            </summary>
+            <param name="item">项目文本。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.AddItem(EAS.Windows.UI.Controls.TextAutoCompleteItem)">
+            <summary>
+            添加项目。
+            </summary>
+            <param name="item">项目。</param>
+        </member>
+        <member name="M:EAS.Windows.UI.Controls.TextAutoComplete.Show(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            强制显示自动补齐界面。
+            </summary>
+            <param name="control">文本录入控件。</param>
+            <param name="forced">是否打开获得焦点。</param>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.VisibleItems">
+             <summary>
+            可见项目。
+             </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.SelectedItemIndex">
+            <summary>
+            当前选择项目索引。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextAutoComplete.WrapperNeeded">
+            <summary>
+            在需要创建自动补齐包装信息时触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextAutoComplete.Selecting">
+            <summary>
+            选择项目时触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextAutoComplete.Selected">
+            <summary>
+            完成选择项目触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextAutoComplete.Hovered">
+            <summary>
+            光标在项目上是触发。
+            </summary>
+        </member>
+        <member name="E:EAS.Windows.UI.Controls.TextAutoComplete.Opening">
+            <summary>
+            自动补齐界面打开后触发。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.Host">
+            <summary>
+            Host。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.TargetControlWrapper">
+            <summary>
+            当前文本录入控件包装。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.ToolTipDuration">
+            <summary>
+            提示显示时长。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.MaximumSize">
+            <summary>
+            录入提示最大尺寸。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.Font">
+            <summary>
+            字体。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.LeftPadding">
+            <summary>
+            文本左边距。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.AutoPopup">
+            <summary>
+            是否自动弹出，如果为False，则必须强制使用Ctrl-Space。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.CaptureFocus">
+            <summary>
+            提示框打开后是否捕获焦点。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.RightToLeft">
+            <summary>
+            对于RTL语言，是否应该向右向左进行绘制。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.ImageList">
+            <summary>
+            图标列表。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.Fragment">
+            <summary>
+            片段。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.SearchPattern">
+            <summary>
+            搜索片段使用的正则表达式。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.MinFragmentLength">
+            <summary>
+            最小片段长度。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.AllowsTabKey">
+            <summary>
+            是否允许使用TAB键选择项。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.AppearInterval">
+            <summary>
+            录入提示显示的间隔（毫秒）。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.Items">
+            <summary>
+            录入项列表。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.ListView">
+            <summary>
+            用于显示录入提示的界面ListView控件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.Enabled">
+            <summary>
+            是否启用。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.TextAutoComplete.SeachFunc">
+            <summary>
+            检索方法。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.TextBox">
+            <summary>
+            文本框对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.InputID">
+            <summary>
+            输入ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.AutoDropDown">
+            <summary>
+            是否自动弹开。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.Host">
+            <summary>
+            弹出对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.ParentHandle">
+            <summary>
+            父窗口句柄。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.Context">
+            <summary>
+            输入上下文。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.Conditions">
+            <summary>
+            动态筛选条件。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.SeachFunc">
+            <summary>
+            数据检索函数。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.DataSource">
+            <summary>
+            显示的数据源。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.DataSource2">
+            <summary>
+            显示的数据源。
+            </summary>
+        </member>
+        <member name="P:EAS.Windows.UI.Controls.InputStruct.ContextValue">
+            <summary>
+            对象返回值。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.TryTime">
+            <summary>
+            尝试更新时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.LastTime">
+            <summary>
+            最后更新时间。
+            </summary>
+        </member>
+    </members>
+</doc>

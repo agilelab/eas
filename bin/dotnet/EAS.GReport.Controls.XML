@@ -1,0 +1,2845 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.GReport.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.GReport.Controls.GDisplayViewer">
+            <summary>
+            数据查看报表控件。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.IGRViewer">
+            <summary>
+            GReport显示容器。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.IGRViewer.Start">
+            <summary>
+            开始。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.IGRViewer.Stop">
+            <summary>
+            停止。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.IGRViewer.Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.#ctor">
+            <summary>
+            初始化报表浏览控件。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.SqlDataBind">
+            <summary>
+            Sql报表绑定。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.Start">
+            <summary>
+            开始。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.Stop">
+            <summary>
+            停止。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.EAS#GReport#Controls#IGRViewer#Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.GetSubReports">
+            <summary>
+            查询子报表清单。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.GetCharts">
+            <summary>
+            查询图表对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.GetSubReport(System.String)">
+            <summary>
+            根据名称求子报表。
+            </summary>
+            <param name="subName">子报表名称。</param>
+            <returns>子报表。</returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.PostColumnLayout">
+            <summary>
+            应用打印布局。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.Clear">
+            <summary>
+            清除所有的报表模板定义数据，使报表主对象成为一张空白报表。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.PrintView(System.Boolean)">
+            <summary>
+            打开预览。
+            </summary>
+            <param name="showModal">是否显示为模式对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.Print(System.Boolean)">
+            <summary>
+            直接打印。
+            </summary>
+            <param name="showPrintDialog">是否显示打印对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.Export(EAS.GReport.Report.ExportType)">
+            <summary>
+            导出报表。
+            </summary>
+            <param name="type">导出类型。</param>
+        </member>
+        <member name="F:EAS.GReport.Controls.GDisplayViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GDisplayViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.AlternateColor">
+            <summary>
+            是否显示交替色。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.Closed">
+            <summary>
+            公共事件，关闭打印对话框。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.ExtractData">
+            <summary>
+            公共事件，提取数据。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.BeforePrint">
+            <summary>
+            公共事件，提取数据。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.BeforePreview">
+            <summary>
+            公共事件，提取数据。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowHeader">
+            <summary>
+            获取或设计一个值，指示是否显示报表头。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowFooter">
+            <summary>
+            获取或设计一个值，指示是否显示报表尾。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ScrollBars">
+            <summary>
+            获取或设置查询控件的滚动条模式。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.PageStyle">
+            <summary>
+            获取或设置查询控件的分页模式：0/不分页，1/自适应分页，2/按行数分页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.PageSize">
+            <summary>
+            获取或设置查询控件的分页记录数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.Resortable">
+            <summary>
+            获取或设置是否可以通过点击明细网格的列标题对明细记录进行重新排序。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.Printed">
+            <summary>
+            打印之前触发本事件、用于控制记录打印次数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ReportName">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ReportID">
+            <summary>
+            报表ID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.SqlCommand">
+            <summary>
+            报表Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.SqlCommand2">
+            <summary>
+            报表参数Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.SqlParameters">
+            <summary>
+            Sql参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.DataAccessor">
+            <summary>
+            数据链接。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.GReport">
+            <summary>
+            报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.RowCount">
+            <summary>
+            行总数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.SelectColumnNo">
+            <summary>
+            选中的列号。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.SelectColumnName">
+            <summary>
+            选中的列名。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.SelectRowNo">
+            <summary>
+            选中的行号。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.Metadata">
+            <summary>
+            报表元数据定义。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.DataObject">
+            <summary>
+            数据源对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ColumnLayout">
+            <summary>
+            打印重置布局。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.GRViewer">
+            <summary>
+            内置的Grid++查询控制。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.Report">
+            <summary>
+            当前的工作报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowLoad">
+            <summary>
+            是否显示提取数据按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowExport">
+            <summary>
+            是否显示打印按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowPrint">
+            <summary>
+            是否显示打印按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowClose">
+            <summary>
+            是否显示提取数据按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowReportID">
+            <summary>
+            是否显示报表ID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ToolBoxDockStyle">
+             <summary>
+            工具条显示位置。
+             </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.ShowToolBox">
+             <summary>
+            是否显示工具条。
+             </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GDisplayViewer.EAS#Modularization#IAddIn#Name">
+            <summary>
+            模块名称。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.ChartClickLegend">
+            <summary>
+            当点击图表的图例时触发本事件。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.ChartDblClickLegend">
+            <summary>
+            当双击图表的图例时触发本事件。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.ChartClickSeries">
+            <summary>
+            当点击图表的图形时触发本事件。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.ChartDblClickSeries">
+            <summary>
+            当双击图表的图形时触发本事件。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.SelectedCellChanged">
+            <summary>
+            选择单元格改变时发生。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.SectionClick">
+            <summary>
+            当鼠标点击在某个节上时触发。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.SectionDoubleClick">
+            <summary>
+            当鼠标双击在某个节上时触发。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.CellClick">
+            <summary>
+            鼠标点击单元格时发生。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GDisplayViewer.CellDoubleClick">
+            <summary>
+            鼠标爽击单元格时发生。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.GReportDesigner">
+            <summary>
+            Grid++报表设计器。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.openMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             打开报表菜单
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.OpenReport">
+            <summary>
+            打开报表
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.saveMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            保存报表菜单
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.SaveReport">
+            <summary>
+            保存报表
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.SaveAsReport">
+            <summary>
+            报表另存为
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.ReOpenReport">
+            <summary>
+             重新打开报表
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.cancelMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             撤消菜单
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.repeatMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             重复操作菜单
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.cutMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             剪切
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.copyMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            复制
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.plasterMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            粘贴
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.deleteMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.selectAllMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            全选
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.autoResizetMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            自动调整大小
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.buildFieldMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             根据查询自动生成字段
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.buildColumnMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            根据字段生成列
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.toolbarMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            工具栏
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.objectLookMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             对象浏览窗口
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.propertyEditMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            属性浏览窗口
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.layoutWindowLeftMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            布局窗口位于左边
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.layoutWindowRightMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            布居局窗口位于右边
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.commonViewMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             普通视图
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.pageViewMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            页面视图
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.chineseInterfaceMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            中文页面
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.englishInterfaceMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             英文页面
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.pageSetMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            页面设置
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.databaseQueryMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            数据库查询
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.columnTitleLayoutMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            列标题布局
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.fieldCollectionMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            字段集合
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.groupCollectionMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            组集合
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.columnCollectionMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            列集合
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.parameterCollectionMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            参数集合
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.StaticBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            静态文本框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.memoBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            综合文件框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.fieldBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             字段框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.summaryBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            统计框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.systemBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            系统变量框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.richtextBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            RTF框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.shapeBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            图形框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.lineMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            线段框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.pictureBoxMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            图片框
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.bsubReportMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             子报表
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.pageHeaderMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             页眉
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.pageFooterMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            页脚
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.reportHeaderMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            报表头
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.reportFooterMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            报表尾
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.detailGridMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            明细网格
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.gourpMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            分组
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.columnMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            列
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.FieldMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            字段
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.parameterMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            参数
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignLeftMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            左对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignCenterMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            居中对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignRightMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            右对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignTopMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            顶端对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignMiddleMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            中间对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignBottomMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            底部对齐
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.alignGridMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            对齐到栅格
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.sameWidthMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            使宽度相同
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.sameHightMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            使高度相同
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.sameBothMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            两者相同
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.sameGridMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             按网络调整大小
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.lSpaceEquallyMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+             相同间隔
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.lSpaceIncraseMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            递增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.lSpaceDecreaseMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            递减
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.lSpaceRemoveMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            移除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.vSpaceEquallyMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             垂直相同间隔
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.vSpaceIncreaseMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             垂直递增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.vSpaceDecreaseMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            垂直递减
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.vSpaceRemoveMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+             垂直移除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.bringToFrontMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+            置于顶层
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.sendToBackMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            置于底层
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:EAS.GReport.Controls.GReportDesigner.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GReportDesigner.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GReportDesigner.ReportName">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GReportDesigner.ConnectionString">
+            <summary>
+            连接字符串。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GReportDesigner.QueryText">
+            <summary>
+            查询文本。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GReportDesigner.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GReportDesigner.Saved">
+            <summary>
+            事件，保存事件。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.DialogDataObject.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DialogDataObject.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.DialogDataObject.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.PrintToGridOptions.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintToGridOptions.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintToGridOptions.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheMetadata.LoadCache">
+            <summary>
+            加载缓存。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheMetadata.UpdateCache">
+            <summary>
+            更新缓存。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.ID">
+            <summary>
+            输入ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.UpdateCycle">
+            <summary>
+            更新周期。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.TryTime">
+            <summary>
+            尝试更新时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.LastTime">
+            <summary>
+            最后更新时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.Metadata">
+            <summary>
+            元数据。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.Helper.DllRegisterServer">
+            <summary>
+            实现自注册。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.FormCondition.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.FormCondition.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.FormCondition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.FormCondition.Metadata">
+            <summary>
+             报表元数据。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.FormCondition.Values">
+            <summary>
+            选择参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.DbColumnEx.Checked">
+            <summary>
+            是否选中。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.DbColumnEx.Caption">
+            <summary>
+            是否选中。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.contents1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.Excel20071">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.Find2">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.gnome_preferences_system">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.page_white_acrobat1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.page_world1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.print_preview">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.printer">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.printer_2_">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.printer_3_">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.TabIcons_bmp">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.text_preview">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.Properties.Resources.Word20071">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.PrintViewDialog">
+            <summary>
+            打印预览对话框。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.Export(EAS.GReport.Report.ExportType)">
+            <summary>
+            导出报表。
+            </summary>
+            <param name="type">导出类型。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.SqlDataBind">
+            <summary>
+            Sql报表绑定。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.GetSubReports">
+            <summary>
+            查询子报表清单。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.GetCharts">
+            <summary>
+            查询图表对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.GetSubReport(System.String)">
+            <summary>
+            根据名称求子报表。
+            </summary>
+            <param name="subName">子报表名称。</param>
+            <returns>子报表。</returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.Print(System.Boolean)">
+            <summary>
+            直接打印。
+            </summary>
+            <param name="showPrintDialog">是否显示打印对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.Clear">
+            <summary>
+            清除所有的报表模板定义数据，使报表主对象成为一张空白报表。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.PrintViewDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.ReportName">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.ReportID">
+            <summary>
+            报表ID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.SqlCommand">
+            <summary>
+            报表Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.SqlCommand2">
+            <summary>
+            报表参数Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.SqlParameters">
+            <summary>
+            Sql参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.DataAccessor">
+            <summary>
+            数据链接。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.PrintRange">
+            <summary>
+            打印范围。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.StartPage">
+            <summary>
+            开始页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.EndPage">
+            <summary>
+            结束页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.DataObject">
+            <summary>
+            数据源对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.GRViewer">
+            <summary>
+            内置的Grid++查询控制。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.Report">
+            <summary>
+            当前的工作报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.PrintViewDialog.GReport">
+            <summary>
+            报表对象。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.PrintViewDialog.Printed">
+            <summary>
+            打印之前触发本事件、用于控制记录打印次数。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.LuaEx">
+            <summary>
+            Lua扩展。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.LuaEx.PrintView(System.String,System.String)">
+            <summary>
+            打印预览。
+            </summary>
+            <param name="reportID"></param>
+            <param name="sqlCommand"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.LuaEx.Print(System.String,System.String)">
+            <summary>
+            打印报表。
+            </summary>
+            <param name="reportID"></param>
+            <param name="sqlCommand"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.LuaEx.PrintView2(System.Object,System.String,System.String)">
+            <summary>
+            打印预览。
+            </summary>
+            <param name="viewer"></param>
+            <param name="reportID"></param>
+            <param name="sqlCommand"></param>
+        </member>
+        <member name="M:EAS.GReport.Controls.LuaEx.Print2(System.Object,System.String,System.String)">
+            <summary>
+            打印报表。
+            </summary>
+            <param name="viewer"></param>
+            <param name="reportID"></param>
+            <param name="sqlCommand"></param>
+        </member>
+        <member name="M:EAS.GReport.MetadataHelper.GetMetadata(System.Guid)">
+            <summary>
+            获取指定GUID的报表元数据。
+            </summary>
+            <param name="reportID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="F:EAS.GReport.Controls.ConditionControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.ConditionControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.ConditionControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.ConditionControl.SetLayout">
+            <summary>
+            创建生成布局。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.ConditionControl.Metadata">
+            <summary>
+             报表元数据。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.ConditionControl.Values">
+            <summary>
+            选择参数。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.KeyHelper.KeyIsInt(System.Int32)">
+            <summary>
+             判定输入（允许输入数字，删除，退格，左右方向键）
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.KeyHelper.KeyIsDecimal(System.Int32)">
+            <summary>
+            判定输入（允许输入数字，小数点，删除，退格，左右方向键）
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.KeyHelper.KeyIsPhone(System.Int32)">
+            <summary>
+            电话号码输入判断（允许输入数字，减号，删除，退格，左右方向键）
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.KeyHelper.KeyIsPressure(System.Int32)">
+            <summary>
+            血压输入判断（允许输入数字，减号，删除，退格，左右方向键）
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.KeyHelper.KeyIsPNumber(System.Int32)">
+            <summary>
+             住院号输入判定（目前为整数）
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.GPrintViewer">
+            <summary>
+            Grid++报表浏览器控件。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.GPrintViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.#ctor">
+            <summary>
+            初始化报表打印控件。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.SqlDataBind">
+            <summary>
+            Sql报表绑定。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.Start">
+            <summary>
+            开始。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.Stop">
+            <summary>
+            停止。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.EAS#GReport#Controls#IGRViewer#Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.GetSubReports">
+            <summary>
+            查询子报表清单。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.GetCharts">
+            <summary>
+            查询图表对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.GetSubReport(System.String)">
+            <summary>
+            根据名称求子报表。
+            </summary>
+            <param name="subName">子报表名称。</param>
+            <returns>子报表。</returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.Export(EAS.GReport.Report.ExportType)">
+            <summary>
+            导出报表。
+            </summary>
+            <param name="type">导出类型。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.LoadFromDocumentFile(System.String)">
+            <summary>
+            载入指定的 Grid++Report 文档文件并在打印查看器中显示。
+            </summary>
+            <param name="fileName">文件名称。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.Clear">
+            <summary>
+            清除所有的报表模板定义数据，使报表主对象成为一张空白报表。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.PrintView(System.Boolean)">
+            <summary>
+            打开预览。
+            </summary>
+            <param name="showModal">是否显示为模式对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GPrintViewer.Print(System.Boolean)">
+            <summary>
+            直接打印。
+            </summary>
+            <param name="showPrintDialog">是否显示打印对话框。</param>
+        </member>
+        <member name="E:EAS.GReport.Controls.GPrintViewer.Closed">
+            <summary>
+            公共事件，关闭打印对话框。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GPrintViewer.ExtractData">
+            <summary>
+            公共事件，提取数据。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ReportName">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ReportID">
+            <summary>
+            报表ID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.SqlCommand">
+            <summary>
+            报表Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.SqlCommand2">
+            <summary>
+            报表参数Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.SqlParameters">
+            <summary>
+            Sql参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.DataAccessor">
+            <summary>
+            数据链接。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.GReport">
+            <summary>
+            报表对象。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Controls.GPrintViewer.Printed">
+            <summary>
+            打印之前触发本事件、用于控制记录打印次数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.Metadata">
+            <summary>
+            报表元数据定义。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.DataObject">
+            <summary>
+            数据源对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.GRViewer">
+            <summary>
+            内置的Grid++查询控制。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.Report">
+            <summary>
+            当前的工作报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowExport">
+            <summary>
+            是否显示打印按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowPrint">
+            <summary>
+            是否显示打印按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowLoad">
+            <summary>
+            是否显示提取数据按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowClose">
+            <summary>
+            是否显示提取数据按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowReportID">
+            <summary>
+            是否显示报表ID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowRuler">
+            <summary>
+            是否显示标尺。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowMarginCorner">
+            <summary>
+            指示是否显示页边距的拐角指示线。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ToolBoxDockStyle">
+             <summary>
+            工具条显示位置。
+             </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.ShowToolBox">
+             <summary>
+            是否显示工具条。
+             </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.PrintRange">
+            <summary>
+            打印范围。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.StartPage">
+            <summary>
+            开始页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.EndPage">
+            <summary>
+            结束页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.GPrintViewer.EAS#Modularization#IAddIn#Name">
+            <summary>
+            模块名称。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.ReportColumn">
+            <summary>
+            选择列。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ReportColumn.Title">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ReportColumn.Name">
+            <summary>
+            列名。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ReportColumn.Visible">
+            <summary>
+            是事显示。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrinterHelper.GetInstalledPrinters">
+            <summary>
+            求本机安装的打印机。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrinterHelper.GetPrinter(System.Guid)">
+            <summary>
+            求指定报表的默认打印机。
+            </summary>
+            <param name="reportID">报表ID。</param>
+            <returns>默认打印机名称。</returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrinterHelper.SetPrinter(System.Guid,System.String)">
+            <summary>
+            求指定报表的默认打印机。
+            </summary>
+            <param name="reportID">报表ID。</param>
+            <param name="printer">默认打印机名称。</param>
+        </member>
+        <member name="T:EAS.Data.Caching.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Data.Caching.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.GReport.Controls.PrintRange">
+            <summary>
+            打印范围。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.PrintRange.AllPages">
+            <summary>
+            当前页。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.PrintRange.CurrentPage">
+            <summary>
+            当前页。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.PrintRange.SelectionPages">
+            <summary>
+            选定页。 
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Extensions.ToParameter(gregn6Lib.IGRParameter)">
+            <summary>
+            
+            </summary>
+            <param name="GRParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Extensions.ToField(gregn6Lib.IGRField)">
+            <summary>
+            
+            </summary>
+            <param name="GRField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Extensions.ToControl(gregn6Lib.IGRControl)">
+            <summary>
+            
+            </summary>
+            <param name="GRField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Extensions.ToChart(gregn6Lib.IGRChart)">
+            <summary>
+            
+            </summary>
+            <param name="GRChart"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Controls.FuncCalculator.GetDefaultValue(EAS.Metadatas.ReportMetadata.Parameter)">
+            <summary>
+            求指定参数值。
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="F:EAS.GReport.Controls.PrintViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.PrintViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.DialogDatabase.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DialogDatabase.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.DialogDatabase.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.GRColumnSelect.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.GRColumnSelect.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.GRColumnSelect.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.SelectedCellChangedEventAgrs">
+            <summary>
+            单元格改变事件参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.SelectedCellChangedEventAgrs.OldColumn">
+            <summary>
+            列索引。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.SelectedCellChangedEventAgrs.OldRow">
+            <summary>
+            行索引。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.CellClickEventAgrs">
+            <summary>
+            单元格鼠标点击事件参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.CellClickEventAgrs.DataField">
+            <summary>
+            字段名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.CellClickEventAgrs.Name">
+            <summary>
+            列名称。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.CellDoubleClickEventAgrs">
+            <summary>
+            单元格鼠标双击事件参数。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.ChartClickLegendAgrs">
+             <summary>
+            图表的图例点击事件参数。
+             </summary>
+        </member>
+        <member name="P:EAS.GReport.ChartClickLegendAgrs.SeriesIndex">
+            <summary>
+            序列索引。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ChartClickLegendAgrs.GroupIndex">
+            <summary>
+            组索引。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ChartClickLegendAgrs.Chart">
+            <summary>
+            图表对象。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.ChartClickSeriesAgrs">
+             <summary>
+            图表的序列点击事件参数。
+             </summary>
+        </member>
+        <member name="P:EAS.GReport.ChartClickSeriesAgrs.SeriesIndex">
+            <summary>
+            序列索引。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ChartClickSeriesAgrs.GroupIndex">
+            <summary>
+            组索引。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.ChartClickSeriesAgrs.Chart">
+            <summary>
+            图表对象。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.IMatrixConverter.ToMatrix(System.Collections.IList)">
+            <summary>
+            数据转换为Matrix。
+            </summary>
+            <param name="vList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.IMatrixConverter.ToList(EAS.Data.Matrix)">
+            <summary>
+            数据转换为List。
+            </summary>
+            <param name="matrix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.GReport.Report">
+            <summary>
+            报表对象定义。
+            </summary>
+            <remarks>
+            可以针对Grid++报表操作的对象。 
+            </remarks>
+        </member>
+        <member name="M:EAS.GReport.Report.#ctor">
+            <summary>
+            初始化Report对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.GetReportHeaderByIndex(System.Int32)">
+            <summary>
+            根据索引位置求报表头。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetReportFooterByIndex(System.Int32)">
+            <summary>
+            根据索引位置求报表尾。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetParameterByName(System.String)">
+            <summary>
+            根据参数名称求参数。
+            </summary>
+            <param name="Name">参数名称。</param>
+            <returns>参数对象。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetFieldByName(System.String)">
+            <summary>
+            根据字段名称求字段。
+            </summary>
+            <param name="Name">字段名称。</param>
+            <returns>字段对象。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetControlByName(System.String)">
+            <summary>
+            根据字段名称求控件。
+            </summary>
+            <param name="Name">控件名称。</param>
+            <returns>控件对象。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetChartByName(System.String)">
+            <summary>
+            根据字段名称求字段。
+            </summary>
+            <param name="Name">字段名称。</param>
+            <returns>字段对象。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.Export(EAS.GReport.Report.ExportType,System.String,System.Boolean)">
+            <summary>
+            导出报表。
+            </summary>
+            <param name="type">类型。</param>
+            <param name="fileName">文件名。</param>
+            <param name="showOptionDlg">是否显示对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.GenerateDocumentFile(System.String)">
+            <summary>
+            生成报表的 Grid++Report 文档文件到指定的文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.GetSubReports">
+            <summary>
+            查询子报表清单。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetSubReport(System.String)">
+            <summary>
+            根据名称求子报表。
+            </summary>
+            <param name="subName">子报表名称。</param>
+            <returns>子报表。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.GetCharts">
+            <summary>
+            查询图表对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.Report.Clear">
+            <summary>
+            清除所有的报表模板定义数据，使报表主对象成为一张空白报表。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.SqlDataBind">
+            <summary>
+            Sql报表绑定。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.GetGroupByFields(System.Int32)">
+             <summary>
+            获取明细网格之中指定分组的分组字段。 
+             </summary>
+             <param name="index">分组索引。</param>
+             <returns>分组字段。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.SetGroupByFields(System.Int32,System.String)">
+             <summary>
+            设置明细网格之中指定分组的分组字段。 
+             </summary>
+             <param name="index">分组索引。</param>
+             <param name="fields">分组字段。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.AddHandlers">
+            <summary>
+            注册数据绑定方法。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.PrintView(System.Boolean)">
+            <summary>
+            打开预览。
+            </summary>
+            <param name="showModal">是否显示为模式对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Print(System.Boolean)">
+            <summary>
+            直接打印。
+            </summary>
+            <param name="showPrintDialog">是否显示打印对话框。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Load(EAS.IO.BufferReader)">
+            <summary>
+            从指定的 BufferReader加载对象。
+            </summary>
+            <param name="reader">读取器。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.WriteTo(EAS.IO.BufferWriter)">
+            <summary>
+            将对象保存到指定的BufferWriter。
+            </summary>
+            <param name="writer">编写器。</param>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportHeaderCount">
+            <summary>
+            报表头部总数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportFooterCount">
+            <summary>
+            报表尾部总数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Columns">
+            <summary>
+            报表列集合。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.DataObject">
+            <summary>
+            数据源对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.GRViewer">
+            <summary>
+            GRViewer。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.GReport">
+            <summary>
+            内部报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportName">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportID">
+            <summary>
+            报表ID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Metadata">
+            <summary>
+            报表元数据。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.DataAccessor">
+            <summary>
+            数据链接。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.SqlCommand">
+            <summary>
+            报表Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.SqlCommand2">
+            <summary>
+            报表参数Sql命令。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.SqlParameters">
+            <summary>
+            Sql参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.PrintRange">
+            <summary>
+            打印范围。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.StartPage">
+            <summary>
+            开始页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.EndPage">
+            <summary>
+            结束页。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.PrinterName">
+            <summary>
+            打印机名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Copies">
+            <summary>
+            打印份数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.CanDuplex">
+            <summary>
+            指示当前打印机是否支持双面打印。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Duplex">
+            <summary>
+            双面打印：0|打印机默认的双面打印设置，1|单面打印，2|双面水平打印，3|双面垂直打印。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.PrintAsDesignPaper">
+            <summary>
+            指定是否按设计时的页面设置生成打印页面(默认false)。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.PaperOrientation">
+            <summary>
+            纸张方向。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Report.Printed">
+            <summary>
+            打印之前触发本事件、用于控制记录打印次数。
+            </summary>
+        </member>
+        <member name="E:EAS.GReport.Report.BeforeSort">
+            <summary>
+            当要对记录集中的记录进行重新排序之前触发本事件。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.Control">
+            <summary>
+            报表控件。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.Name">
+            <summary>
+            参数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.Visible">
+            <summary>
+            显示文本。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.AsMemoBox">
+            <summary>
+            转换为综合文字框。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.AsStaticBox">
+            <summary>
+            转换为静态文字框。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.AsRichTextBox">
+            <summary>
+            转换为富文本框。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.AsBarcode">
+            <summary>
+            转换为条形码。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Control.AsPictureBox">
+            <summary>
+            转换为图片框。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.MemoBox">
+            <summary>
+            综合文字框。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.MemoBox.Text">
+            <summary>
+            条码文字。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.StaticBox">
+            <summary>
+            综合文字框。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.StaticBox.Text">
+            <summary>
+            条码文字。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.RichTextBox">
+            <summary>
+            综合文字框。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.RichTextBox.LoadFromFile(System.String)">
+            <summary>
+            运行时从磁盘文件中载入RTF格式文件。
+            </summary>
+            <param name="PathFile">载入RTF文件的路径与文件名。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.RichTextBox.LoadFromMemory(System.Byte@,System.Int32)">
+            <summary>
+            运行时从内存中载入RTF格式文本数据。
+            </summary>
+            <param name="pBuffer">RTF数据缓冲区内存地址。</param>
+            <param name="BytesCount">RTF数据缓冲区的字节数。</param>
+        </member>
+        <member name="P:EAS.GReport.Report.RichTextBox.Text">
+            <summary>
+            条码文字。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.Barcode">
+            <summary>
+            条码控件。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Barcode.Text">
+            <summary>
+            条码文字。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.PictureBox">
+            <summary>
+            图像控件。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.PictureBox.LoadFromFile(System.String)">
+            <summary>
+            运行时从磁盘文件或网络URL地址中载入图像文件。
+            </summary>
+            <param name="PathFile">载入图像文件的路径与文件名，或URL。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.PictureBox.LoadFromMemory(System.Byte@,System.Int32)">
+            <summary>
+            运行时从内存中载入图像数据。
+            </summary>
+            <param name="pBuffer">图像数据缓冲区内存地址。</param>
+            <param name="BytesCount">图像数据缓冲区的字节数。</param>
+        </member>
+        <member name="P:EAS.GReport.Report.PictureBox.ImageFile">
+            <summary>
+            图片文件。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.ReportHeader">
+            <summary>
+            报表头部。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportHeader.Name">
+            <summary>
+            参数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportHeader.Visible">
+            <summary>
+            显示文本。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportHeader.Height">
+            <summary>
+            高度。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.ReportFooter">
+            <summary>
+            报表尾部。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportFooter.Name">
+            <summary>
+            参数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportFooter.Visible">
+            <summary>
+            显示文本。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.ReportFooter.Height">
+            <summary>
+            高度。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.ChartType">
+            <summary>
+            表示图表的类型。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.BarChart">
+            <summary>
+            柱图。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.PieChart">
+            <summary>
+            饼图。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.LineChart">
+            <summary>
+            折线图。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.StepBarChart">
+            <summary>
+            叠加柱图
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.XYScatterChart">
+            <summary>
+            散列点图
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.XYLineChart">
+            <summary>
+            散列点连线图
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.CurveLineChart">
+            <summary>
+            连曲线图
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.XYCurveLineChart">
+            <summary>
+            散列点连曲线图
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ChartType.Bubble">
+            <summary>
+            气泡图
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.Chart">
+            <summary>
+            报表图表。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.SetSeriesLabel(System.Int16,System.String)">
+            <summary>
+            设置序列标签。
+            </summary>
+            <param name="seriesIndex">序列索引。</param>
+            <param name="lablel">标签文本。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.SetGroupLabel(System.Int16,System.String)">
+            <summary>
+            设置组标签。
+            </summary>
+            <param name="groupIndex">组索引。</param>
+            <param name="lablel">标签文本。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.SetValue(System.Int16,System.Int16,System.Double)">
+            <summary>
+            设置图表值。
+            </summary>
+            <param name="seriesIndex">序列索引。</param>
+            <param name="groupIndex">组索引。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.GetValue(System.Int16,System.Int16)">
+            <summary>
+            获取图表值。
+            </summary>
+            <param name="seriesIndex">序列索引。</param>
+            <param name="groupIndex">组索引。</param>
+            <returns>值。</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.AddXYValue(System.Int16,System.Double,System.Double)">
+            <summary>
+            在指定序列上增加坐标点值。
+            </summary>
+            <param name="seriesIndex">指定序列。</param>
+            <param name="xValue">指定坐标X值。</param>
+            <param name="yValue">指定坐标Y值。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.GetXYValue(System.Int16,System.Int32,System.Double@,System.Double@)">
+            <summary>
+            在指定序列上增加坐标点值。
+            </summary>
+            <param name="seriesIndex">指定序列。</param>
+            <param name="index">指定序列中的数据序号。</param>
+            <param name="xValue">指定坐标X值。</param>
+            <param name="yValue">指定坐标Y值。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.EmptyValues">
+            <summary>
+            清空全部XYZ值。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.AddXYZValue(System.Int16,System.Double,System.Double,System.Double)">
+            <summary>
+            在指定序列上增加坐标点值与Z值。
+            </summary>
+            <param name="seriesIndex">指定序列。</param>
+            <param name="xValue">指定坐标X值。</param>
+            <param name="yValue">指定坐标Y值。</param>
+            <param name="zValue">指定坐标Z值。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.GetXYZValue(System.Int16,System.Int32,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            在指定序列上增加坐标点值。
+            </summary>
+            <param name="seriesIndex">指定序列。</param>
+            <param name="index">指定序列中的数据序号。</param>
+            <param name="xValue">指定坐标X值。</param>
+            <param name="yValue">指定坐标Y值。</param>
+            <param name="zValue">指定坐标X值。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.EmptyFillColors">
+            <summary>
+            清空全部自定义图形填充颜色。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.AddFillColor(System.Drawing.Color)">
+            <summary>
+            增加一个自定义图形填充颜色。
+            </summary>
+            <param name="color">颜色值。</param>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.LoadDataFromXML(System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            从XML文本数据中获取图表数据。
+            </summary>
+            <param name="xml">指定要载入的XML数据包。</param>
+            <param name="firstSeries">指定第一列是否为序列标识数据。</param>
+            <param name="autoSeries">指定是否从数据中自动获取序列标签文字，只有当FirstSeries=true时才会自动获取序列标签文字。</param>
+            <param name="autoGroup">指定是否从数据中自动获取组标签文字。</param>
+            <returns>指定载入数据是否成功</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.LoadXYDataFromXML(System.String,System.Boolean)">
+            <summary>
+            从XML文本数据中载入XY类型的图表数据。
+            </summary>
+            <param name="xml">指定要载入的XML数据包。</param>
+            <param name="autoSeries">指定是否从数据中自动获取序列标签文字。</param>
+            <returns>指定载入数据是否成功</returns>
+        </member>
+        <member name="M:EAS.GReport.Report.Chart.LoadXYZDataFromXML(System.String,System.Boolean)">
+            <summary>
+            从XML文本数据中载入XYZ类型的图表数据。
+            </summary>
+            <param name="xml">指定要载入的XML数据包。</param>
+            <param name="autoSeries">指定是否从数据中自动获取序列标签文字。</param>
+            <returns>指定载入数据是否成功</returns>
+        </member>
+        <member name="P:EAS.GReport.Report.Chart.Name">
+            <summary>
+            图表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Chart.Chart3D">
+            <summary>
+            指定是否以三维图形方式显示，此属性仅对柱图与饼图有效。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Chart.SeriesCount">
+            <summary>
+            图表的数据序列数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Chart.GroupCount">
+            <summary>
+            图表的数据组数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Chart.Title">
+            <summary>
+            指定图表的标题显示文。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.ExportType">
+            <summary>
+            导出类型。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.XLS">
+            <summary>
+            Execl格式。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.TXT">
+            <summary>
+            TXT格式。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.HTM">
+            <summary>
+            Html格式。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.RTF">
+            <summary>
+            RTF格式。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.PDF">
+            <summary>
+             PDF格式。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.CSV">
+            <summary>
+            CSV格式。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Report.ExportType.IMG">
+            <summary>
+            图片。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.Parameter">
+            <summary>
+            报表参数。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.Name">
+            <summary>
+            参数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.DisplayText">
+            <summary>
+            显示文本。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.Format">
+            <summary>
+            格式。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.IsNull">
+            <summary>
+            是否为空。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.Value">
+            <summary>
+            参数值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.AsBoolean">
+            <summary>
+            布尔值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.AsDateTime">
+            <summary>
+            日期时间值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.AsFloat">
+            <summary>
+            浮点值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.AsInteger">
+            <summary>
+            整数值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.AsString">
+            <summary>
+            字符串值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Parameter.Tag">
+            <summary>
+            Tag对象。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Report.Field">
+            <summary>
+            数据字段。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.Name">
+            <summary>
+            参数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.DisplayText">
+            <summary>
+            显示文本。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.Format">
+            <summary>
+            格式。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.IsNull">
+            <summary>
+            是否为空。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.Value">
+            <summary>
+            参数值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.AsBoolean">
+            <summary>
+            布尔值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.AsDateTime">
+            <summary>
+            日期时间值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.AsFloat">
+            <summary>
+            浮点值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.AsInteger">
+            <summary>
+            整数值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.AsString">
+            <summary>
+            字符串值。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Report.Field.Tag">
+            <summary>
+            Tag对象。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.DynamicReport">
+            <summary>
+            动态报表容器。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.DynamicReport.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DynamicReport.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.DynamicReport.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DynamicReport.#ctor">
+            <summary>
+            初始化动态报表。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DynamicReport.#ctor(System.Guid)">
+            <summary>
+            初始化动态报表。
+            </summary>
+            <param name="reportID">报表ID。</param>
+        </member>
+        <member name="M:EAS.GReport.Controls.DynamicReport.CreateConditionControl">
+            <summary>
+            创建条件控件。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DynamicReport.ExtractData">
+            <summary>
+            提取数据 。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.DynamicReport.ReportID">
+            <summary>
+            报表GUID。
+            </summary>
+        </member>
+        <member name="P:EAS.GReport.Controls.DynamicReport.EAS#Modularization#IAddIn#Name">
+            <summary>
+            模块名称。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.LoadMetadata(EAS.Data.Caching.CacheMetadata)">
+            <summary>
+            提取指定GUID的报表元数据。
+            </summary>
+            <param name="cacheMetadata">缓存元数据。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.UpdateMetadata(EAS.Data.Caching.CacheMetadata)">
+            <summary>
+            更新指定GUID的报表元数据。
+            </summary>
+            <param name="ID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.GReport.PaperOrientation">
+            <summary>
+            纸张方向。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.PaperOrientation.Default">
+            <summary>
+            应用打印机当前设置的纸张输出方向。
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.PaperOrientation.Portrait">
+            <summary>
+            纸张输出方向为纵向。 
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.PaperOrientation.Landscape">
+            <summary>
+            纸张输出方向为横向。
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.Controls.DataGridViewExtensions">
+            <summary>
+            DataGridView扩展。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.DataGridViewExtensions.PrintEx(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            打印DataGridView。
+            </summary>
+            <param name="dataGridView">DataGridView。</param>
+            <param name="title">标题。</param>
+        </member>
+        <member name="M:EAS.GReport.DataFilter.Filter(System.Data.DataTable,System.Collections.Generic.List{System.Data.DataColumn},System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            矩阵数据筛选。
+            </summary>
+            <param name="dataTable"></param>
+            <param name="columns"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.DataFilter.Filter(gregn6Lib.IGridppReport,System.Object)">
+            <summary>
+            子报表数据关联筛细。
+            </summary>
+            <param name="Report"></param>
+            <param name="m_Data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.GReport.GRHelper">
+            <summary>
+            数据辅助类。
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillDataSource(gregn6Lib.IGridppReport,EAS.Data.Matrix)">
+            <summary>
+            将 Matrix 的数据转储到 Grid++Report 的数据集中。
+            </summary>
+            <param name="Report"></param>
+            <param name="matrix"></param>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillDataSource(gregn6Lib.IGridppReport,System.Data.DataTable)">
+            <summary>
+            将 DataTable 的数据转储到 Grid++Report 的数据集中。
+            </summary>
+            <param name="Report"></param>
+            <param name="dt"></param>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillParameters(gregn6Lib.IGridppReport,EAS.Data.Matrix)">
+            <summary>
+            向报表填充参数。
+            </summary>
+            <param name="Report"></param>
+            <param name="matrix"></param>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillDataSource(gregn6Lib.IGridppReport,EAS.Data.ORM.Entity)">
+            <summary>
+            将 Entity 的数据转储到 Grid++Report 的数据集中。
+            </summary>
+            <param name="Report"></param>
+            <param name="dataEntity"></param>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillDataSource(gregn6Lib.IGridppReport,EAS.Data.ORM.Table)">
+            <summary>
+            将 Entity 的数据转储到 Grid++Report 的数据集中。
+            </summary>
+            <param name="Report"></param>
+            <param name="table"></param>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillReport(gregn6Lib.IGridppReport,System.Object)">
+            <summary>
+            向报表填充数据。
+            </summary>
+            <param name="Report"></param>
+            <param name="m_Data"></param>
+        </member>
+        <member name="M:EAS.GReport.GRHelper.FillReport2(gregn6Lib.IGridppReport,System.Object)">
+            <summary>
+            向报表填充数据|内部使用。
+            </summary>
+            <param name="Report"></param>
+            <param name="m_Data"></param>
+        </member>
+        <member name="T:EAS.GReport.Controls.FlatTabControl">
+            <summary>
+            Summary description for FlatTabControl.
+            </summary>
+        </member>
+        <member name="F:EAS.GReport.Controls.FlatTabControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.FlatTabControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EAS.GReport.Controls.FlatTabControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EAS.GReport.GRDataFiller`1">
+            <summary>
+            数据填充。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:EAS.GReport.GRDataFiller`1.FillDataSource(gregn6Lib.IGridppReport,System.Collections.Generic.IList{`0})">
+            <summary>
+            填充数据源。
+            </summary>
+            <param name="Report">报表。</param>
+            <param name="dataItems">数据项目。</param>
+        </member>
+        <member name="M:EAS.GReport.GRDataFiller`1.Filler(System.Collections.Generic.IList{`0},System.Collections.Generic.List{EAS.Data.ORM.Column},System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            子报表数据筛选。
+            </summary>
+            <param name="dataItems"></param>
+            <param name="columns"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.GRDataFiller2`1.FillDataSource(gregn6Lib.IGridppReport,System.Collections.Generic.IList{`0})">
+            <summary>
+            填充数据源。
+            </summary>
+            <param name="Report">报表。</param>
+            <param name="dataItems">数据项目。</param>
+        </member>
+        <member name="M:EAS.GReport.GRDataFiller2`1.Filler(System.Collections.Generic.IList{`0},System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            子报表数据筛选。
+            </summary>
+            <param name="dataItems"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.GReport.GRDataFiller2`1.GetProperties">
+            <summary>
+            求属性。
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

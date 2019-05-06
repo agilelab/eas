@@ -1,0 +1,1128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Metadata</name>
+    </assembly>
+    <members>
+        <member name="F:EAS.Design.UIMetaData.m_DataEntity">
+            <summary>
+             与界面关联的数据类型。
+            </summary>
+        </member>
+        <member name="F:EAS.Design.UIMetaData.m_ClassName">
+            <summary>
+            文件的映射的实体
+            </summary>
+        </member>
+        <member name="F:EAS.Design.UIMetaData.m_Caption">
+            <summary>
+            Form的标题
+            </summary>
+        </member>
+        <member name="F:EAS.Design.UIMetaData.m_NameSpace">
+            <summary>
+            文件的命名空间
+            </summary>
+        </member>
+        <member name="F:EAS.Design.UIMetaData.m_MapTable">
+            <summary>
+            文件映射的数据表
+            </summary>
+        </member>
+        <member name="F:EAS.Design.UIMetaData.m_Assembly">
+            <summary>
+            文件映射的程序集
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.FormXml">
+            <summary>
+            窗体XML。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.SettingXml">
+            <summary>
+            窗体XML。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.DataEntity">
+            <summary>
+            数据实体类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.ClassName">
+            <summary>
+            类名。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.NameSpace">
+            <summary>
+            命名空间。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.MapTable">
+            <summary>
+            数据表名。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.UIMetaData.MapAssembly">
+            <summary>
+            程序集名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Metadatas.ReportMetadata">
+            <summary>
+            报表元数据。
+            </summary>
+        </member>
+        <member name="M:EAS.Metadatas.ReportMetadata.#ctor">
+            <summary>
+            初始化ReportMetadata对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Metadatas.ReportMetadata.ToString">
+            <summary>
+            返回表示当前 ReportMetadata 的 System.String。
+            </summary>
+            <returns>System.String，表示当前的 InputMetadata。</returns>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.ID">
+            <summary>
+            ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Name">
+            <summary>
+            报表名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Alias">
+            <summary>
+            别名。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Define">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.QueryText">
+            <summary>
+            查询定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Layout">
+            <summary>
+            布局。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Script">
+            <summary>
+            脚本。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Width">
+            <summary>
+            高度。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Height">
+            <summary>
+            宽度。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Printer">
+            <summary>
+            打印机。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Landscape">
+            <summary>
+            横向打印。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Attributes">
+            <summary>
+            属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.PrintMode">
+            <summary>
+            是否为打印模式。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.PopCondition">
+            <summary>
+            是否为弹窗式条件选择。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.UpdateCycle">
+            <summary>
+            缓存更新周期。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameters">
+            <summary>
+            参数。
+            </summary>
+        </member>
+        <member name="T:EAS.Metadatas.ReportMetadata.Parameter">
+            <summary>
+            条件。
+            </summary>
+        </member>
+        <member name="M:EAS.Metadatas.ReportMetadata.Parameter.#ctor">
+            <summary>
+            初始化Parameter对象实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Readonly">
+            <summary>
+            只读。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Display">
+            <summary>
+            是否显示参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Type">
+            <summary>
+            参数类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.NotNull">
+            <summary>
+             必选参数
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.InputID">
+            <summary>
+            字典ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Value">
+            <summary>
+            值。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.ReportMetadata.Parameter.Default">
+            <summary>
+            默认值。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.Directory">
+            <summary>
+            实体目录。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Directory.Name">
+            <summary>
+            目录名称
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Directory.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="M:EAS.Metadatas.InputMetadata.GeTData">
+            <summary>
+            获取数据类型。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Metadatas.InputMetadata.ToString">
+            <summary>
+            返回表示当前 InputMetadata 的 System.String。
+            </summary>
+            <returns>System.String，表示当前的 InputMetadata。</returns>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputID">
+            <summary>
+            ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Name">
+            <summary>
+            字典名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.DataType">
+            <summary>
+            数据类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Width">
+            <summary>
+            高度。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Height">
+            <summary>
+            宽度。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Top">
+            <summary>
+            Top条数。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.UseCached">
+            <summary>
+            是否使用缓存。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.UpdateField">
+            <summary>
+            更新属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.ValueField">
+            <summary>
+            码值属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.TextField">
+            <summary>
+            显示属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.UpdateCycle">
+            <summary>
+            缓存更新周期。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.UseScript">
+            <summary>
+            使用教本。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Script">
+            <summary>
+            脚本。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.FontName">
+            <summary>
+            表格字体名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.FontSize">
+            <summary>
+            表格字体大小。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Columns">
+            <summary>
+            显示定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Filters">
+            <summary>
+            数据筛选器。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Conditions">
+            <summary>
+            条件定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.Sorts">
+            <summary>
+            排序定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputColumn.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputColumn.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputColumn.Visible">
+            <summary>
+            可见。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputColumn.Width">
+            <summary>
+            宽度。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputColumn.Index">
+            <summary>
+            索引。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.InputColumn.Format">
+            <summary>
+            格式。
+            </summary>
+        </member>
+        <member name="T:EAS.Metadatas.InputMetadata.FilterColumn">
+            <summary>
+            筛选列。
+            </summary>
+        </member>
+        <member name="M:EAS.Metadatas.InputMetadata.FilterColumn.#ctor">
+            <summary>
+            初始化FilterColumn对象实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.FilterColumn.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.FilterColumn.Enable">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.FilterColumn.Type">
+            <summary>
+            筛选器类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.FilterColumn.Value">
+            <summary>
+            值。
+            </summary>
+        </member>
+        <member name="T:EAS.Metadatas.InputMetadata.ConditionColumn">
+            <summary>
+            检索每件。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.ConditionColumn.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.ConditionColumn.Enable">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.ConditionColumn.Type">
+            <summary>
+            条件类型。
+            </summary>
+        </member>
+        <member name="T:EAS.Metadatas.InputMetadata.SortColumn">
+            <summary>
+            排序每件。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.SortColumn.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.SortColumn.Enable">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="P:EAS.Metadatas.InputMetadata.SortColumn.Type">
+            <summary>
+            排序类型。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.RefEnum">
+            <summary>
+            枚举关联。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RefEnum.#ctor">
+            <summary>
+            初始化RefEnum对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RefEnum.Copy">
+            <summary>
+            复制一个新RefEnum。
+            </summary>
+            <returns>新的RefEnum副本。</returns>
+        </member>
+        <member name="P:EAS.Design.RefEnum.Name">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEnum.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEnum.RefProperty">
+            <summary>
+            引用属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEnum.RefType">
+            <summary>
+            引用枚举类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEnum.DisplayProperty">
+            <summary>
+            显示属性。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.ICodeGenerator">
+            <summary>
+            代码生成器接口，用于完成代码生成。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.ICodeGenerator.GeneratCode(EAS.Design.RootEntity,EAS.Design.Project)">
+            <summary>
+            生成数据表对象及表列信息生成代码。
+            </summary>
+            <param name="rootEntity">表信息。</param>
+            <param name="project">工作项目信息。</param>
+            <returns>生成代码结果。</returns>
+        </member>
+        <member name="M:EAS.Design.ICodeGenerator.GeneratCode(EAS.Design.Enumeration,EAS.Design.Project)">
+            <summary>
+            生成枚举对象代码。
+            </summary>
+            <param name="enumeration">枚举对象。</param>
+            <param name="project">工作项目信息。</param>
+            <returns>生成代码结果。</returns>
+        </member>
+        <member name="M:EAS.Design.ICodeGenerator.GeneratSolution(EAS.Design.Project,System.String,System.Boolean)">
+            <summary>
+            输出/生成解决方法。
+            </summary>
+            <param name="project">项目元数据。</param>
+            <param name="outputFolder">输出路径。</param>
+            <param name="haveSolution">是否生成解决方案。</param>
+        </member>
+        <member name="P:EAS.Design.ICodeGenerator.Name">
+            <summary>
+            代码方案名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.Model">
+            <summary>
+            数据模型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Model.Name">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Model.Buffer">
+            <summary>
+            数据缓存。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.Enumeration">
+            <summary>
+            数据枚举定义。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.Enumeration.#ctor">
+            <summary>
+            初始化Enumeration对象实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Enumeration.Directory">
+            <summary>
+            目录。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Enumeration.Name">
+            <summary>
+            枚举名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Enumeration.Caption">
+            <summary>
+            标题/说明。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Enumeration.NameSpace">
+            <summary>
+            命名空间。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Enumeration.BaseType">
+            <summary>
+            数据类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Enumeration.Items">
+            <summary>
+            列集合。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.EnumItem">
+            <summary>
+            枚举项元数据。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.EnumItem.#ctor">
+            <summary>
+            初始化EnumItem对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.EnumItem.Copy">
+            <summary>
+            复制一个新EnumItem。
+            </summary>
+            <returns>新的EnumItem副本。</returns>
+        </member>
+        <member name="P:EAS.Design.EnumItem.Name">
+            <summary>
+            枚举项名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.EnumItem.Value">
+            <summary>
+            枚举值。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.EnumItem.Caption">
+            <summary>
+            标题/说明。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.IDesignAddIn">
+            <summary>
+            元数据设计器插件。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.IDesignAddIn.Start(EAS.Design.Project)">
+            <summary>
+            执行插件。
+            </summary>
+            <param name="workProject">当前项目。</param>
+        </member>
+        <member name="P:EAS.Design.IDesignAddIn.Name">
+            <summary>
+            插件名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.Property">
+            <summary>
+            列定义信息。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.Property.#ctor">
+            <summary>
+            初始化Column对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.Property.Copy">
+            <summary>
+            复制一个新Property。
+            </summary>
+            <returns>新的Property副本。</returns>
+        </member>
+        <member name="P:EAS.Design.Property.Name">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Type">
+            <summary>
+            数据类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.ColumnName">
+            <summary>
+            数据列名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.DbType">
+            <summary>
+            数据类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.DefaultValue">
+            <summary>
+            默认值。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Size">
+            <summary>
+            数据长度。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Scale">
+            <summary>
+            小数位数。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.PrimaryKey">
+            <summary>
+            是否为主键。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Identity">
+            <summary>
+            自动增长。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Timestamp">
+            <summary>
+            行版本列。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.CacheUpdated">
+            <summary>
+            缓存更新字段。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.NowTime">
+            <summary>
+            系统时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.NotNull">
+            <summary>
+            非空字段。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Virtual">
+            <summary>
+            虚拟字段。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.RefEntity">
+            <summary>
+            关联实体。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.RefProperty">
+            <summary>
+            引用属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.CalcProperty">
+            <summary>
+            计算属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.CalcExpression">
+            <summary>
+            计算表达式。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Visible">
+            <summary>
+            是否可见。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Width">
+            <summary>
+            宽度。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Alignment">
+            <summary>
+            对齐方式。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.AlignmentText">
+            <summary>
+            对齐方式。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Format">
+            <summary>
+            显示格式。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Property.Index">
+            <summary>
+            显示顺序号。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.Project">
+            <summary>
+            项目、解决方案。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.Project.#ctor">
+            <summary>
+            初始化Project对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.Project.GetConnectionString">
+            <summary>
+            取得连接字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EAS.Design.Project.m_List">
+            <summary>
+            设计列表
+            </summary>
+        </member>
+        <member name="F:EAS.Design.Project.m_Froms">
+            <summary>
+            设计窗体
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Namespace">
+            <summary>
+            命名空间。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.OutPutFolder">
+            <summary>
+            位置。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Language">
+            <summary>
+             语言。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.DatabaseType">
+            <summary>
+             数据库类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.DbServer">
+            <summary>
+             数据库服务器。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.DbUser">
+            <summary>
+             数据库用户。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.DbPassword">
+            <summary>
+             数据库密码。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.DbName">
+            <summary>
+             数据库名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Index">
+            <summary>
+             使用索引器。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.AutoProperty">
+            <summary>
+             自动属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.ColumnNameUpper">
+            <summary>
+            列名强制大写。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.PropertyFirstUpper">
+            <summary>
+            属性名称首字母大写。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.ShowDbType">
+            <summary>
+            显山数据库类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.SwitchDbType">
+            <summary>
+            自动切换元数据DB类型
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.GeneratAddIn">
+            <summary>
+            生成AgileEAS.NET插件。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.IntegratePrint">
+            <summary>
+            集成打印。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.RootEntities">
+            <summary>
+            表对象集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Models">
+            <summary>
+            模型集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.RefProjects">
+            <summary>
+            引用项目。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Enumerations">
+            <summary>
+            枚举定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Directorys">
+            <summary>
+            目录。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.EnumDirectorys">
+            <summary>
+            枚举。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.ListForms">
+            <summary>
+            列表对象集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.Forms">
+            <summary>
+            窗体对象集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.AutoUI">
+            <summary>
+            是否显示AutoUI参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.MetaInteraction">
+            <summary>
+            元数据联动。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.IsNulle">
+            <summary>
+            生成可空类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.Project.MongoDb">
+            <summary>
+            是否有MongoDb环境。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.RefProject">
+            <summary>
+            引用项目。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RefProject.#ctor">
+            <summary>
+            初始化RefProject对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RefProject.Copy">
+            <summary>
+            复制一个新RefProject。
+            </summary>
+            <returns>新的RefProject副本。</returns>
+        </member>
+        <member name="P:EAS.Design.RefProject.FileName">
+            <summary>
+            引用项目文件。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.RefEntity">
+            <summary>
+            引用实体定义。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RefEntity.#ctor">
+            <summary>
+            初始化RefEntity对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RefEntity.Copy">
+            <summary>
+            复制一个新RefEntity。
+            </summary>
+            <returns>新的RefEntity副本。</returns>
+        </member>
+        <member name="P:EAS.Design.RefEntity.Name">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEntity.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEntity.RefProperty">
+            <summary>
+            引用属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEntity.RefType">
+            <summary>
+            引用实体类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEntity.RefKey">
+            <summary>
+            引用实体主键。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEntity.Nullable">
+            <summary>
+            可空引用。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RefEntity.Cache">
+            <summary>
+            是否缓存。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.ChildEntity">
+            <summary>
+            子实体定义。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.ChildEntity.#ctor">
+            <summary>
+            初始化ChildEntity对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.ChildEntity.Copy">
+            <summary>
+            复制一个新ChildEntity。
+            </summary>
+            <returns>新的ChildEntity副本。</returns>
+        </member>
+        <member name="P:EAS.Design.ChildEntity.Name">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:EAS.Design.ChildEntity.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.ChildEntity.ParentKey">
+            <summary>
+            父实体属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.ChildEntity.ChildType">
+            <summary>
+            子实体类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.ChildEntity.ChildProperty">
+            <summary>
+            子实体属性。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.UIListMetaData">
+            <summary>
+            列表页面。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.UIFormMetaData">
+            <summary>
+            窗体页面。
+            </summary>
+        </member>
+        <member name="T:EAS.Design.RootEntity">
+            <summary>
+            数据实体对象/表对象。
+            </summary>
+        </member>
+        <member name="M:EAS.Design.RootEntity.#ctor">
+            <summary>
+            初始化RootEntity对象实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.Directory">
+            <summary>
+            目录。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.ClassName">
+            <summary>
+            类名。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.Caption">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.TextPropertie">
+            <summary>
+            主显示属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.NameSpace">
+            <summary>
+            命名空间。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.MapTable">
+            <summary>
+            数据表名。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.Properties">
+            <summary>
+            列集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.RefEntities">
+            <summary>
+            引用/依赖对象集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.ChildEntities">
+            <summary>
+            子对象集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Design.RootEntity.RefEnums">
+            <summary>
+            关联枚举集合。
+            </summary>
+        </member>
+    </members>
+</doc>

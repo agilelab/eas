@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.DynamicModules.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.DynamicModules.Controls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.contents1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.Excel20071">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.Find2">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.gnome_preferences_system">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.page_white_acrobat1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.page_world1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.print_preview">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.printer">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.printer_2_">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.printer_3_">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.TabIcons_bmp">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.text_preview">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.Properties.Resources.Word20071">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="F:EAS.DynamicModules.Controls.FormCondition.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.FormCondition.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.FormCondition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.FormCondition.Metadata">
+            <summary>
+             报表元数据。
+            </summary>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.FormCondition.Values">
+            <summary>
+            选择参数。
+            </summary>
+        </member>
+        <member name="T:EAS.DynamicModules.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.DynamicModules.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.DynamicModules.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.DynamicModules.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.ReportCode.Init(EAS.DynamicModules.Controls.DynamicReport)">
+            <summary>
+            控件初始化设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.ReportCode.ExecQuery(EAS.DynamicModules.Controls.DynamicReport,EAS.GReport.Report,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            执行查询
+            </summary>
+        </member>
+        <member name="F:QueryControl.FrmParamSelect.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:QueryControl.FrmParamSelect.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:QueryControl.FrmParamSelect.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EAS.DynamicModules.Controls.FlatTabControl">
+            <summary>
+            Summary description for FlatTabControl.
+            </summary>
+        </member>
+        <member name="F:EAS.DynamicModules.Controls.FlatTabControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.FlatTabControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.FlatTabControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.ShowHeader">
+            <summary>
+            获取或设计一个值，指示是否显示报表头。
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.ShowFooter">
+            <summary>
+            获取或设计一个值，指示是否显示报表尾。
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.ScrollBars">
+            <summary>
+            获取或设置查询控件的滚动条模式。
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.PageSize">
+            <summary>
+            获取或设置查询控件的分页记录数。
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.PageStyle">
+            <summary>
+            获取或设置查询控件的分页模式：0/不分页，1/自适应分页，2/按行数分页。
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.ShowToolBox">
+            <summary>
+                        是否显示工具条。
+            </summary>
+        </member>
+        <member name="P:QueryControl.DisplayViewer.Resortable">
+            <summary>
+            获取或设置是否可以通过点击明细网格的列标题对明细记录进行重新排序。
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.FuncCalculator.GetDefaultValue(EAS.Metadatas.ReportMetadata.Parameter)">
+            <summary>
+            求指定参数值。
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.DynamicReport.LoadLayoutV1">
+            <summary>
+            旧的报表布局。
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.DynamicReport.LoadLayoutV2">
+            <summary>
+            新的报表布局。
+            </summary>
+        </member>
+        <member name="M:EAS.DynamicModules.Controls.DynamicReport.GetParams(EAS.GReport.Report,System.Collections.Generic.List{QueryControl.ICommonAttribute})">
+            <summary>
+            通过控件获取参数列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.DynamicModules.Controls.DynamicReport.ReportID">
+            <summary>
+            报表GUID。
+            </summary> 
+        </member>
+    </members>
+</doc>

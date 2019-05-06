@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Name="">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <PageHeight>8.5in</PageHeight>
+  <PageWidth>11in</PageWidth>
+  <DataSources>
+    <DataSource Name="DS1">
+      <ConnectionProperties>
+        <DataProvider>WebLog</DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <Width>10in</Width>
+  <TopMargin>.25in</TopMargin>
+  <LeftMargin>.25in</LeftMargin>
+  <RightMargin>.25in</RightMargin>
+  <BottomMargin>.25in</BottomMargin>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>Url=c:\temp\access103105.log</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="host">
+          <DataField>host</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="client_identifier">
+          <DataField>client_identifier</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="user">
+          <DataField>user</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="datetime">
+          <DataField>datetime</DataField>
+          <TypeName>System.DateTime</TypeName>
+        </Field>
+        <Field Name="request_cmd">
+          <DataField>request_cmd</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="request_url">
+          <DataField>request_url</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="request_type">
+          <DataField>request_type</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="status_code">
+          <DataField>status_code</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="bytes">
+          <DataField>bytes</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="referrer">
+          <DataField>referrer</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="user_agent">
+          <DataField>user_agent</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+        <Field Name="cookie">
+          <DataField>cookie</DataField>
+          <TypeName>System.String</TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Table Name="Table1">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>96.2pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>39.7pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>19.3pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>35.3pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>95.2pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>50.8pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>48.1pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>44.9pt</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox1">
+                      <Value>host</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox2">
+                      <Value>client_identifier</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>user</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>datetime</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox5">
+                      <Value>request_cmd</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox6">
+                      <Value>request_url</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox7">
+                      <Value>request_type</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox8">
+                      <Value>status_code</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox9">
+                      <Value>bytes</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox10">
+                      <Value>referrer</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox11">
+                      <Value>user_agent</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox12">
+                      <Value>cookie</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                      <CanGrow>False</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="host">
+                      <Value>=Fields!host.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="client_identifier">
+                      <Value>=Fields!client_identifier.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="user">
+                      <Value>=Fields!user.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="datetime">
+                      <Value>=Fields!datetime.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="request_cmd">
+                      <Value>=Fields!request_cmd.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="request_url">
+                      <Value>=Fields!request_url.Value</Value>
+                      <CanGrow>True</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="request_type">
+                      <Value>=Fields!request_type.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="status_code">
+                      <Value>=Fields!status_code.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="bytes">
+                      <Value>=Fields!bytes.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="referrer">
+                      <Value>=Fields!referrer.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="user_agent">
+                      <Value>=Fields!user_agent.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="cookie">
+                      <Value>=Fields!cookie.Value</Value>
+                      <CanGrow>False</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2 pt</PaddingLeft>
+                        <BorderColor />
+                        <BorderWidth />
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+      </Table>
+      <Matrix Name="Matrix1">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>12pt</Height>
+            <DynamicColumns>
+              <Grouping Name="DynamicColumnsGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!referrer.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="Textbox14">
+                  <Value>=Fields!referrer.Value</Value>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>&gt;</Style>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="Textbox15">
+                    <Value>referrer Subtotal</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>&gt;</Style>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>154.6pt</Width>
+            <DynamicRows>
+              <Grouping Name="DynamicRowsGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!request_url.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="Textbox16">
+                  <Value>=Fields!request_url.Value</Value>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>&gt;</Style>
+                </Textbox>
+              </ReportItems>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="Textbox17">
+                    <Value>request_url Subtotal</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>&gt;</Style>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>117.5pt</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>12pt</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="Textbox18">
+                    <Value>=Count(Fields!request_cmd.Value)</Value>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>&gt;</Style>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+        <Left>0.0pt</Left>
+        <Top>68.8pt</Top>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!request_url.Value</FilterExpression>
+            <Operator>Like</Operator>
+            <FilterValues>
+              <FilterValue>"^*.msi"</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
+      </Matrix>
+      <Textbox Name="Textbox19">
+        <Height>19.97pt</Height>
+        <Width>154.09pt</Width>
+        <Value>Url vs Referrer</Value>
+        <Left>2.1pt</Left>
+        <Top>38.1pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontSize>16pt</FontSize>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>184.2pt</Height>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>14 pt</Height>
+    <ReportItems>
+      <Textbox Name="Textbox13">
+        <Top>1 pt</Top>
+        <Left>10 pt</Left>
+        <Height>12 pt</Height>
+        <Width>3in</Width>
+        <Value>=Globals!PageNumber.Value + ' of ' + Globals!TotalPages.Value</Value>
+        <Style>
+          <FontSize>10pt</FontSize>
+          <FontWeight>Normal</FontWeight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <CanGrow>False</CanGrow>
+      </Textbox>
+    </ReportItems>
+    <PrintOnFirstPage>True</PrintOnFirstPage>
+    <PrintOnLastPage>True</PrintOnLastPage>
+  </PageFooter>
+  <PageHeader>
+    <Height>0pt</Height>
+    <PrintOnFirstPage>True</PrintOnFirstPage>
+    <PrintOnLastPage>True</PrintOnLastPage>
+  </PageHeader>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+</Report>

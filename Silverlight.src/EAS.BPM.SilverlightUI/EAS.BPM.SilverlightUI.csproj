@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05B04E3E-6505-420D-834A-570A9CF1CCB7}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EAS.BPM.SilverlightUI</RootNamespace>
+    <AssemblyName>EAS.BPM.SilverlightUI</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Publish\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Publish\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EAS.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL" />
+    <Reference Include="EAS.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL" />
+    <Reference Include="EAS.MicroKernel, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL" />
+    <Reference Include="EAS.ReportViewer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ContextHelper.cs" />
+    <Compile Include="Helpers\WfAddInHelper.cs" />
+    <Compile Include="MsgBoxWindow.xaml.cs">
+      <DependentUpon>MsgBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfApprovalWindow.xaml.cs">
+      <DependentUpon>WfApprovalWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfDefineInput.xaml.cs">
+      <DependentUpon>WfDefineInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfExecuteItem.xaml.cs">
+      <DependentUpon>WfExecuteItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfLaunchFlow.xaml.cs">
+      <DependentUpon>WfLaunchFlow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SLContext.cs" />
+    <Compile Include="WfInstanceWindow.xaml.cs">
+      <DependentUpon>WfInstanceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfInstanceList.xaml.cs">
+      <DependentUpon>WfInstanceList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfTrackWindow.xaml.cs">
+      <DependentUpon>WfTrackWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfExecuteWindow.xaml.cs">
+      <DependentUpon>WfExecuteWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfToDoList.xaml.cs">
+      <DependentUpon>WfToDoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfDoList.xaml.cs">
+      <DependentUpon>WfDoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WfApplyList.xaml.cs">
+      <DependentUpon>WfApplyList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowRuntime.cs" />
+    <Compile Include="WfSubmitWindow.xaml.cs">
+      <DependentUpon>WfSubmitWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MsgBoxWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfApprovalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WfDefineInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WfExecuteItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WfLaunchFlow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WfInstanceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WfInstanceList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfTrackWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfExecuteWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfToDoList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfDoList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfApplyList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WfSubmitWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EAS.Explorer.BLL.Contracts\EAS.Explorer.BLL.Contracts.csproj">
+      <Project>{443662F4-40F4-4AAF-AFAA-177E6AEE6827}</Project>
+      <Name>EAS.Explorer.BLL.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EAS.Explorer.Entities\EAS.Explorer.Entities.csproj">
+      <Project>{2767B2EA-64B1-45F9-98F4-D21CC0C6E727}</Project>
+      <Name>EAS.Explorer.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EAS.Explorer\EAS.Explorer.csproj">
+      <Project>{9554CA97-31B4-4A79-802A-FC6C322A711F}</Project>
+      <Name>EAS.Explorer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Exclamation.png" />
+    <Resource Include="Images\Info.png" />
+    <Resource Include="Images\Message.png" />
+    <Resource Include="Images\Question.png" />
+    <Resource Include="Images\StopSign.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

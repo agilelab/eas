@@ -1,0 +1,81 @@
+﻿
+
+#header {
+    margin: 6px 12px;
+    position: relative;
+}
+
+    #header img.logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+    }
+
+    #header a.title {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 24px;
+        text-decoration: none;
+        line-height: 30px;
+        margin-left: 15px;
+    }
+
+.topbar.f-toolbar {
+    border-top-color: inherit;
+    padding: 3px 12px;
+}
+
+.bottomtable{background-color:#c7d9ee;}
+.bottomtable a{color:#000; text-decoration:none}
+#toggleheader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-image: url(../icon/bullet_arrow_up.png);
+    background-repeat: no-repeat;
+    z-index: 10000;
+}
+
+#toggleheader.collapsed {
+    background-image: url(../icon/bullet_arrow_down.png);
+}
+
+
+.f-theme-neptune .region-top .x-panel-body,
+.f-theme-neptune .region-top .x-toolbar {
+    background-color: #005999!important;
+}
+
+.f-theme-neptune .region-top .x-toolbar {
+    border-color: #014A7E!important;
+}
+
+.f-theme-neptune .region-top span,
+.f-theme-neptune .region-top .x-toolbar-text,
+.f-theme-neptune .region-top a {
+    color: #fff;
+}
+
+.f-theme-neptune .region-top .x-toolbar-separator {
+    border-color: #aaa;
+}
+
+.f-theme-neptune .region-top .x-btn-default-toolbar-small {
+    background-color: transparent;
+    background-image: none;
+    border-width: 0;
+}
+.f-theme-neptune .region-top .x-btn-default-toolbar-small-over,
+.f-theme-neptune .region-top .x-btn-default-toolbar-small-menu-active {
+    background-color: #3386c2;
+}
+
+.highlight {
+    font-weight: bold;
+    color: Red;
+}

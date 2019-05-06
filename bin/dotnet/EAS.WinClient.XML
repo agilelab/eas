@@ -1,0 +1,1873 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.WinClient</name>
+    </assembly>
+    <members>
+        <member name="M:EAS.Explorer.WinClient.SessionCollection.#ctor">
+            <summary>
+            初始化 WebSessionCollection 类的新实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.SessionCollection.Add(EAS.Explorer.WinClient.Session)">
+            <summary>
+            向会话集合添加一个新的会话对象。
+            </summary>
+            <param name="session">要向集合添加的会话对象。</param>
+            <returns>成功添加会话对象后在集合中的位置。</returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.SessionCollection.Remove(EAS.Explorer.WinClient.Session)">
+            <summary>
+            从会话集合中删除一个会话对象。
+            </summary>
+            <param name="session">要删除的会话对象。</param>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.SessionCollection.Item(EAS.Sessions.IClient)">
+            <summary>
+            获取指定的帐户（客户端）和服务器建立的 Session 对象的引用。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.SessionCollection.Item(System.String)">
+            <summary>
+            获取指定键的 ISession 对象。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.LoginForm.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.LoginForm.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.LoginForm.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.LoginForm.Passed">
+            <summary>
+            获取或者设置一个值，该值只是用户是否通过验证。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.LoginForm.LoginID">
+            <summary>
+            获取正在登录的用户的登录ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.LoginForm.Password">
+            <summary>
+            获取正在登录的用户的登录密码。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopItemSelector.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopItemSelector.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.DeskTopItemSelector.Modules">
+            <summary>
+            选中的模块。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.DeskTopItemSelector.MultiSelect">
+            <summary>
+            是否多选。
+            </summary>
+        </member>
+        <member name="T:EAS.ScheduledTask.TimingScheduler">
+            <summary>
+            时间定点调度。
+            </summary>
+        </member>
+        <member name="T:EAS.ScheduledTask.IScheduler">
+            <summary>
+            调度。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.IScheduler.Execute">
+            <summary>
+            执行动作。
+            </summary>
+        </member>
+        <member name="P:EAS.ScheduledTask.IScheduler.ID">
+            <summary>
+            调度ID。
+            </summary>
+        </member>
+        <member name="P:EAS.ScheduledTask.IScheduler.Name">
+            <summary>
+            调度名称。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.AbstractScheduler.DoAction(EAS.Explorer.Entities.JobSchedule)">
+            <summary>
+            具体工作。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.AbstractScheduler.WriteLog(EAS.Explorer.Entities.JobSchedule,System.Exception)">
+            <summary>
+            保存日志。
+            </summary>
+            <param name="schedule"></param>
+            <param name="error"></param>
+        </member>
+        <member name="M:EAS.ScheduledTask.TimingScheduler.#ctor">
+            <summary>
+            初始化TimingScheduler对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.TimingScheduler.#ctor(EAS.Explorer.Entities.JobSchedule)">
+            <summary>
+            初始化TimingScheduler对象实例。
+            </summary>
+            <param name="sechedule">计划调度。</param>
+        </member>
+        <member name="P:EAS.ScheduledTask.TimingScheduler.TimeValue">
+            <summary>
+            时间点。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.AboutForm.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.AboutForm.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.AboutForm.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.BottomControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.BottomControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.BottomControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.m_TotalItemCount">
+            <summary>
+            项目总数
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.m_SelectedItem">
+            <summary>
+            当前选择项目。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.GetDeskTopItemInfo(System.Drawing.Point)">
+            <summary>
+            求指定位置的项目。
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.OpenDesktopItem(EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo)">
+            <summary>
+            打开桌面项目。
+            </summary>
+            <param name="desktopItem"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.CalculateItemCount(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            计算项目总数，行/列。
+            </summary>
+            <param name="itemWidth"></param>
+            <param name="itemHeight"></param>
+            <param name="spiltWidth"></param>
+            <param name="spiltHeght"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.ContainerMoveAnimate">
+            <summary>
+            容器拖动动作。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.ContainerMoveMouseMove(System.Int32)">
+            <summary>
+            容器拖动动作。
+            </summary>
+            <param name="DeatilX"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.CreateRoundedRectanglePath(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            生成圆角矩形路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.GetWindowsDesktopPictrueAds">
+            <summary>
+            获取桌面北京图。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.GetBackgroundStyleKey">
+            <summary>
+            背景样式设置。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.GetBackgroundKey">
+            <summary>
+            背景图片变动。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.GetBackgroundLayoutKey">
+            <summary>
+            背景图片变动。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DeskTopView.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo.Image">
+            <summary>
+            图像。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo.RectShow">
+            <summary>
+            图形区域。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo.Module">
+            <summary>
+            模块。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo.Type">
+            <summary>
+            模块类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo.ID">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.DeskTopView.DeskTopItemInfo.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.MdiShell">
+            <summary>
+            MdiShell模式界面。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.OpenModule(System.Object)">
+            <summary>
+            装载模块插件。
+            </summary>
+            <param name="addIn"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.CloseModule">
+            <summary>
+            关闭当前模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.CloseModule(System.Object)">
+            <summary>
+            关闭指定模块。
+            </summary>
+            <param name="module">模块。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.CloseAllModule(System.Boolean)">
+            <summary>
+            关闭所有模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MdiShell.AddInActivate(System.Object)">
+            <summary>
+            激活插件。
+            </summary>
+            <param name="addIn"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.#ctor">
+            <summary>
+            初始化 Navigation 类实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeNavigationList">
+            <summary>
+            初始化导航控件导航栏目。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeNavigationGuest">
+            <summary>
+            Guest用户初始化导航。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeNavigationPublic">
+            <summary>
+            普通用户导航初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeNavigationTree">
+            <summary>
+            初始化导航控件导航栏目。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeNavigationGuest(System.Windows.Forms.TreeNode)">
+            <summary>
+            Guest用户初始化导航。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.InitializeNavigationPublic(System.Windows.Forms.TreeNode,EAS.Explorer.Entities.NavigateGroup)">
+            <summary>
+            普通用户导航初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationControl.GetModuleIcon(System.Byte[])">
+            <summary>
+            读模块图标。
+            </summary>
+            <param name="iconBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.PlugContext.ShowLoginDialog">
+            <summary>
+            重新登录。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.PlugContext.ShowAboutDialog">
+            <summary>
+            打开关于。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.ModuleManager">
+            <summary>
+            系统模块管理程序提供者。
+            </summary>
+            <remarks>用于系统开发人员，系统管理人员为配置系统功能模块提供相关功能。</remarks>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.ModuleManager.m_Assemblys">
+            <summary>
+            调试程序集。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.LoadModule(System.Guid)">
+            <summary>
+            静态方法，从程序集中加载一个系统功能模块。
+            </summary>
+            <param name="Guid">使用的系统会话。</param>
+            <returns>正常返回一个系统功能模块。</returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.LoadModule(System.String,System.String,System.String)">
+            <summary>
+            静态方法，从程序集中加载一个系统功能模块。
+            </summary>
+            <param name="name">要加载的系统功能模块名称。</param>
+            <param name="assemmby">要加载的系统功能模块所在的程序集。</param>
+            <param name="type">要加载的系统功能模块所在的类型信息。</param>
+            <returns>正常返回一个系统功能模块。</returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.RunModule(EAS.Explorer.IMainShell,EAS.Modularization.IModule)">
+            <summary>
+            静态方法，运行指定的程序模块。
+            </summary>
+            <param name="shell">程序模块运行的容器Shell。</param>
+            <param name="module">要运行的程序模块。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.RunModule(EAS.Explorer.IMainShell,System.Object)">
+            <summary>
+            静态方法，运行指定的程序模块。
+            </summary>
+            <param name="shell">程序模块运行的容器Shell。</param>
+            <param name="module">要运行的程序模块。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.CloseModule(EAS.Explorer.IMainShell)">
+            <summary>
+            关闭当前模块。
+            </summary>
+            <param name="shell"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.GetRunMethod(System.Object)">
+            <summary>
+            取得入口方法。
+            </summary>
+            <param name="module">模块。</param>
+            <returns>入口方法。</returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.DemandPrivileges(System.Object)">
+            <summary>
+            验证模块权限。
+            </summary>
+            <param name="module">模块</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ModuleManager.StartModule(System.Object,System.Object)">
+            <summary>
+            完成模块的调用。
+            </summary>
+            <param name="AddIn">模块。</param>
+            <param name="shell">容器。</param>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.ExplorerDoc.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ExplorerDoc.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ExplorerDoc.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EAS.WinClient.SystemStyle">
+            <summary>
+            系统样式。
+            </summary>
+        </member>
+        <member name="F:EAS.WinClient.SystemStyle.MdiStyle">
+            <summary>
+            MdiStyle
+            </summary>
+        </member>
+        <member name="F:EAS.WinClient.SystemStyle.MdiStyle2">
+            <summary>
+            MdiStyle2。
+            </summary>
+        </member>
+        <member name="F:EAS.WinClient.SystemStyle.DevStyle">
+            <summary>
+             DevShell。
+            </summary>
+        </member>
+        <member name="F:EAS.WinClient.SystemStyle.DesktopStyle">
+            <summary>
+             DesktopStyle。
+            </summary>
+        </member>
+        <member name="T:EAS.LuaEx">
+            <summary>
+            DataAccessor对象Lua扩展类。
+            </summary>
+            <remarks>
+            本类所实现的方法仅供Lua脚本之中调用。
+            </remarks>
+        </member>
+        <member name="M:EAS.LuaEx.Execute(System.String)">
+            <summary>
+            执行指定的非查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句。该语句必须是标准的数据库语句。</param>
+            <returns>返回命令影响的行数。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.Query(System.String,System.Int32)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="resultType">调用方要求的返回结果的类型。</param>
+            <returns>返回查询到的数据结果。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.QueryScalar(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果的第一行第一列。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.QueryMatrix(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一个查询结果Matrix。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.QueryDictionary(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一行的Key-Value。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.QueryList(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一列的值。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.QueryDataSet(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果集。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.QueryDataTable(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果集的第一个DataTable。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.GetDataSet">
+            <summary>
+            求当前系统的帐套信息。
+            </summary>
+            <returns>当前系统的登录账号。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.GetAccount">
+            <summary>
+            求当前系统的登录账号信息。
+            </summary>
+            <returns>当前系统的登录账号。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.GetAppSetting(System.String,System.String)">
+            <summary>
+            取系统配置参数。
+            </summary>
+            <param name="category">参数目录。</param>
+            <param name="itemKey">参数Key。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.LuaEx.StartsWith(System.String,System.String)">
+            <summary>
+            确定在使用指定的比较选项进行比较时此字符串实例的开头是否与指定的字符串匹配。
+            </summary>
+            <param name="text">源字符串。</param>
+            <param name="find">比较字符串。</param>
+            <returns>如果 value 参数与此字符串的开头匹配，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.EndsWith(System.String,System.String)">
+            <summary>
+            确定使用指定的比较选项进行比较时此字符串实例的结尾是否与指定的字符串匹配。
+            </summary>
+            <param name="text">源字符串。</param>
+            <param name="find">比较字符串。</param>
+            <returns>如果此字符串的末尾与 value 参数匹配，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:EAS.LuaEx.Contains(System.String,System.String)">
+            <summary>
+            该值指示指定的 System.String 对象是否出现在此字符串中。
+            </summary>
+            <param name="text">源字符串。</param>
+            <param name="find">比较字符串。</param>
+            <returns>如果 value 参数出现在此字符串中，或者 value 为空字符串 ("")，则为 true；否则为 false。</returns>
+        </member>
+        <member name="P:EAS.LuaEx.Instance">
+            <summary>
+            DataAccessorLuaEx对象的唯一实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ImageExtensions.ToIcon(System.Drawing.Image)">
+            <summary>
+            转换图像为图标。
+            </summary>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.ExceptionHandler.Handle(System.Exception)">
+            <summary>
+            处理错误异常。
+            </summary>
+            <param name="exc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.ExceptionHandler.Handle(System.Exception,System.String)">
+            <summary>
+            处理错误异常。
+            </summary>
+            <param name="exc"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.SystemErrorEventHandler">
+            <summary>
+            定义Shell应用程序的的错误处理委托。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.SystemErrorEventArgs">
+            <summary>
+            为信息系统开发平台Shell应用程序的异常处理事件提供参数。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.SystemErrorEventArgs.#ctor">
+            <summary>
+            初始化 SystemErrorEventArgs 类实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.SystemErrorEventArgs.#ctor(System.Exception)">
+            <summary>
+            使用异常初始化 SystemErrorEventArgs 类实例。
+            </summary>
+            <param name="exc">系统异常。</param>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.SystemErrorEventArgs.Error">
+            <summary>
+            获取已经发生的 Error 对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.SystemErrorEventArgs.Catched">
+            <summary>
+            获取或者设置一个值，该值指示当前出现的异常是否已经处理，如果已经处理，则不会使用 Explorer 内置的异常处理。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.ErrorBox">
+            <summary>
+            Explorer 内置的最终异常报告窗口。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ErrorBox.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ErrorBox.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.ErrorBox.Error">
+            <summary>
+            获取或者设置当前正在处理的 EAS.Windows.Error 对象。
+            </summary>
+        </member>
+        <member name="T:EAS.ScheduledTask.IntervalScheduler">
+            <summary>
+            时间间隔处理。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.IntervalScheduler.#ctor">
+            <summary>
+            初始化IntervalScheduler对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.IntervalScheduler.#ctor(EAS.Explorer.Entities.JobSchedule)">
+            <summary>
+            初始化IntervalScheduler对象实例。
+            </summary>
+            <param name="sechedule">计划调度。</param>
+        </member>
+        <member name="P:EAS.ScheduledTask.IntervalScheduler.TimeValue">
+            <summary>
+            时间间隔。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.about">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.bannar">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.bannerRight">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.CheckedImage1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.DesktopImage">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.document">
+            <summary>
+              查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Group_Link">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Login">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.loginBotton">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.MdiTabControl">
+            <summary>
+              查找 System.Byte[] 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.mid">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Module_About">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Module_Desktop">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Module_Login">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Module_Start">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.png_Left">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.png_Right">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Start">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.T_Group">
+            <summary>
+              查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.T_Module">
+            <summary>
+              查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.tab_Module">
+            <summary>
+              查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Tool_Group">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Tool_Module">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Properties.Resources.Tool_NV">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.FormContainer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.FormContainer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.FormContainer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.FormContainer.m_FocusNodes">
+            <summary>
+            节点存储。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.FormContainer.FormContainer_Enter(System.Object,System.EventArgs)">
+            <summary>
+            处理焦点。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.FormContainer.ControlPass(System.Windows.Forms.Control)">
+            <summary>
+            验证那些控件可以通过。
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.FormContainer.SetDefaultFocus">
+            <summary>
+            设置默认焦点。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.FormContainer.FocusNode">
+            <summary>
+            叶子节点。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.FormContainer.FocusNode.Value">
+            <summary>
+            字符串值，即TabIndex字符表示方式，如0.1,0.2,1.1.1,1.2.2。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.FormContainer.FocusNode.Leaf">
+            <summary>
+            叶子节点。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.TopContainer.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.TopContainer.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.TopContainer.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.DesktopShell">
+            <summary>
+            MdiShell模式界面。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.OpenModule(System.Object)">
+            <summary>
+            装载模块插件。
+            </summary>
+            <param name="addIn"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.CloseModule">
+            <summary>
+            关闭当前模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.CloseModule(System.Object)">
+            <summary>
+            关闭指定模块。
+            </summary>
+            <param name="module">模块。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.CloseAllModule(System.Boolean)">
+            <summary>
+            关闭所有模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DesktopShell.AddInActivate(System.Object)">
+            <summary>
+            激活插件。
+            </summary>
+            <param name="addIn"></param>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.Banner.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.Banner.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.Banner.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.BLL.ScheduledConsts.ScheduledTopic">
+            <summary>
+            通知变更。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.BLL.ScheduledConsts.RunTopic">
+            <summary>
+            立即执行。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.NavigationToolbox">
+            <summary>
+            Summary description for DummyPropertyGrid.
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationToolbox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationToolbox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.ModuleLoader">
+            <summary>
+            Shell应用程序系统模块加载器。
+            </summary>
+            <remarks>用于加载运行指定程序集的系统功能模块。</remarks>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.ModuleLoader.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ModuleLoader.#ctor">
+            <summary>
+            初始化 ModuleLoader 类实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ModuleLoader.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ModuleLoader.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.ModuleLoader.AssemblyName">
+            <summary>
+            获取包含要运行的模块的程序集文件。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.ModuleLoader.ModuleClassName">
+            <summary>
+            获取已经选中的模块的入口类名称，该类是实现了 IModule 接口的类。
+            </summary>
+        </member>
+        <member name="T:EAS.ScheduledTask.ScheduledService">
+            <summary>
+            定时服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.PasswordBox.DisabledClose">
+            <summary>
+            禁止关闭。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.PasswordBox.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.PasswordBox.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.PasswordBox.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.PasswordBox.LoginID">
+            <summary>
+            获取或者设置要设置密码的帐户的登录ID。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.DevShell">
+            <summary>
+            DevShell模式界面。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DevShell.OpenModule(System.Object)">
+            <summary>
+            装载模块插件。
+            </summary>
+            <param name="addIn"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DevShell.CloseModule">
+            <summary>
+            关闭当前模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DevShell.CloseModule(System.Object)">
+            <summary>
+            关闭指定模块。
+            </summary>
+            <param name="module">模块。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DevShell.CloseAllModule(System.Boolean)">
+            <summary>
+            关闭所有模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DevShell.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.DevShell.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.NavigationTool">
+            <summary>
+            导航工具条。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.#ctor">
+            <summary>
+            初始化 NavigationTool 类实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.InitializeNavigationGuest">
+            <summary>
+            Guest用户初始化导航。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.InitializeNavigationPublic">
+            <summary>
+            普通用户导航初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.InitializeNavigationPublic(System.Windows.Forms.ToolStripDropDownItem,EAS.Explorer.Entities.NavigateGroup)">
+            <summary>
+            普通用户导航初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.GetModuleIcon(System.Byte[])">
+            <summary>
+            读模块图标。
+            </summary>
+            <param name="iconBuffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.NavigationTool.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:EAS.WinClient.Application">
+            <summary>
+            AgileEAS.NET平台WinClient程序对外接口。
+            </summary>
+        </member>
+        <member name="M:EAS.WinClient.Application.ConfigTimeFunc(System.Func{System.DateTime})">
+            <summary>
+            配置系统时间函数。
+            </summary>
+            <param name="timeFunc">时间函数。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.ConfigResource(EAS.Explorer.IResource)">
+            <summary>
+            配置系统资源。
+            </summary>
+            <param name="resource">资源实例。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.ConfigUIActionController(EAS.Explorer.IUIActionController)">
+            <summary>
+            配置界面动作控件器。
+            </summary>
+            <param name="actionController"></param>
+        </member>
+        <member name="M:EAS.WinClient.Application.ConfigSystemStyle(EAS.WinClient.SystemStyle)">
+            <summary>
+            配置系统风格。
+            </summary>
+            <param name="style">系统风格。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.Start">
+            <summary>
+            正常启动。
+            </summary>
+        </member>
+        <member name="M:EAS.WinClient.Application.AnalogLogin(System.String,System.String)">
+            <summary>
+             模拟登录(启动程序不弹出登录窗口进行登录)。 
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.Start(System.String)">
+            <summary>
+            启动平台。
+            </summary>
+            <param name="assemblyName">调试启动。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.Start(System.String,System.Boolean)">
+            <summary>
+            启动平台。
+            </summary>
+            <param name="assemblyName">调试启动。</param>
+            <param name="needLogin">需要登录。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.Start(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            启动平台。
+            </summary>
+            <param name="assemblyName">调试启动。</param>
+            <param name="needLogin">需要登录。</param>
+            <param name="LoginID">登录ID。</param>
+            <param name="Password">密码。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.Start(System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            启动平台。
+            </summary>
+            <param name="assemblyName">调试启动。</param>
+            <param name="needLogin">需要登录。</param>
+            <param name="organization">组织机构。</param>
+            <param name="LoginID">登录ID。</param>
+            <param name="Password">密码。</param>
+        </member>
+        <member name="M:EAS.WinClient.Application.CachePrepare">
+            <summary>
+            缓存预热。
+            </summary>
+        </member>
+        <member name="M:EAS.WinClient.Application.Upgrade">
+            <summary>
+            启动升级。
+            </summary>
+        </member>
+        <member name="M:EAS.WinClient.Application.DllRegisterServer">
+            <summary>
+            实现自注册。
+            </summary>
+        </member>
+        <member name="M:EAS.WinClient.Application.appDomain_AssemblyResolve(System.Object,System.ResolveEventArgs)">
+            <summary>
+            动态加载程序集。
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.WinClient.Application.Domain_UnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+            <summary>
+            异常处理事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:EAS.WinClient.Application.AllowSocket">
+            <summary>
+            允许会用Socket进行协调。
+            </summary>
+        </member>
+        <member name="P:EAS.WinClient.Application.AllowIM">
+            <summary>
+            允许使用即时通讯。
+            </summary>
+        </member>
+        <member name="P:EAS.WinClient.Application.AllowKicking">
+            <summary>
+            是否允许踢人。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.WorkFlow.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.WorkFlow.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.WorkFlow.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.VersionConverter">
+            <summary>
+            版本号转换工具。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.VersionConverter.CreateInt64Version(System.String)">
+            <summary>
+            将指定的模块的 String 版本信息转换为 Int64 版本信息。
+            </summary>
+            <param name="version">String 版本信息。</param>
+            <returns>已经转换的 Int64 版本信息。</returns>
+            <exception cref="T:System.FormatException">version的格式不符合“xxxxx.xxxxx.xxxxx.xxxxx”，但是版本的每一个部分不需要达到指定的位数（分别是2.2.4.5），但至少要一位。</exception>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.VersionConverter.CreateStringVersion(System.Int64)">
+            <summary>
+            将指定的 Int64 版本信息转换为 String 版本信息。
+            </summary>
+            <param name="version">Int64 版本信息。</param>
+            <returns>已经转换的 String 版本信息。</returns>
+            <exception cref="T:System.FormatException">version 是一个小于 0 的值。</exception>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.NavigationStyle">
+            <summary>
+            应用程序导航的样式。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.NavigationStyle.ListStyle">
+            <summary>
+            列表导航。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.NavigationStyle.TreeStyle">
+            <summary>
+             树形导航。
+            </summary>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.StartWF.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.StartWF.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.StartWF.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Session.Account">
+            <summary>
+            获取当前已经登录系统的用户帐户的引用。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Win32Api.FindWindow(System.String,System.String)">
+            <summary>
+            获取窗体句柄
+            </summary>
+            <param name="lpClassName"></param>
+            <param name="lpWindowName">窗体名称</param>
+            <returns>IntPtr 句柄</returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Win32Api.SetForegroundWindow(System.IntPtr)">
+            <summary>
+             该函数将创建指定窗口的线程设置到前台，并且激活该窗口。键盘输入转向该窗口，并为用户改各种可视的记号。
+             系统给创建前台窗口的线程分配的权限稍高于其他线程。 
+            </summary>
+            <param name="hWnd">将被激活并被调入前台的窗口句柄</param>
+            <returns>如果窗口设入了前台，返回值为非零；如果窗口未被设入前台，返回值为零</returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NetClass.GetMacAddress">
+            <summary>
+            取MAC地址。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NetClass.GetHostName">
+            <summary>
+            取计算机名称。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NetClass.GetIPAddress">
+            <summary>
+            取IP地址。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EAS.Explorer.WinClient.UI.StartModuleEx.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.StartModuleEx.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.StartModuleEx.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.Win2WPF">
+            <summary>
+            Win2WPF.xaml 的交互逻辑
+            </summary>
+            <summary>
+            Win2WPF
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.Win2WPF.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ConfigReader.Write(System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.ConfigReader.Read(System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="F:EAS.ScheduledTask.ScheduledContext.m_Schedulers">
+            <summary>
+            调度任务。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.ScheduledContext.Initialize">
+            <summary>
+            初始化，从数据库加载任务调度。
+            </summary>
+        </member>
+        <member name="M:EAS.ScheduledTask.ScheduledContext.OnJobRun(System.Object)">
+            <summary>
+            订阅，执行任务。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:EAS.ScheduledTask.ScheduledContext.OnJobChanged(System.Object)">
+            <summary>
+            订阅，加载数据。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:EAS.ScheduledTask.ScheduledContext.Worker">
+            <summary>
+            工作线程。
+            </summary>
+        </member>
+        <member name="P:EAS.ScheduledTask.ScheduledContext.Schedulers">
+            <summary>
+            计划清单。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.UI.ModuleEditor">
+            <summary>
+            系统模块属性对话框。
+            </summary>
+            <remarks>用于系统开发人员、用户系统管理人员查看修改系统功能模块属性。</remarks>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ModuleEditor.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.ModuleEditor.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要使用代码编辑器修改
+            此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.ModuleEditor.IModule">
+            <summary>
+            获取或设置当前正在处理的功能模块。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.UI.ModuleEditor.Module">
+            <summary>
+            获取或者设置当前正在显示的系统模块对象引用。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.WinContext">
+            <summary>
+            WinContext
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Instance">
+            <summary>
+            单例。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Application">
+            <summary>
+            取得当前应用程序。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.ApplicationContext">
+            <summary>
+            获取系统上下文。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Account">
+            <summary>
+            取得系统账号。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Session">
+            <summary>
+            取得系统会话。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Sessions">
+            <summary>
+            获取会话集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.ConfigFile">
+            <summary>
+            应用程序配置文件名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.AllowClose">
+            <summary>
+            充许关闭起始页。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Adminstrators">
+            <summary>
+            是否管理员。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.WpfApplication">
+            <summary>
+            Wpf应用程序。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.ApplicationPath">
+            <summary>
+            系统运行路径。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.ActiveShell">
+            <summary>
+            系统运行容器。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.NavigationStyle">
+            <summary>
+            导航样式。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.SystemStyle">
+            <summary>
+            系统风格。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.EnableDesktop">
+            <summary>
+            系统风格。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.NavigationExpand">
+            <summary>
+            导航栏是打开。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.WinForm2WPF">
+            <summary>
+            是否管理员。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.DebugAssembly">
+            <summary>
+            测试程序。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Organization">
+            <summary>
+            默认帐套。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.LoginID">
+            <summary>
+            默认登录账号。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.Password">
+            <summary>
+            默认登录密码。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.SocketTcp">
+            <summary>
+            同步/协调Socket。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.AllowSocket">
+            <summary>
+            允许会用Socket进行协调。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.AllowIM">
+            <summary>
+            允许使用即时通讯。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.AllowKicking">
+            <summary>
+            是否允许踢人。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.WinContext.UIActionController">
+            <summary>
+            事件控制器。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NavigationProxy.GetNavigation(System.String)">
+            <summary>
+            查询导航。
+            </summary>
+            <param name="loginID"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NavigationProxy.GetGroupList">
+            <summary>
+            查一级分组。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NavigationProxy.GetGroupList(System.String)">
+            <summary>
+            查下载分组。
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.NavigationProxy.GeModuleList(System.String)">
+            <summary>
+            查询导航模块。
+            </summary>
+            <param name="groupID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.NavigationProxy.GroupList">
+            <summary>
+            导航信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.NavigationProxy.ModuleList">
+            <summary>
+            模块信息。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.WinClient.Application">
+            <summary>
+            AgileEAS.NET平台WinForm/WPF应用程序。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.AppStart">
+            <summary>
+            启动系统。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.AppEnd">
+            <summary>
+            终止系统。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.Login(System.String,System.String,System.String)">
+            <summary>
+            登录系统。
+            </summary>
+            <param name="dataSet"></param>
+            <param name="loginID"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.Login(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            登录系统。
+            </summary>
+            <param name="dataSet"></param>
+            <param name="loginID"></param>
+            <param name="password"></param>
+            <param name="lineState"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.AnalogLogin(System.String,System.String)">
+            <summary>
+            模拟账户登录|免密。
+            </summary>
+            <param name="dataSet"></param>
+            <param name="loginID"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.AnalogLogin(System.String,System.String,System.Int32)">
+            <summary>
+            模拟账户登录|免密。
+            </summary>
+            <param name="dataSet"></param>
+            <param name="loginID"></param>
+            <param name="lineState"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.Login">
+            <summary>
+            登录系统。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.Logout">
+            <summary>
+            注销系统。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.ChangePassword">
+            <summary>
+            修改密码。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.OnStart">
+            <summary>
+            启动程序初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.OnLogined">
+            <summary>
+            登录系统。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.OnNoNeedLogined">
+            <summary>
+            模拟登录。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.LoadMainForm">
+            <summary>
+            加载主界面。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.OnLogouting">
+            <summary>
+            注销程序。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.OnExit">
+            <summary>
+            退出程序，清除资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.Application_Error(System.Object,System.Threading.ThreadExceptionEventArgs)">
+            <summary>
+            息系统开发平台Shell应用程序系统错误处理。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.CallScript(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            脚本调用。
+            </summary>
+            <param name="script"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.Application.Demand(System.Guid,EAS.Security.Privileges)">
+            <summary>
+            API，不使用提示。
+            </summary>
+            <param name="component"></param>
+            <param name="privileges"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Application.Shell">
+            <summary>
+            容器Shell。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Application.Sessions">
+            <summary>
+            会话集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Application.Account">
+            <summary>
+            客户端帐户。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Application.NeedLogin">
+            <summary>
+            需要登录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Application.NeedPassword">
+            <summary>
+            需要密码。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.WinClient.Application.Name">
+            <summary>
+            应用程序的名称。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.WinClient.UI.MessageHelper.UnsubscribeMessages(System.Object)">
+            <summary>
+            退订模块消息。
+            </summary>
+            <param name="addIn"></param>
+        </member>
+        <member name="M:EAS.ScheduledTask.TaskWorker.AddTask(System.Action)">
+            <summary>
+            加入任务到对列。
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:EAS.ScheduledTask.TaskWorker.GetTask">
+            <summary>
+            获取一个任务。
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

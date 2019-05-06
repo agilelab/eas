@@ -1,0 +1,61 @@
+﻿<UserControl xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"  
+             x:Class="EAS.SilverlightClient.AddIn.AppSettingList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:MyCtrl="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="800">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="#99bbe8" BorderThickness="1,1,1,0" Height="28">
+            <StackPanel x:Name="opPanal"  Orientation="Horizontal" >
+                <Image Source="Images/refresh.png"  Cursor="Hand" Stretch="None" Margin="3" MouseLeftButtonUp="OnRefresh"/>
+                <TextBlock Text="刷新" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" MouseLeftButtonUp="OnRefresh"/>
+                <Image Source="Images/split.png" Stretch="None" Margin="3"/>
+                <Image Source="Images/New.png" Cursor="Hand" Stretch="None" Margin="3" MouseLeftButtonUp="OnNew"/>
+                <TextBlock Text="添加" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" MouseLeftButtonUp="OnNew"/>
+                <Image Source="Images/split.png" Stretch="None" Margin="3"/>
+                <Image Source="Images/delete.png"  Cursor="Hand" Stretch="None" Margin="3" MouseLeftButtonUp="OnDelete"/>
+                <TextBlock Text="删除" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" MouseLeftButtonUp="OnDelete"/>
+                <Image Source="Images/split.png" Stretch="None" Margin="3"/>
+                <Image Source="Images/Property.png" Cursor="Hand" Stretch="None" Margin="3" MouseLeftButtonUp="OnProperty"/>
+                <TextBlock Text="属性" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" MouseLeftButtonUp="OnProperty"/>
+                <Image Source="Images/split.png" Stretch="None" Margin="3"/>
+                <TextBlock Text="检索:" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" />
+                <TextBox  x:Name="tbSeach" Width="120" KeyDown="tbSeach_KeyDown"/>
+                <Image Source="Images/Seach.png" Cursor="Hand" Stretch="None" Margin="3" MouseLeftButtonUp="OnRefresh"/>
+                <TextBlock Text="查询" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" MouseLeftButtonUp="OnRefresh"/>
+                <Image Source="Images/split.png" Stretch="None" Margin="3"/>
+                <Image Source="Images/close.png" Cursor="Hand" Stretch="None" Margin="3" MouseLeftButtonUp="OnClose"/>
+                <TextBlock Text="关闭" FontSize="12" Cursor="Hand" VerticalAlignment="Center" Margin="1" MouseLeftButtonUp="OnClose"/>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="#99bbe8" BorderThickness="1,1,1,1">
+            <sdk:DataGrid  x:Name="dataList" AutoGenerateColumns="False" MouseLeftButtonDown="dataList_MouseLeftButtonDown" >
+            	<sdk:DataGrid.Columns>
+                    <sdk:DataGridTemplateColumn Header="" Width="20" >
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Checked, Mode=TwoWay}" VerticalAlignment="Center" />
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                    <sdk:DataGridTextColumn Header="目录" IsReadOnly="True"  Width="120" Binding="{Binding Category}" />
+                    <sdk:DataGridTextColumn Header="名称" IsReadOnly="True"  Width="180" Binding="{Binding Key}" />
+                    <sdk:DataGridTextColumn Header="值" IsReadOnly="True"  Width="240" Binding="{Binding Value}" />
+                    <sdk:DataGridTextColumn Header="说明" IsReadOnly="True"  Width="280" Binding="{Binding Description}" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        </Border>        
+        <Border Grid.Row="2" BorderBrush="#99bbe8" BorderThickness="1,0,1,1" Height="30">
+            <MyCtrl:VisualPager x:Name="pager" HorizontalAlignment="Left"  PageCount="15" Margin="5"  />
+        </Border>
+    </Grid>
+</UserControl>

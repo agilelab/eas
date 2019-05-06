@@ -1,0 +1,79 @@
+﻿  /* CSS layout */
+ *{
+	margin:0 auto;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color:#6a6a6a;
+	background-color:#ebe9ee
+}
+
+#masthead {
+   height:84px;  background:url('../images/top_bj.gif') repeat-x ;
+}
+#masthead .logo
+{
+	height:84px; width:800px;background:url('../images/lolo.gif') no-repeat;
+}
+
+
+#container {
+	min-width: 600px; width:900px; background-color:white; min-height:380px
+}
+
+#left_col {
+	width: 445px;
+	float: left;
+}
+#left_col .login
+{
+	margin-top:20px; margin-left:24px; background:aqua url('../images/login_bj.gif') no-repeat; height:224px; width:414px; padding-top:102px;
+}
+
+#left_col dl
+{
+	margin-left:55px;
+}
+#left_col dl dd
+{
+ margin-bottom:12px;
+	}
+
+label
+{
+	height:30px; line-height:30px; vertical-align:middle; width:65px; float:left
+}
+
+.an
+{
+	padding-top:8px; padding-left:140px
+}
+#left_col a
+{
+	color:blue; font-size:14px; font-weight:bold;
+}
+#page_content {
+	margin-left: 450px;
+}
+#page_content .title
+{
+	color:blue; font-size:14px; padding-top:45px; height:25px; background: url('../images/bj3.jpg') no-repeat left bottom
+}
+#page_content .text
+{
+	padding-top:10px; padding-right:10px; font-size:14px; line-height:25px;
+}
+#page_content .text p
+{
+	text-indent:2em; margin:10px; padding-top:10px; padding-bottom:10px;
+}
+
+.input
+{
+	border:1px #9ab2c2 solid; height:28px; width:170px; line-height:28px; vertical-align:middle
+}
+
+#footer {
+	clear: both; width:900px; font-size:12px; text-align:center; height:60px; line-height:25px; vertical-align:middle; padding-top:45px
+}

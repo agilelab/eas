@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A72B872D-3B08-435B-8681-BBA7B06D04F6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDLServer</RootNamespace>
+    <AssemblyName>RDLServer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RdlAsp\RdlAsp.csproj">
+      <Project>{5C53B7BA-E8F0-433F-B777-358F3C2AD679}</Project>
+      <Name>RdlAsp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RdlEngine\RdlEngine.csproj">
+      <Project>{C97E91F4-B310-44E2-9B6C-96775395722D}</Project>
+      <Name>RdlEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CopyReportServer.bat" />
+    <None Include="Reports\ChartExampleArea.rdl" />
+    <None Include="Reports\ChartExampleAreaPercentStacked.rdl" />
+    <None Include="Reports\ChartExampleAreaStacked.rdl" />
+    <None Include="Reports\ChartExampleBar.rdl" />
+    <None Include="Reports\ChartExampleBarPercentStacked.rdl" />
+    <None Include="Reports\ChartExampleBarStacked.rdl" />
+    <None Include="Reports\ChartExampleColumn.rdl" />
+    <None Include="Reports\ChartExampleColumnPercentStacked.rdl" />
+    <None Include="Reports\ChartExampleColumnStacked.rdl" />
+    <None Include="Reports\ChartExampleDoughnut.rdl" />
+    <None Include="Reports\ChartExampleLine.rdl" />
+    <None Include="Reports\ChartExamplePie.rdl" />
+    <None Include="Reports\CustOrderOdProdCat.rdl" />
+    <None Include="Reports\DesignerTestCode.rdl" />
+    <None Include="Reports\DesignTestRectangle.rdl" />
+    <None Include="Reports\DesignTestTable3.rdl" />
+    <None Include="Reports\DrilldownTest.rdl" />
+    <None Include="Reports\DrilldownTwoLevel.rdl" />
+    <None Include="Reports\FileDirectoryTest.rdl" />
+    <None Include="Reports\FinancialFunctions.rdl" />
+    <None Include="Reports\ITEMINFO.rdl" />
+    <None Include="Reports\RssLong.rdl" />
+    <None Include="Reports\RssShort.rdl" />
+    <None Include="Reports\SqlParameterTest.rdl" />
+    <None Include="Reports\Suppliers.rdl" />
+    <None Include="Reports\SuppliersStyled.rdl" />
+    <None Include="Reports\TableThreeColumns.rdl" />
+    <None Include="Reports\TextProviderTest.rdl" />
+    <None Include="Reports\ThreeColumns.rdl" />
+    <None Include="Reports\WebLogHitCount.rdl" />
+    <None Include="Reports\WebLogTest.rdl" />
+    <None Include="Reports\WebServiceGetAtoms.rdl" />
+    <None Include="Reports\WebServiceGetStockPrice.rdl" />
+    <None Include="Reports\WebServiceGoogle.rdl" />
+    <None Include="Reports\WorldFacts.rdl" />
+    <None Include="Reports\WorldFactsQueryArgs.rdl" />
+    <None Include="Reports\WorldFactsQueryArgs2.rdl" />
+    <None Include="rexaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RunReportServer.bat" />
+    <Content Include="Web.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADefault.aspx" />
+    <Content Include="datetimepicker.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="dscrnshot1tn.jpg" />
+    <Content Include="empty.gif" />
+    <Content Include="FrameTest.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="limitinput.js" />
+    <Content Include="ListReports.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="minus.gif" />
+    <Content Include="plus.gif" />
+    <Content Include="Reports\Contacts.xml" />
+    <Content Include="Reports\empty.gif" />
+    <Content Include="Reports\minus.gif" />
+    <Content Include="Reports\plus.gif" />
+    <Content Include="Reports\SalesData.xml" />
+    <Content Include="Reports\WorldFacts.xml" />
+    <Content Include="ReportViewer.js" />
+    <Content Include="SessionCount.aspx" />
+    <Content Include="ShowFile.aspx" />
+    <Content Include="ShowReport.aspx" />
+    <Content Include="Silverlight.js\localized\Silverlight.ar-sa.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.bg-bg.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.cs-cz.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.da-dk.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.de-de.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.el-gr.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.en-us.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.es-es.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.et-ee.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.fi-fi.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.fr-fr.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.he-il.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.hr-hr.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.hu-hu.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.it-it.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.ja-jp.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.ko-kr.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.lv-lv.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.nb-no.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.nl-nl.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.pl-pl.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.pt-br.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.pt-pt.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.ro-ro.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.ru-ru.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.sk-sk.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.sl-si.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.sr-latin-cs.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.sv-se.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.th-th.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.tr-tr.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.uk-ua.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.zh-chs.js" />
+    <Content Include="Silverlight.js\localized\Silverlight.zh-cht.js" />
+    <Content Include="Silverlight.js\Silverlight.js" />
+    <Content Include="SilverlightTest.aspx" />
+    <Content Include="SLViewer\fullscrn.png" />
+    <Content Include="SLViewer\zoomin.png" />
+    <Content Include="SLViewer\zoomout.png" />
+    <Content Include="SmallCalendar.gif" />
+    <Content Include="TestReportsSideBySide.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34362</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

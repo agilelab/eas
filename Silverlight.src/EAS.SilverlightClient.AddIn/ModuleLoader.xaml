@@ -1,0 +1,20 @@
+﻿<sdk:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:my="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    x:Class="EAS.SilverlightClient.AddIn.ModuleLoader"
+	Title="模块加载器" Height="188" Width="528">
+	<Grid>
+		<sdk:Label Name="label1" TabIndex="0" Margin="8,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="所在的程序集："/>
+		<TextBox Name="tbAssembly" Height="21" Width="413" TabIndex="1" Margin="8,26,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" TextChanged="tbAssembly_TextChanged"></TextBox>
+		<sdk:Label x:Name="label2" TabIndex="3" Margin="8,64,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="要启动的模块：" />
+		<ComboBox Name="cbxModules" Height="20" Width="413" TabIndex="4" Margin="8,83,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="cbxModules_SelectionChanged" />
+        <Button Name="btnBrowser" Height="24" Width="70" TabIndex="2" Margin="0,25,12,0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="浏览..." Click="btnBrowser_Click"></Button>
+        <Button Name="btnOK" Height="24" TabIndex="5" IsEnabled="False" Margin="339,0,0,11" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="70" Click="btnOK_Click">加载</Button>
+		<Button Name="btnCancel" Height="24" Width="70" TabIndex="6" Margin="0,0,12,11" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="-1.014,0.542" Click="btnCancel_Click">取消</Button>
+	</Grid>
+</sdk:ChildWindow>

@@ -1,0 +1,172 @@
+﻿*
+{
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-image: none;
+	font-family: 新宋体,宋体;
+}
+td, ul, div
+{
+	font-size: 12px;
+	font-family: 宋体, Verdana, Arial;
+}
+.leftwidth
+{
+	width: 162px;
+	background-image: url( "../images/leftbj.gif" );
+	padding-left: 12px;
+	padding-right: 17px;
+	height: 480px;
+}
+.lefttitle
+{
+	background-image: url( "../images/left1_1.gif" );
+	line-height: 33px;
+	padding-left: 37px;
+	vertical-align: middle;
+	width: 98px;
+	float: left;
+}
+.leftimg
+{
+	width: 27px;
+	float: left;
+}
+.t
+{
+	font-size: 12px;
+	color: #0a4276;
+}
+.leftmiddle
+{
+	background-image: url( "../images/left2.gif" );
+	padding-left: 39px;
+}
+.hg
+{
+	line-height: 22px;
+}
+.t
+{
+	font-size: 12px;
+	color: #0768a9;
+}
+
+.etimage
+{
+	background-color:"#c0d9e6";	
+	background: url( "../images/topbg.jpg" );
+}
+
+.Text
+{
+	font-size: 9pt;
+}
+
+.TitleText
+{
+	font-size: 10pt;
+	font-weight:bold;
+	color: #0768a9;
+}
+
+/*按钮样式*/
+.Newbutton
+{
+	font-size: 9pt;
+	color: White;
+	font-family: "Tahoma" , "宋体";
+}
+
+.InputCss
+{
+	font-size: 9pt;
+	color: #003399;
+	font-family: "宋体";
+	font-style: normal;
+	border-color: #93BEE2 #93BEE2 #93BEE2 #93BEE2;
+	border: 1px #93BEE2 solid;	
+}
+
+.InputCss2
+{
+	font-size: 12pt;	
+	color: #003399;
+	font-family: "宋体";
+	font-style: normal;
+	border-color: #93BEE2 #93BEE2 #93BEE2 #93BEE2;
+	border: 1px #93BEE2 solid;
+	line-height:18px;
+	height:18px
+	
+}
+
+/*按钮样式*/
+.ButtonCss
+{
+	font-family: "Tahoma" , "宋体";
+	font-size: 9pt;
+	color: #003399;
+	border: 1px #003399 solid;
+	color: 006699;
+	border-bottom: #93bee2 1px solid;
+	border-left: #93bee2 1px solid;
+	border-right: #93bee2 1px solid;
+	border-top: #93bee2 1px solid;
+	background-image: url(../Images/bluebuttonbg.gif);
+	background-color: #e8f4ff;
+	cursor: hand;
+	font-style: normal;
+}
+/*蓝色按钮样式*/
+.blueButtonCss
+{
+	font-family: "Tahoma" , "宋体";
+	font-size: 9pt;
+	color: #003366;
+	border: 0px #93bee2 solid; /* BORDER-BOTTOM: #93bee2 1px solid;      BORDER-LEFT: #93bee2 1px solid;      BORDER-RIGHT: #93bee2 1px solid;      BORDER-TOP: #93bee2 1px solid;*/
+	background-image: url(../Images/blue_button_bg.gif);
+	background-color: #ffffff;
+	cursor: hand;
+	font-style: normal;
+}
+/*红色按钮样式*/
+.redButtonCss
+{
+	font-family: "Tahoma" , "宋体";
+	font-size: 9pt;
+	color: #0066cc;
+	border: 1px #93bee2 solid;
+	border-bottom: #93bee2 1px solid;
+	border-left: #93bee2 1px solid;
+	border-right: #93bee2 1px solid;
+	border-top: #93bee2 1px solid;
+	background-image: url(../Images/redbuttonbg.gif);
+	background-color: #ffffff;
+	cursor: hand;
+	font-style: normal;
+}
+
+/*绿色按钮样式*/
+.greenButtonCss
+{
+	font-family: "Tahoma" , "宋体";
+	font-size: 9pt;
+	color: #0066cc;
+	border: 1px #93bee2 solid;
+	border-bottom: #93bee2 1px solid;
+	border-left: #93bee2 1px solid;
+	border-right: #93bee2 1px solid;
+	border-top: #93bee2 1px solid;
+	background-image: url(../Images/greenbuttonbg.gif);
+	background-color: #ffffff;
+	cursor: hand;
+	font-style: normal;
+}
+
+.GbText 
+{  
+	font-size: 9pt
+}

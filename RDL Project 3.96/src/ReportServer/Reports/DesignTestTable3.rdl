@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Name="DrilldownTest">
+  <Description>
+  </Description>
+  <Author>
+  </Author>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>SELECT CategoryName, ProductName, ProductSales FROM "Product Sales for 1997"</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CategoryName">
+          <DataField>CategoryName</DataField>
+        </Field>
+        <Field Name="ProductName">
+          <DataField>ProductName</DataField>
+        </Field>
+        <Field Name="ProductSales">
+          <DataField>ProductSales</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageHeader>
+    <Height>91.7pt</Height>
+    <PrintOnFirstPage>True</PrintOnFirstPage>
+    <PrintOnLastPage>True</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox5">
+        <Height>14.12pt</Height>
+        <Width>320.12pt</Width>
+        <Value>=Globals!PageNumber.Value + " of " + Globals!TotalPages.Value</Value>
+        <Left>9.7pt</Left>
+        <Top>72.9pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <ZIndex>10</ZIndex>
+        <Top>5.54pt</Top>
+        <Height>0.2in</Height>
+        <Width>7.375in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>=Parameters!testparm.Value</Value>
+        <Left>13.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <BackgroundColor>Silver</BackgroundColor>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <Height>0.25in</Height>
+        <Width>9.875in</Width>
+        <CanGrow>true</CanGrow>
+        <Value />
+        <Left>13.5pt</Left>
+        <Top>3.75pt</Top>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Top>21.75pt</Top>
+        <Height>0.125in</Height>
+        <Width>4in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~CRITERIA1~~</Value>
+        <Left>13.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <Top>30.74pt</Top>
+        <Height>0.135in</Height>
+        <Width>4in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~CRITERIA2~~</Value>
+        <Left>13.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox30">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <Top>39.75pt</Top>
+        <Height>0.15in</Height>
+        <Width>4in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~CRITERIA3~~</Value>
+        <Left>13.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox31">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <Top>50.55pt</Top>
+        <Height>0.135in</Height>
+        <Width>4in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~CRITERIA4~~</Value>
+        <Left>13.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <Top>57.75pt</Top>
+        <Height>0.135in</Height>
+        <Width>4in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~CRITERIA5~~</Value>
+        <Left>13.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox33">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <Top>39.75pt</Top>
+        <Height>0.135in</Height>
+        <Width>1.875in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~PAGEOF~~</Value>
+        <Left>589.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <Top>30.74pt</Top>
+        <Height>0.135in</Height>
+        <Width>1.875in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~USERNAME~~</Value>
+        <Left>589.5pt</Left>
+      </Textbox>
+      <Textbox Name="Textbox35">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>7pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <Top>21.75pt</Top>
+        <Height>0.135in</Height>
+        <Width>1.875in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>~~PRINTDATE~~</Value>
+        <Left>589.5pt</Left>
+      </Textbox>
+    </ReportItems>
+  </PageHeader>
+  <Body>
+    <Height>268.8pt</Height>
+    <ReportItems>
+      <Table Name="Table1">
+        <Style>
+          <BackgroundColor>yellow</BackgroundColor>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <TableGroups>
+          <TableGroup>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <Height>12 pt</Height>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="CatToggle">
+                          <Value>=Fields!CategoryName.Value</Value>
+                          <Style>
+                            <FontWeight>bold</FontWeight>
+                            <BorderStyle />
+                            <BorderColor />
+                            <BorderWidth />
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <ColSpan>2</ColSpan>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox6">
+                          <Value>=sum(Fields!ProductSales.Value)</Value>
+                          <Style>
+                            <Format>$#,##0.00</Format>
+                            <TextAlign>Right</TextAlign>
+                            <FontWeight>=iif(sum(Fields!ProductSales.Value)&gt;=100000,"bold", "normal")</FontWeight>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Textbox7">
+                          <Value>
+                          </Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                </TableRow>
+              </TableRows>
+              <RepeatOnNewPage>True</RepeatOnNewPage>
+            </Header>
+            <Grouping Name="CatNameGroup">
+              <GroupExpressions>
+                <GroupExpression>=Fields!CategoryName.Value</GroupExpression>
+              </GroupExpressions>
+              <PageBreakAtStart>False</PageBreakAtStart>
+              <PageBreakAtEnd>False</PageBreakAtEnd>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Style>
+          <BorderStyle>Solid</BorderStyle>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1 in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox1">
+                      <Value>Category</Value>
+                      <Style>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox2">
+                      <Value>Product</Value>
+                      <Style>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox3">
+                      <Value>Sales</Value>
+                      <Style>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox4">
+                      <Value>Running Sum</Value>
+                      <Style>
+                        <FontWeight>bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <Visibility>
+            <Hidden>true</Hidden>
+            <ToggleItem>CatToggle</ToggleItem>
+          </Visibility>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox8">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProductName">
+                      <Value>=Fields!ProductName.Value</Value>
+                      <Style>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <BackgroundColor>=iif(Rownumber(Nothing) mod 2, "PowderBlue", "White")</BackgroundColor>
+                      </Style>
+                      <CanGrow>True</CanGrow>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ProductSales">
+                      <Value>=Fields!ProductSales.Value</Value>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <Format>$#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox9">
+                      <Value>=RunningValue(Fields!ProductSales.Value, sum, CatNameGroup)</Value>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <Format>$#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+            <TableRow>
+              <Height>24 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox36">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox37">
+                      <Value>this is a constant in a table row</Value>
+                      <Style>
+                        <BorderStyle />
+                        <BorderColor />
+                        <BorderWidth />
+                        <BackgroundColor>=iif(Rownumber(Nothing) mod 2, "PowderBlue", "White")</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox38">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <Format>$#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox39">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                        <Format>$#,##0.00</Format>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Visibility>
+                <Hidden>=Iif(Left(Fields!ProductName.Value, 1) = Parameters!testparm.Value, true, false)</Hidden>
+              </Visibility>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>11.6pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox10">
+                      <Value>All products</Value>
+                      <Style>
+                        <Color>blue</Color>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox11">
+                      <Value>
+                      </Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox12">
+                      <Value>=sum(Fields!ProductSales.Value)</Value>
+                      <Style>
+                        <Format>$#,##0.00</Format>
+                        <TextAlign>Right</TextAlign>
+                        <Color>blue</Color>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox13">
+                      <Value>
+                      </Value>
+                      <Style>
+                        <Format>$#,##0.00</Format>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Footer>
+        <Left>2.1pt</Left>
+        <Top>28.3pt</Top>
+      </Table>
+      <Textbox Name="Textbox14">
+        <Height>13.50pt</Height>
+        <Width>114.75pt</Width>
+        <Value>Above the table</Value>
+        <Left>18.00pt</Left>
+        <Top>5.80pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <Height>13.44pt</Height>
+        <Width>114.75pt</Width>
+        <Value>Below the table</Value>
+        <Left>1.5pt</Left>
+        <Top>102.2pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+        </Style>
+      </Textbox>
+      <Chart Name="Chart1">
+        <Height>144.00pt</Height>
+        <Width>288.00pt</Width>
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>LeftRight</BackgroundGradientType>
+          <BackgroundGradientEndColor>Azure</BackgroundGradientEndColor>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Type>Column</Type>
+        <Subtype>Plain</Subtype>
+        <SeriesGroupings>
+          <SeriesGrouping>
+            <DynamicSeries>
+              <Grouping Name="DynamicSeriesGroup2">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!CategoryName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label>=Fields!CategoryName.Value</Label>
+            </DynamicSeries>
+          </SeriesGrouping>
+        </SeriesGroupings>
+        <ChartData>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!ProductSales.Value)</Value>
+                  </DataValue>
+                </DataValues>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+        </ChartData>
+        <ValueAxis>
+          <Axis>
+            <Visible>True</Visible>
+            <MajorTickMarks>Inside</MajorTickMarks>
+            <MajorGridLines>
+              <ShowGridLines>True</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <FontSize>8pt</FontSize>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <ShowGridLines>True</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <Title>
+              <Caption>ProductSales</Caption>
+              <Style>
+                <WritingMode>tb-rl</WritingMode>
+              </Style>
+            </Title>
+          </Axis>
+        </ValueAxis>
+        <Legend>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <PaddingLeft>5pt</PaddingLeft>
+            <FontSize>8pt</FontSize>
+          </Style>
+          <Visible>True</Visible>
+          <Position>RightCenter</Position>
+        </Legend>
+        <Title>
+          <Style>
+            <FontWeight>Bold</FontWeight>
+            <FontSize>14pt</FontSize>
+            <TextAlign>Center</TextAlign>
+          </Style>
+          <Caption> CategoryName Chart</Caption>
+        </Title>
+        <Left>392.9pt</Left>
+        <Top>21.0pt</Top>
+        <PageBreakAtStart>False</PageBreakAtStart>
+      </Chart>
+      <Table Name="Table2">
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox16">
+                      <Value>CategoryName</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox17">
+                      <Value>ProductName</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox18">
+                      <Value>ProductSales</Value>
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox19">
+                      <Value>=Fields!CategoryName.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor />
+                        <BorderWidth />
+                        <BackgroundColor>=iif(Rownumber(Nothing) mod 2, "PowderBlue", "Green")</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox20">
+                      <Value>=Fields!ProductName.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor />
+                        <BorderWidth />
+                        <BackgroundColor>=iif(Rownumber(Nothing) mod 2, "PowderBlue", "Green")</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox21">
+                      <Value>=Fields!ProductSales.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <BorderColor />
+                        <BorderWidth />
+                        <BackgroundColor>=iif(Rownumber(Nothing) mod 2, "PowderBlue", "Green")</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>12 pt</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox22">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox23">
+                      <Value>
+                      </Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Textbox24">
+                      <Value>=Sum(Fields!ProductSales.Value)</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>404.6pt</Left>
+        <Top>177.7pt</Top>
+      </Table>
+      <Chart Name="Chart2">
+        <Height>144.00pt</Height>
+        <Width>288.00pt</Width>
+        <DataSetName>Data</DataSetName>
+        <NoRows>Query returned no rows!</NoRows>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>LeftRight</BackgroundGradientType>
+          <BackgroundGradientEndColor>Azure</BackgroundGradientEndColor>
+          <BorderColor />
+          <BorderWidth />
+        </Style>
+        <Type>Column</Type>
+        <Subtype>Plain</Subtype>
+        <SeriesGroupings>
+          <SeriesGrouping>
+            <DynamicSeries>
+              <Grouping Name="DynamicSeriesGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!CategoryName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label>=Fields!CategoryName.Value</Label>
+            </DynamicSeries>
+          </SeriesGrouping>
+        </SeriesGroupings>
+        <ChartData>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!ProductSales.Value)</Value>
+                  </DataValue>
+                </DataValues>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+        </ChartData>
+        <ValueAxis>
+          <Axis>
+            <Visible>True</Visible>
+            <MajorTickMarks>Inside</MajorTickMarks>
+            <MajorGridLines>
+              <ShowGridLines>True</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <FontSize>8pt</FontSize>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <ShowGridLines>True</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <Title>
+              <Caption>ProductSales</Caption>
+              <Style>
+                <WritingMode>tb-rl</WritingMode>
+              </Style>
+            </Title>
+          </Axis>
+        </ValueAxis>
+        <Legend>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <PaddingLeft>5pt</PaddingLeft>
+            <FontSize>8pt</FontSize>
+          </Style>
+          <Visible>True</Visible>
+          <Position>RightCenter</Position>
+        </Legend>
+        <Title>
+          <Style>
+            <FontWeight>Bold</FontWeight>
+            <FontSize>14pt</FontSize>
+            <TextAlign>Center</TextAlign>
+          </Style>
+          <Caption> CategoryName Chart</Caption>
+        </Title>
+        <Left>16.5pt</Left>
+        <Top>118.5pt</Top>
+        <PageBreakAtStart>False</PageBreakAtStart>
+      </Chart>
+    </ReportItems>
+    <Columns>1</Columns>
+  </Body>
+  <PageFooter>
+    <Height>17.9pt</Height>
+    <PrintOnFirstPage>True</PrintOnFirstPage>
+    <PrintOnLastPage>True</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="Textbox25">
+        <Height>14.13pt</Height>
+        <Width>320.12pt</Width>
+        <Value>=Globals!PageNumber.Value + " of " + Globals!TotalPages.Value</Value>
+        <Left>1.6pt</Left>
+        <Top>0.0pt</Top>
+        <Style>
+          <BorderStyle />
+          <BorderColor />
+          <BorderWidth />
+          <FontWeight>Bold</FontWeight>
+        </Style>
+      </Textbox>
+    </ReportItems>
+  </PageFooter>
+  <Width>.1pt</Width>
+  <PageWidth>11 in</PageWidth>
+  <PageHeight>8.5 in</PageHeight>
+  <LeftMargin>.25 in</LeftMargin>
+  <RightMargin>.25 in</RightMargin>
+  <BottomMargin>.25 in</BottomMargin>
+  <TopMargin>.25 in</TopMargin>
+  <DataElementName>Report</DataElementName>
+  <DataElementStyle>AttributeNormal</DataElementStyle>
+  <ReportParameters>
+    <ReportParameter Name="testparm">
+      <DataType>String</DataType>
+      <Nullable>False</Nullable>
+      <AllowBlank>False</AllowBlank>
+      <Prompt>When this parameter = first char of product constant row is hidden</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <DataSources>
+    <DataSource Name="DS1">
+      <DataSourceReference>northwind</DataSourceReference>
+    </DataSource>
+  </DataSources>
+</Report>

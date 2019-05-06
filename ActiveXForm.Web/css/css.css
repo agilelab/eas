@@ -1,0 +1,136 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:12px;
+	
+}
+
+
+
+table{
+	font-size:12px;
+}
+.RED01 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: lighter;
+	font-variant: normal;
+	color: #800C2D;
+	text-decoration: none;
+}
+.Blue01 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: lighter;
+	font-variant: normal;
+	color: #7887A9;
+	text-decoration: none;
+}
+.Black01 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.White01 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: lighter;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.white02 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: lighter;
+	color: #C6DFE2;
+	text-decoration: none;
+}
+
+/*-----------menu_start----------------*/
+.TopMenuGroup
+{
+  border:solid 1px #003167;
+  background-color:#4379C1;
+}
+
+.MenuGroup
+{
+  border:solid 1px #003167;
+  background-color:#EEEEEE;
+}
+
+.TopMenuItem
+{
+  background-image: url(images/top_item_bg.gif); 
+  color:white;
+  font-family:verdana;
+  font-size:11px;
+  width:75px;
+  height:22px;
+  cursor:pointer;
+}
+
+.TopMenuItemHover
+{
+  background-image: url(images/top_item_hover_bg.gif); 
+  color:white;
+  font-family:verdana;
+  font-size:11px;
+  width:75px;
+  height:22px;
+  cursor:pointer;
+}
+
+.MenuItem
+{
+  background-color:White;
+  color:#6699CC;
+  font-family:verdana;
+  font-size:10px;
+  border: solid 1px white;
+  cursor:pointer;
+}
+
+.MenuItemHover
+{
+  background-color:#EEEEEE;
+  color:#285D9F;
+  font-family:verdana;
+  font-size:10px;
+  border: solid 1px white;
+  cursor:pointer;
+}
+
+/*-----------menu_end----------------*/
+
+
+.Purplekuang {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-top-color: #DDE5F6;
+	border-right-color: #DDE5F6;
+	border-bottom-color: #DDE5F6;
+	border-left-color: #DDE5F6;
+}
+
+.copyright {
+	FONT-WEIGHT: bold; CLEAR: both; MARGIN-TOP: 30px; FONT-SIZE: 17px; COLOR: #333333; FONT-FAMILY: Verdana, Tahoma, sans-serif; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.copyright A {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, sans-serif; TEXT-DECORATION: none
+}
+.copyright A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}

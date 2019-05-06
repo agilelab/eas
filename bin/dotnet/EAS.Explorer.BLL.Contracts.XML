@@ -1,0 +1,1045 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Explorer.BLL.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Explorer.BLL.IModuleService">
+            <summary>
+            模块管理服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IModuleService.InstallModule(EAS.Explorer.Entities.Module)">
+            <summary>
+            安装模块。
+            </summary>
+            <param name="module"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IModuleService.UnstallModule(EAS.Explorer.Entities.Module)">
+            <summary>
+            卸载模块。
+            </summary>
+            <param name="module"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IModuleService.UpdateModule(EAS.Explorer.Entities.Module,System.Collections.Generic.List{EAS.Explorer.Entities.ACL})">
+            <summary>
+            更新模块
+            </summary>
+            <param name="?"></param>
+            <param name="acls"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IModuleService.GetModules(System.Guid)">
+            <summary>
+            读取指定分组的模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IModuleService.UpdateSortCode(System.Collections.Generic.List{EAS.Explorer.Entities.Module})">
+            <summary>
+            修改模块的排序码。
+            </summary>
+            <param name="modules">模块清单。</param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.ILoginService">
+            <summary>
+            登录服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ILoginService.GetAccountInfo(System.String,System.String,System.String)">
+            <summary>
+            取账号信息，并且进行登录。
+            </summary>
+            <param name="organ">账套。</param>
+            <param name="loginID">登录ID。</param>
+            <param name="password">密码。</param>
+            <returns>登录结果。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ILoginService.GetAccountRoleList(System.String)">
+            <summary>
+            求账号的角色清单。
+            </summary>
+            <param name="loginID">登录ID。</param>
+            <returns>账号的角色清单。</returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.ICertificateService">
+            <summary>
+            证书管理服务契约。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.CreateX509Cert(System.String,System.String,System.DateTime,System.DateTime,System.Int32,System.Security.Cryptography.RSAParameters@)">
+            <summary>
+            创建一个X509数字证书。
+            </summary>
+            <param name="friendlyName">友好名称。</param>
+            <param name="subject">主题。</param>
+            <param name="beginDate">证书生效日期。</param>
+            <param name="endDate">证书失效日期。</param>
+            <param name="serialNumber">序列号。</param>
+            <param name="privateKey">RSA私钥。</param>
+            <returns>已创建的X509数字证书。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.Apply(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            申请数字证书。
+            </summary>
+            <param name="loginID">账户登录ID。</param>
+            <param name="passWord">账户密码。</param>
+            <param name="friendName">友好名称。</param>
+            <param name="limitTime">证书效期(天)</param>
+            <returns>证书Guid。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.GetCert(System.Guid)">
+            <summary>
+            获取已经申请的证书。
+            </summary>
+            <param name="guid">证书Guid。</param>
+            <returns>序列化的X509证书。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.UpdateCert(System.String,System.String,System.Guid)">
+            <summary>
+            更新证书。
+            </summary>
+             <param name="loginID">账户登录ID。</param>
+            <param name="passWord">账户密码。</param>
+            <param name="guid">原证书ID。</param>
+            <returns>证书Guid</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.GetCertGuid(System.String)">
+            <summary>
+            根据账户登录ID获取证书ID。
+            </summary>
+            <param name="loginID">登录ID。</param>
+            <returns>证书Guid</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.RevokeCert(System.String,System.String,System.Guid)">
+            <summary>
+            作废数字证书。
+            </summary>
+            <param name="loginID">登录ID。</param>
+            <param name="passWord">登录密码。</param>
+            <param name="guid">证书Guid。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.GetCertificateList">
+            <summary>
+            读取系统证书列表。
+            </summary>
+            <returns>证书清单。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.GetCertificateList(System.String)">
+            <summary>
+            读取系统证书列表。
+            </summary>
+            <param name="loginID">登录账号。</param>
+            <returns>证书清单。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.GetCertificateList(System.Int32)">
+            <summary>
+            读取系统证书列表。
+            </summary>
+            <param name="state">证书状态。</param>
+            <returns>证书清单。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ICertificateService.GetCertificateList(System.String,System.Int32,System.DateTime)">
+            <summary>
+            读取系统证书列表。
+            </summary>
+            <param name="loginID">登录账号。</param>
+            <param name="state">证书状态。</param>
+            <param name="limitTime">失效时间。</param>
+            <returns>证书清单。</returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IGroupService">
+            <summary>
+            分组服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IGroupService.AddMember(EAS.Explorer.Entities.NavigateGroup,System.Collections.Generic.List{System.String})">
+            <summary>
+            添加成员。
+            </summary>
+            <param name="group"></param>
+            <param name="modules"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IGroupService.RemoveMember(EAS.Explorer.Entities.NavigateGroup,System.Collections.Generic.List{System.String})">
+            <summary>
+            移除成员。
+            </summary>
+            <param name="group"></param>
+            <param name="modules"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IGroupService.UpdateGroup(EAS.Explorer.Entities.NavigateGroup,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存分组。
+            </summary>
+            <param name="group"></param>
+            <param name="modules"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IGroupService.DeleteGroup(EAS.Explorer.Entities.NavigateGroup)">
+            <summary>
+            删除分组。
+            </summary>
+            <param name="group"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IGroupService.GetSubGroups(System.Guid)">
+            <summary>
+            读取分组。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IGroupService.GetSubGroups(System.Guid,System.Int32)">
+            <summary>
+            读取分组。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IACLService">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Clear(System.Guid)">
+            <summary>
+            清除权限。
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Clear(System.Guid,System.String)">
+            <summary>
+            清除权限。
+            </summary>
+            <param name="guid"></param>
+            <param name="privileger"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Clear(System.String)">
+            <summary>
+            清除全新。
+            </summary>
+            <param name="privileger"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Grant(System.Guid,System.Collections.Generic.List{System.String},System.Int32,System.Int32)">
+            <summary>
+            授权/对一模块进行授权。
+            </summary>
+            <param name="pObject"></param>
+            <param name="privilegers"></param>
+            <param name="pType"></param>
+            <param name="pValue"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Grant(System.String,System.Int32,System.Collections.Generic.List{System.Guid},System.Int32)">
+            <summary>
+            授权/对一所有者进行模块授权。
+            </summary>
+            <param name="privileger"></param>
+            <param name="pType"></param>
+            <param name="pObjects"></param>
+            <param name="pValue"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Demand(System.Guid,System.String)">
+            <summary>
+            验证权限。
+            </summary>
+            <param name="module"></param>
+            <param name="loginID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IACLService.Demand(System.Guid,System.String,System.Int32)">
+            <summary>
+            验证权限。
+            </summary>
+            <param name="module"></param>
+            <param name="loginID"></param>
+            <param name="privileges"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IAccountService">
+            <summary>
+            账户服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.Delete(EAS.Explorer.Entities.Account)">
+            <summary>
+            删除账户。
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.DeleteOrganization(System.String)">
+            <summary>
+            删除账户目录/组织机构。
+            </summary>
+            <param name="organID"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.UpdateAccount(EAS.Explorer.Entities.Account,System.String)">
+            <summary>
+            更新账户。
+            </summary>
+            <param name="account"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.UpdateAccount(EAS.Explorer.Entities.Account,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EAS.Explorer.Entities.ACL})">
+            <summary>
+            更新账户。
+            </summary>
+            <param name="account"></param>
+            <param name="password"></param>
+            <param name="roleList"></param>
+            <param name="aclList"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.AddRoles(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            添加角色。
+            </summary>
+            <param name="loginID"></param>
+            <param name="roles"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.UpdatePassword(System.String,System.String)">
+            <summary>
+            修改密码。
+            </summary>
+            <param name="loginid"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.VerifyPassword(System.String,System.String)">
+            <summary>
+            密码验证。
+            </summary>
+            <param name="loginid">登录ID。</param>
+            <param name="password">密码。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.GetAccounts(System.String)">
+            <summary>
+            查询指定角色的子账户。
+            </summary>
+            <param name="roleName">角色名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAccountService.Unlock(System.String)">
+            <summary>
+            解锁账号。
+            </summary>
+            <param name="loginID"></param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.NavigationResult">
+            <summary>
+            登录结果信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.NavigationResult.Groups">
+            <summary>
+            分组信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.NavigationResult.Modules">
+            <summary>
+            模块信息。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IInputDictService">
+            <summary>
+            输入字典服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IInputDictService.GetInputMetadata(System.Guid)">
+            <summary>
+            获取输入字典元数据。
+            </summary>
+            <param name="inputID">输入字典ID。</param>
+            <returns>字典元数据。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IInputDictService.GetInputMetadata(System.Guid,System.DateTime)">
+            <summary>
+            获取输入字典元数据。
+            </summary>
+            <param name="inputID">输入字典ID。</param>
+            <param name="updateTime">更新时间。</param>
+            <returns>字典元数据，无更新返回空字符串。</returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IBugService">
+            <summary>
+            Bug服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IBugService.Submit(System.String,System.Byte[],System.String)">
+            <summary>
+            提交Bug。
+            </summary>
+            <param name="Subject">主题 。</param>
+            <param name="Content">Bug内容 。</param>
+            <param name="environment">环境上下文。</param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.INavigationService">
+            <summary>
+            登录导航服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.INavigationService.GetNavigation(System.String)">
+            <summary>
+            取导航菜单/目录。
+            </summary>
+            <param name="loginID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IScriptService">
+            <summary>
+            脚本服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IScriptService.Get(System.String,System.String)">
+            <summary>
+            读取系统配置。
+            </summary>
+            <param name="category">目录。</param>
+            <param name="itemKey">项目。</param>
+            <returns>配置信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IScriptService.CacheGet(System.String,System.String)">
+            <summary>
+            读取系统配置/缓存。
+            </summary>
+            <param name="category">目录。</param>
+            <param name="itemKey">项目。</param>
+            <returns>配置信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IScriptService.RunLuaScript(System.String)">
+            <summary>
+            执行指定的Lua脚本。
+            </summary>
+            <param name="script">Lua脚本。</param>
+            <returns>脚本的执行输出。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IScriptService.RunJavaScript(System.String)">
+            <summary>
+            执行指定的JavaScript。
+            </summary>
+            <param name="script">JavaScript。</param>
+            <returns>脚本的执行输出。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IScriptService.RunCSharp(System.String)">
+            <summary>
+            执行指定的CSharp脚本。
+            </summary>
+            <param name="script">CSharp脚本。</param>
+            <returns>脚本的执行输出。</returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.BusinessTipException">
+            <summary>
+            业务提示异常，即用于BLL方法向UI返回人为提示。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.BusinessTipException.#ctor">
+            <summary>
+            初始化BusinessTipException对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.BusinessTipException.#ctor(System.String)">
+            <summary>
+            初始化BusinessTipException对象实例。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.BusinessTipException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            初始化BusinessTipException对象实例。
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.BusinessTipException.#ctor(System.String,System.Exception)">
+            <summary>
+            初始化BusinessTipException对象实例。
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.ContactResult">
+            <summary>
+            通信服务DTO。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.ContactResult.Organizations">
+            <summary>
+            组织机构。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.ContactResult.Accounts">
+            <summary>
+            账号。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.ContactResult.Friends">
+            <summary>
+            好友。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.ContactResult.FriendGroups">
+            <summary>
+            好友分组。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.ContactResult.Crowds">
+            <summary>
+            群组信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.ContactResult.AccountCrowds">
+            <summary>
+            群组/账号。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IMakeCertParameters">
+            <summary>
+            证书生成参数。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.IMakeCertParameters.MakeCertPath">
+            <summary>
+            证书生成工具路径。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.IMakeCertParameters.CertSavePath">
+            <summary>
+            证书在放路径。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.IMakeCertParameters.CertFileName">
+            <summary>
+            证书文件名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.IMakeCertParameters.LimitTime">
+            <summary>
+            证书有效期
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.IMakeCertParameters.Auditing">
+            <summary>
+            是否需要审核。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IReportManageService">
+            <summary>
+            报表管理服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IReportManageService.UpdateReport(EAS.Explorer.Entities.Report)">
+            <summary>
+            更新报表
+            </summary>
+            <param name="m_Report">报表对象。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IReportManageService.DeleteReport(EAS.Explorer.Entities.Report)">
+            <summary>
+            删除报表
+            </summary>
+            <param name="m_Report">报表对象。</param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IReportService">
+            <summary>
+            报表服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IReportService.GetMetadata(System.String)">
+            <summary>
+            读取报表元数据定义。
+            </summary>
+            <param name="name">报表名称。</param>
+            <returns>报表元数据定义信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IReportService.GetMetadata(System.String,System.DateTime)">
+            <summary>
+            读取报表元数据定义。
+            </summary>
+            <param name="name">报表名称。</param>
+            <param name="updateTime">更新时间。</param>
+            <returns>报表元数据定义信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IReportService.GetMetadata(System.Guid)">
+            <summary>
+            读取报表元数据定义。
+            </summary>
+            <param name="reportID">报表ID。</param>
+            <returns>报表元数据定义信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IReportService.GetMetadata(System.Guid,System.DateTime)">
+            <summary>
+            读取报表元数据定义。
+            </summary>
+            <param name="reportID">报表ID。</param>
+            <param name="updateTime">更新时间。</param>
+            <returns>报表元数据定义信息。</returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IDesktopService">
+            <summary>
+            桌面服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IDesktopService.GetDesktopItems(System.String)">
+            <summary>
+            获取指定登录账号的桌面。
+            </summary>
+            <param name="loginID">登录ID。</param>
+            <returns>桌面项目清单。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IDesktopService.UpdateDesktopItemCounter(System.String,System.String)">
+            <summary>
+            更新桌面项目计数。
+            </summary>
+            <param name="loginID">登录ID。</param>
+            <param name="module">模块Guid。</param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IAppSettingService">
+            <summary>
+            系统配置服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAppSettingService.GetAppSetting(System.String,System.String)">
+            <summary>
+            读取系统配置。
+            </summary>
+            <param name="category">目录。</param>
+            <param name="itemKey">项目。</param>
+            <returns>配置信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAppSettingService.GetAppSettingList(System.String)">
+            <summary>
+            读取系统配置。
+            </summary>
+            <param name="category">目录。</param>
+            <returns>配置信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAppSettingService.Get(System.String,System.String)">
+            <summary>
+            读取系统配置。
+            </summary>
+            <param name="category">目录。</param>
+            <param name="itemKey">项目。</param>
+            <returns>配置信息。</returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IAppSettingService.CacheGet(System.String,System.String)">
+            <summary>
+            读取系统配置/缓存。
+            </summary>
+            <param name="category">目录。</param>
+            <param name="itemKey">项目。</param>
+            <returns>配置信息。</returns>
+        </member>
+        <member name="T:EAS.BPM.BLL.IWorkflowService">
+            <summary>
+            工作流服务。
+            </summary>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.ChangeWFDefineID(System.Guid)">
+            <summary>
+            改变工作流定义的Guid。
+            </summary>
+            <param name="sourceID">流程定义ID。</param>
+            <remarks>
+            工作流版本升级，原来的流程ID需要让位于新版本，原有流程的ID变为一个新的Guid并且改变所以实例的ID。 
+            </remarks>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.SaveWFDefine(EAS.BPM.Entities.WFDefineRoot)">
+            <summary>
+            保存工作流定义。
+            </summary>
+            <param name="wfDefine">工作流定义对象。</param>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.PublishWorkflow(System.Guid,System.String)">
+            <summary>
+            发布工作流定义。
+            </summary>
+            <param name="flowID">流程ID。</param>
+            <param name="loginID">发布人。</param>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetWFDefineRoot(System.Guid)">
+            <summary>
+            获取工作流定义。
+            </summary>
+            <param name="flowID">工作流Guid。</param>
+            <returns>工作流定义对象。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetWFDefine(System.Guid)">
+            <summary>
+            获取定工作流定义。
+            </summary>
+            <param name="flowID">流程ID。</param>
+            <returns>工作流定义。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetWFDefineList(System.String,System.String)">
+            <summary>
+            查询指定账户具有发起权限的工作流定义。
+            </summary>
+            <param name="loginId">登录账号。</param>
+            <param name="flowName">流程名称。</param>
+            <returns>工作流定义清单。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.VerifyWorkflow(System.String,System.String,System.String)">
+            <summary>
+            验证工作流定义。
+            </summary>
+            <param name="xomlString">xoml定义。</param>
+            <param name="rulesString">规则定义。</param>
+            <param name="variable">变量定义。</param>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.CreateWorkflow(System.Guid,EAS.Workflow.IWorkflowDataEntity,System.String)">
+            <summary>
+            创建工作流实例。
+            </summary>
+            <param name="flowID">流程ID。</param>
+            <param name="wfData">工作流业务数据。</param>
+            <param name="loginID">登录账户。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.CreateWorkflow(System.Guid,System.Guid,EAS.Workflow.IWorkflowDataEntity,System.String)">
+            <summary>
+            创建工作流实例。
+            </summary>
+            <param name="instanceID">实例Guid。</param>
+            <param name="flowID">工作流定义GUID。</param>
+            <param name="wfData">工作流业务数据。</param>
+            <param name="loginID">登录账户。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.Submit(System.Guid,System.String,System.String)">
+            <summary>
+            申请提交。
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <param name="loginID">提交账号。</param>
+            <param name="comment">提交原因。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.Submit(System.Guid,EAS.Workflow.IWorkflowDataEntity,System.String,System.String)">
+            <summary>
+            申请提交。
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <param name="wfData">业务数据。</param>
+            <param name="loginID">提交账号。</param>
+            <param name="comment">提交原因。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.Approval(System.Guid,System.String,System.Boolean,System.String)">
+            <summary>
+            审批提交。
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <param name="loginID">审批账号。</param>
+            <param name="result">审批结果。</param>
+            <param name="comment">审批意见。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.Approval(System.Guid,EAS.Workflow.IWorkflowDataEntity,System.String,System.Boolean,System.String)">
+            <summary>
+            审批提交。
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <param name="wfData">业务数据。</param>
+            <param name="loginID">审批账号。</param>
+            <param name="result">审批结果。</param>
+            <param name="comment">审批意见。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.Terminate(System.Guid,System.String)">
+            <summary>
+            终止流程
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <param name="cause">终止原因。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetToDoWorkflows(System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            取得待办流程实例。
+            </summary>
+            <param name="loginID">登录账号。</param>
+            <param name="flowID">流程ID。</param>
+            <param name="startTime">开始时间。</param>
+            <param name="endTime">结束时间。</param>
+            <returns>待办流程清单。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetDoWorkflows(System.String,System.String,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            取得已办流程实例。
+            </summary>
+            <param name="loginID">登录账号。</param>
+            <param name="flowID">流程ID。</param>
+            <param name="startTime">开始时间。</param>
+            <param name="endTime">结束时间。</param>
+            <param name="state">流程状态。</param>
+            <returns>已办流程清单。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetWorkflowDataEntity(System.Guid)">
+            <summary>
+            取指定工作流实例ID的数据对象。
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.GetWorkFlowResult(System.Guid)">
+            <summary>
+            取指定工作流实例ID的当前处理结果。
+            </summary>
+            <param name="instanceID">实例ID。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="M:EAS.BPM.BLL.IWorkflowService.Save(System.Guid,EAS.Workflow.IWorkflowDataEntity)">
+            <summary>
+            保存流程数据。
+            </summary>
+            <param name="instanceID">流程实例。</param>
+            <param name="wfData">流程数据。</param>
+            <returns>工作流返回结果。</returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IPermissionService">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IPermissionService.UpdatePermissions(System.String,System.Int32,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            更新权限。
+            </summary>
+            <param name="privileger">权限所有者。</param>
+            <param name="pType">所有者类型。</param>
+            <param name="objects">权限对象列表。</param>
+            <param name="onlyNavigation">仅导航权限。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.GetContact(System.String)">
+            <summary>
+            求联系人。
+            </summary>
+            <param name="loginID">登录ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.CreateAccount(EAS.Explorer.Entities.Account,System.String)">
+            <summary>
+            注册/创建账号。
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.UpdateAccount(EAS.Explorer.Entities.Account)">
+            <summary>
+            更新账号。
+            </summary>
+            <param name="account"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.SaveFriendGroup(EAS.Explorer.Entities.FriendGroup)">
+            <summary>
+            更新分组。
+            </summary>
+            <param name="friendGroup"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.AddFriend(EAS.Explorer.Entities.Friend)">
+            <summary>
+            添加好友。
+            </summary>
+            <param name="friend"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.DeleteFriend(EAS.Explorer.Entities.Friend)">
+            <summary>
+            删除好友。
+            </summary>
+            <param name="friend"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.UpdateCrowd(EAS.Explorer.Entities.Crowd)">
+            <summary>
+            创建/更新群。
+            </summary>
+            <param name="crowd"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.CrowdAdd(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            加入群。
+            </summary>
+            <param name="crowdID"></param>
+            <param name="loginIDs">成员。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.CrowdExit(System.String,System.String)">
+            <summary>
+            退出群。
+            </summary>
+            <param name="crowdID"></param>
+            <param name="loginID">成员。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.CrowdDismiss(System.String,System.String)">
+            <summary>
+            解散群。
+            </summary>
+            <param name="crowdID"></param>
+            <param name="loginID"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.SeachFriends(System.String)">
+            <summary>
+            检索好友。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMagpieService.SeachCrowds(System.String)">
+            <summary>
+            检索群。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IRoleService">
+            <summary>
+            角色管理服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IRoleService.DeleteRole(EAS.Explorer.Entities.Role)">
+            <summary>
+            删除角色。
+            </summary>
+            <param name="role"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IRoleService.UpdateRole(EAS.Explorer.Entities.Role,System.Collections.Generic.List{System.String},System.Collections.Generic.List{EAS.Explorer.Entities.ACL})">
+            <summary>
+            更新角色。
+            </summary>
+            <param name="role"></param>
+            <param name="accounts"></param>
+            <param name="acls"></param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IRoleService.GetRoles(System.String)">
+            <summary>
+            查询指定账号的所属角色。
+            </summary>
+            <param name="LoginID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IRoleService.AddMembers(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            注册成员。
+            </summary>
+            <param name="roleName"></param>
+            <param name="loginIDs"></param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IMetaDataService">
+            <summary>
+            元数据服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.SpaceCanDelete(EAS.Explorer.Entities.MetaSpace)">
+            <summary>
+            目录是否可以删除。
+            </summary>
+            <param name="space"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.NewMetaData(EAS.Explorer.Entities.Metadata,System.String)">
+            <summary>
+            新建元数据。
+            </summary>
+            <param name="meta">元数据。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.UpdateMetaData(EAS.Explorer.Entities.Metadata,System.String)">
+            <summary>
+            更新元数据。
+            </summary>
+            <param name="meta">元数据。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.DeleteMetaData(EAS.Explorer.Entities.Metadata)">
+            <summary>
+            删除元数据。
+            </summary>
+            <param name="meta">元数据。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.CheckOut(EAS.Explorer.Entities.Metadata,System.String,System.String)">
+            <summary>
+            元数据签出。
+            </summary>
+            <param name="meta">元数据。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.CheckUndo(EAS.Explorer.Entities.Metadata,System.String)">
+            <summary>
+            元数据签出撤销。
+            </summary>
+            <param name="meta">元数据。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.CheckIn(EAS.Explorer.Entities.Metadata,System.String,System.String)">
+            <summary>
+            元数据签入。
+            </summary>
+            <param name="meta">元数据。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IMetaDataService.UpdateEnumObject(EAS.Explorer.Entities.EnumObject,System.String)">
+            <summary>
+            保存枚举对象。
+            </summary>
+            <param name="enumObject">枚举对象。</param>
+            <param name="LoginID">登录ID。</param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.LoginResult">
+            <summary>
+            登录结果信息。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.LoginResult.#ctor">
+            <summary>
+            初始化LoginResult对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.LoginResult.#ctor(EAS.Explorer.Entities.Account,System.Boolean)">
+            <summary>
+            初始化LoginResult对象实例。
+            </summary>
+            <param name="account"></param>
+            <param name="passed"></param>
+        </member>
+        <member name="P:EAS.Explorer.BLL.LoginResult.Account">
+            <summary>
+            帐号信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.LoginResult.Passed">
+            <summary>
+            是否通过验证。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.BLL.LoginResult.Error">
+            <summary>
+            错误。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.BLL.ILogService">
+            <summary>
+            系统日志服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.ILogService.Log(System.String,System.String,System.String,System.String)">
+            <summary>
+            记录日志。
+            </summary>
+            <param name="LoginID">登录ID。</param>
+            <param name="Info">日志信息。</param>
+            <param name="HostName">主机名称。</param>
+            <param name="IpAddress">IP地址。</param>
+        </member>
+        <member name="T:EAS.Explorer.BLL.IJobService">
+            <summary>
+            计划任务服务。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IJobService.DeleteJob(System.Guid)">
+            <summary>
+            删除指定的计划任务。
+            </summary>
+            <param name="jobID">任务ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IJobService.UpdateJob(EAS.Explorer.Entities.Job)">
+            <summary>
+            保存Job。
+            </summary>
+            <param name="job">计划任务对象。</param>
+        </member>
+        <member name="M:EAS.Explorer.BLL.IJobService.Run(System.Guid)">
+            <summary>
+            执行Job。
+            </summary>
+            <param name="jobID">任务ID。</param>
+        </member>
+    </members>
+</doc>

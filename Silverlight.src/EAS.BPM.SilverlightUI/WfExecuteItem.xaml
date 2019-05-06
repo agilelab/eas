@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="EAS.BPM.SilverlightUI.WfExecuteItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid x:Name="LayoutRoot" Background="White">
+        <sdk:DataGrid  x:Name="dgList" AutoGenerateColumns="False" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Header="当前状态" IsReadOnly="True"  Width="100" Binding="{Binding StateName}" />
+                <sdk:DataGridTextColumn Header="处理时间" IsReadOnly="True"  Width="125" Binding="{Binding ExecuteTime}" />
+                <sdk:DataGridTextColumn Header="经办人" IsReadOnly="True"  Width="80" Binding="{Binding LoginID}" />
+                <sdk:DataGridTextColumn Header="动作" IsReadOnly="True"  Width="80" Binding="{Binding ActionName}" />
+                <sdk:DataGridTextColumn Header="处理结果" IsReadOnly="True"  Width="65" Binding="{Binding ResultText}" />
+                <sdk:DataGridTextColumn Header="处理意见" IsReadOnly="True"  Width="150" Binding="{Binding Comment}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</UserControl>

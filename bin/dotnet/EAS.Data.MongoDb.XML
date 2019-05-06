@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Data.MongoDb</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Data.MongoDbProvider">
+            <summary>
+            MongoDb提供者程序。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.#ctor">
+            <summary>
+            初始化MongoDbProvider对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Connect">
+            <summary>
+            打开连接。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Close">
+            <summary>
+            关闭连接。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetMongo">
+            <summary>
+            获取Mongo连接。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetDatabase(System.String)">
+            <summary>
+            取得原始API。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetDatabase(MongoDB.Driver.MongoServer,System.String)">
+            <summary>
+            取得原始API。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetCollection(MongoDB.Driver.MongoDatabase,System.String)">
+            <summary>
+            返回指定集合。
+            </summary>
+            <param name="db">Mongo数据库。</param>
+            <param name="collectionName">集合名称。</param>
+            <returns>集合对象。</returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetCollection``1(MongoDB.Driver.MongoDatabase)">
+             <summary>
+             返回指定集合。
+             </summary>
+             <param name="db">Mongo数据库。</param>
+            <typeparam name="T">类型。</typeparam>
+             <returns>集合对象。</returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetCollection``1(MongoDB.Driver.MongoDatabase,System.String)">
+            <summary>
+            返回指定集合。
+            </summary>
+            <param name="db">Mongo数据库。</param>
+            <param name="collectionName">集合名称。</param>
+            <returns>集合对象。</returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.GetCollectionName``1">
+            <summary>
+            求集合名称。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Insert``1(``0)">
+            <summary>
+            插入单条记录。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="item">数据对象记录。</param>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.InsertBatch``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            插入多条记录。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="documents">数据对象集合。</param>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Update``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            更新记录操作。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="item">数据对象记录。</param>
+            <param name="func">更新表达式。</param>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Update``1(System.Linq.Expressions.Expression{System.Func{``0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            更新记录操作。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="updater">更新表达式。</param>
+            <param name="func">更新表达式。</param>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Delete``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            删除指定对象。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="func">条件表达式。</param>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.List``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Int32,System.Int32)">
+            <summary>
+            查询对象集合。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="where">条件表达式。</param>
+            <param name="skip">跳过记录。</param>
+            <param name="take">取记录。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Single``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            读取单条记录。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="where">查询表达式。</param>
+            <returns>数据对象记录。</returns>
+        </member>
+        <member name="M:EAS.Data.MongoDbProvider.Linq``1">
+            <summary>
+            转换为Linq自由查询。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <returns>查询表达式包装类。</returns>
+        </member>
+        <member name="P:EAS.Data.MongoDbProvider.ConnectionString">
+            <summary>
+            获取或设置数据库连接字符串。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.MongoDbProvider.DbName">
+            <summary>
+            获取或设置数据库名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.MongoDbProvider.IsOpen">
+            <summary>
+            是否已打开连接。
+            </summary>
+        </member>
+        <member name="T:EAS.Data.QueryableWarp`1">
+            <summary>
+            结构化数据访问Linq支持包装类。
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <remarks>
+            为AgileEAS.NET SOA 中间件NoSQL数据访问
+            </remarks>
+        </member>
+        <member name="M:EAS.Data.QueryableWarp`1.Finalize">
+            <summary>
+            析构函数，释放资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.QueryableWarp`1.Dispose">
+            <summary>
+            释放资源。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.QueryableWarp`1.Queryable">
+            <summary>
+            Linq表达式。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,205 @@
+body
+{
+  background-color:White; 
+  font-family:Verdana; 
+  font-size:11px;
+  color:#3F3F3F; 
+}
+
+a
+{
+  color:#DD3409;
+  text-decoration:none; 
+}
+
+a:hover
+{
+  color:#DD3409;
+  text-decoration:underline; 
+}
+
+ul
+{
+  list-style-image: url(images/bullet.gif);
+  list-style-type:square; 
+  list-style-position:outside; 
+  margin-left:18px; 
+  margin-top:5px; 
+  color:#666666;
+  padding-left:2px;
+}
+
+ol
+{
+  list-style-position:outside; 
+  margin-left:25px; 
+  margin-top:5px; 
+}
+
+h1
+{
+  font-family:Verdana; 
+  font-weight:bold;
+  font-size:18px; 
+  color:#3F3F3F;
+  margin-top:12px; 
+  margin-bottom:40px; 
+}
+
+h2
+{
+  font-family:Verdana; 
+  font-weight:bold;
+  font-size:18px; 
+  color:#3F3F3F;
+  margin-top:15px; 
+  margin-bottom:15px; 
+}
+
+h3
+{
+  font-family:Verdana; 
+  font-weight:bold;
+  font-size:12px; 
+  margin-top:2px; 
+  margin-bottom:2px; 
+}
+
+.TopNavLink
+{
+  font-size:10px;
+  color:#3F3F3F; 
+}
+
+
+.WelcomeTitle
+{
+  font-family:Verdana;
+  font-size:23px;   
+  font-weight:900; 
+  letter-spacing:-0.2mm;
+  margin-top:10px; 
+  margin-bottom:20px; 
+}
+
+.MainText
+{
+  font-size:11px; 
+}
+
+.SmallText
+{
+  font-size:10px; 
+}
+
+.Hint
+{
+  color:Red;
+}
+
+.DemoArea
+{
+  border:1px silver solid; 
+  padding:8px;
+  background-color:#F6F6F6;
+}
+
+.AboutBox
+{
+  border:1px #E6E6E6 solid; 
+  background-color:#DDDDDD; 
+  background-image: url(images/about_background.gif); 
+}
+
+.SidePanel
+{ 
+  padding: 10px; 
+  border:1px; 
+  border-color:#AAAAAA; 
+  border-style: solid; 
+  background-color:#F3F3F3;
+  font-size:10px;
+  color:#666666;
+} 
+
+
+.DemosNav 
+{ 
+  padding: 0px; 
+  border:1px; 
+  border-color:#AAAAAA; 
+  border-style: solid; 
+  background-color:#F3F3F3;
+} 
+
+.DemoCategory 
+{ 
+  color:black; 
+  font-family: verdana; 
+  font-size: 10px; 
+  font-weight:bold; 
+  cursor: default; 
+} 
+
+.DemoCategoryOver
+{ 
+  color:black; 
+  font-family: verdana; 
+  font-size: 10px; 
+  font-weight:bold; 
+  text-decoration:underline; 
+  cursor: default; 
+} 
+
+.Demo 
+{ 
+  font-family: verdana; 
+  font-size: 10px; 
+  padding: 1px; 
+  padding-left:2px;
+  padding-right:2px;
+  border:1px; 
+  border-color:#F3F3F3; 
+  border-style: solid; 
+  cursor: default; 
+} 
+
+.DemoHover 
+{
+  font-family: verdana; 
+  font-size: 10px; 
+  padding: 1px; 
+  padding-left: 2px; 
+  padding-right: 2px; 
+  background-color:#cccccc; 
+  border:1px; 
+  border-color:gray; 
+  border-style: solid; 
+  cursor: default; 
+}
+
+.DemoSelected 
+{
+  font-family: verdana; 
+  font-size: 10px; 
+  padding: 1px; 
+  padding-left: 2px; 
+  padding-right: 2px; 
+  background-color:#FFFFFF; 
+  border:1px; 
+  border-color:gray; 
+  border-style: solid; 
+  cursor: default; 
+}
+
+input
+{
+  font-family: verdana; 
+  font-size: 11px; 
+}  
+
+select
+{
+  font-family:Verdana; 
+  font-size:11px;
+}

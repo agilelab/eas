@@ -1,0 +1,84 @@
+﻿<eas:DataWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+xmlns:eas="clr-namespace:EAS.Controls;assembly=EAS.Controls"
+xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
+	x:Class="EAS.SilverlightClient.AddIn.RoleEditor"
+	Title="系统角色属性" Height="454" Width="412" >
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Button x:Name="btnCancel" Height="23" Width="75" TabIndex="2" Margin="307,0,0,9" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="取消" Click="btnCancel_Click" />
+		<Button x:Name="btnOK" Height="23" Width="75" TabIndex="1" Margin="212,0,0,9" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="确定" Click="btnOK_Click" />
+        <sdk:TabControl Name="tcMain"  Height="372" HorizontalAlignment="Left" Margin="11,6,0,0"  VerticalAlignment="Top" Width="374" d:LayoutOverrides="GridBox">
+			<sdk:TabItem Header ="基本信息">
+				<Grid>
+                    <TextBox Height="21" HorizontalAlignment="Left"  Margin="70,51,0,0" x:Name="tbDescription" TabIndex="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" />
+					<sdk:Label Content="角色说明：" HorizontalAlignment="Left" Margin="10,54,0,0" x:Name="labelType" TabIndex="2" VerticalAlignment="Top" Height="16" Width="55" />
+					<sdk:Label Height="2" HorizontalAlignment="Left" Margin="11,31,0,0" x:Name="hr1" TabIndex="1" VerticalAlignment="Top" Width="352" />
+					<TextBox Height="21" HorizontalAlignment="Left" Margin="71,12,0,0" x:Name="tbName" TabIndex="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" />
+					<Image HorizontalAlignment="Left" Height="48" Width="48" Margin="11,-3,0,0" Source="Images/role.png" Stretch="Fill" VerticalAlignment="Top" />
+                    <eas:GroupBox Height="215" Margin="6,84,6,0" Name="groupBox1" Title="成员" VerticalAlignment="Top">
+                        <Grid Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <sdk:DataGrid x:Name="dataMembers" AutoGenerateColumns="False" Height="183" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="330">
+                                <sdk:DataGrid.Columns>
+                                    <sdk:DataGridTemplateColumn Header="" Width="20" >
+                                        <sdk:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox Name="cbMS" ClickMode="Release" Click="cbMS_Checked" IsChecked="{Binding Checked, Mode=TwoWay}" VerticalAlignment="Center" />
+                                            </DataTemplate>
+                                        </sdk:DataGridTemplateColumn.CellTemplate>
+                                    </sdk:DataGridTemplateColumn>
+                                    <sdk:DataGridTextColumn Header="名称" IsReadOnly="True"  Width="240" Binding="{Binding LoginID}" />
+                                </sdk:DataGrid.Columns>
+                            </sdk:DataGrid>
+                        </Grid>
+                    </eas:GroupBox>
+                    <Button Content="删除" Height="23" HorizontalAlignment="Right" IsEnabled="False" Margin="0,0,194,6" x:Name="btnMDelete" Click="btnMDelete_Click" TabIndex="3" VerticalAlignment="Bottom" Width="70" d:LayoutOverrides="VerticalAlignment" />
+                    <Button Content="添加..." Height="23" HorizontalAlignment="Left" Margin="6,0,0,6" x:Name="btnMAdd"  Click="btnMAdd_Click" TabIndex="2" VerticalAlignment="Bottom" Width="70" d:LayoutOverrides="VerticalAlignment" />
+                </Grid>
+			</sdk:TabItem>
+			<sdk:TabItem Header ="模块访问">
+				<Grid>
+					<sdk:Label Content="模块名称：" HorizontalAlignment="Left" Margin="5,9,0,0" x:Name="labelSec1" TabIndex="0" VerticalAlignment="Top" />
+					<sdk:Label Content="权限：" HorizontalAlignment="Left" Margin="5,0,0,107" x:Name="labelSec1_Copy" TabIndex="0" VerticalAlignment="Bottom" />
+					<Button Content="删除" Height="23" HorizontalAlignment="Right" IsEnabled="False" Margin="0,0,5,120" x:Name="btnDelete" Click="btnDelete_Click" TabIndex="3" VerticalAlignment="Bottom" Width="70" d:LayoutOverrides="VerticalAlignment" />
+					<Button Content="添加..." Height="23" HorizontalAlignment="Left" Margin="207,0,0,120" x:Name="btnAdd"  Click="btnAdd_Click" TabIndex="2" VerticalAlignment="Bottom" Width="70" d:LayoutOverrides="VerticalAlignment" />
+                    <sdk:DataGrid x:Name="dataPermissions" AutoGenerateColumns="False" Margin="7,29,5,152" SelectionChanged="dataPermissions_SelectionChanged">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTemplateColumn Header="" Width="20" >
+                                <sdk:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Name="cbPermissions"  IsChecked="{Binding Checked, Mode=TwoWay}" ClickMode="Release" Click="cbPermissions_Checked"  VerticalAlignment="Center" />
+                                    </DataTemplate>
+                                </sdk:DataGridTemplateColumn.CellTemplate>
+                            </sdk:DataGridTemplateColumn>
+                            <sdk:DataGridTextColumn Header="名称" IsReadOnly="True"  Width="200" Binding="{Binding MInfo.Name}" />
+                            <sdk:DataGridTextColumn Header="说明" IsReadOnly="True"  Width="240" Binding="{Binding MInfo.Description}" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    <sdk:DataGrid x:Name="dataPVs" AutoGenerateColumns="False" Height="93" Margin="7,0,5,8" VerticalAlignment="Bottom" Width="347">
+                        <sdk:DataGrid.Columns>
+                            <sdk:DataGridTemplateColumn Header="" Width="20" >
+                                <sdk:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Name="cbPVS" ClickMode="Release" Click="cbPVS_Checked" IsChecked="{Binding Checked, Mode=TwoWay}" VerticalAlignment="Center" />
+                                    </DataTemplate>
+                                </sdk:DataGridTemplateColumn.CellTemplate>
+                            </sdk:DataGridTemplateColumn>
+                            <sdk:DataGridTextColumn Header="名称" IsReadOnly="True"  Width="240" Binding="{Binding Name}" />
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                </Grid>
+			</sdk:TabItem>			
+		</sdk:TabControl>
+    </Grid>
+</eas:DataWindow>

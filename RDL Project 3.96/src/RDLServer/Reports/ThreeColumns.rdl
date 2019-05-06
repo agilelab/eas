@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report>
+  <DataElementStyle>ElementNormal</DataElementStyle>
+  <RightMargin>0.25in</RightMargin>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <DataInstanceName>Row</DataInstanceName>
+        <Style />
+        <DataSetName>Data</DataSetName>
+        <ReportItems>
+          <Textbox Name="Phone">
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>false</CanGrow>
+            <Value>=Fields!Phone.Value</Value>
+            <Left>1.5in</Left>
+            <Width>1in</Width>
+            <Height>12pt</Height>
+          </Textbox>
+          <Textbox Name="ContactName">
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+            <Width>1.5in</Width>
+            <Height>12pt</Height>
+            <CanGrow>false</CanGrow>
+            <Value>=Fields!ContactName.Value</Value>
+          </Textbox>
+        </ReportItems>
+      </List>
+    </ReportItems>
+    <Style />
+    <Height>0.25in</Height>
+    <ColumnSpacing>0.25in</ColumnSpacing>
+    <Columns>3</Columns>
+  </Body>
+  <TopMargin>0.5in</TopMargin>
+  <DataSources>
+    <DataSource Name="DS1">
+      <ConnectionProperties>
+        <!--				<DataProvider>SQL</DataProvider>   change to this for sql server -->
+        <DataProvider>xxx</DataProvider>
+        <!--  just for xml example data -->
+        <ConnectString>Server=(local)\VSDotNet;DataBase=Northwind;Integrated Security=SSPI;Connect Timeout=5</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Data">
+      <Query>
+        <DataSourceName>DS1</DataSourceName>
+        <CommandText>SELECT ContactName, Phone FROM Customers ORDER BY 1</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ContactName">
+          <DataField>ContactName</DataField>
+          <TypeName>String</TypeName>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+          <TypeName>String</TypeName>
+        </Field>
+      </Fields>
+      <Rows File="Contacts.xml" />
+    </DataSet>
+  </DataSets>
+  <LeftMargin>0.25in</LeftMargin>
+  <BottomMargin>0.5in</BottomMargin>
+  <Width>2.5in</Width>
+  <PageHeader>
+    <Height>0pt</Height>
+  </PageHeader>
+  <PageFooter>
+    <Height>0pt</Height>
+  </PageFooter>
+</Report>

@@ -1,0 +1,53 @@
+﻿<controls:ChildWindow
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    x:Class="EAS.SilverlightClient.AddIn.ModuleInstaller" Title="系统模块安装" 
+    Height="568" Width="526" xmlns:my="clr-namespace:EAS.Controls;assembly=EAS.Controls">
+	<Grid>
+        <my:GroupBox Height="252" HorizontalAlignment="Left" Margin="9,235,0,0" Name="groupBox1" VerticalAlignment="Top" Width="487" Title="模块信息" >
+        	<Grid Margin="0">
+                <TextBox Name="tbDeveloper" Height="21" Width="400" TabIndex="13" Margin="63,0,0,7" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbDescription" Height="21" Width="400" TabIndex="11" Margin="63,0,0,39" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbAssembly" Height="21" Width="400" TabIndex="9" Margin="63,0,0,71" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbClass" Height="21" Width="400" TabIndex="7" Margin="63,0,0,103" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbVersion" Height="21" Width="400" TabIndex="5" Margin="63,0,0,135" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbName" Height="21" Width="400" TabIndex="3" Margin="63,0,0,167" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+                <TextBox Name="tbGuid" Height="21" Width="400" TabIndex="1"  HorizontalAlignment="Left" IsReadOnly="True" TextWrapping="Wrap" Margin="63,0,0,197" VerticalAlignment="Bottom"  />
+                <sdk:Label x:Name="labelDeveloper"   TabIndex="12" Margin="14,0,0,9" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="开发商：" />
+                <sdk:Label x:Name="labelDescription"   TabIndex="10" Margin="13,0,0,41" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="描   述：" />
+                <sdk:Label x:Name="labelAssembly"   TabIndex="8" Margin="14,0,0,73" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="程序集：" />
+                <sdk:Label x:Name="labelClass"   TabIndex="6" Margin="13,0,0,105" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="类   型：" />
+                <sdk:Label x:Name="labelVersion"   TabIndex="4" Margin="13,0,0,137" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="版   本：" />
+                <sdk:Label x:Name="labelName"   TabIndex="2" Margin="13,0,0,169" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="名   称：" />
+                <sdk:Label x:Name="labelGuid"   TabIndex="0"  HorizontalAlignment="Left" Content="Guid：" VerticalAlignment="Bottom" Margin="21,0,0,199" />
+            </Grid>
+        </my:GroupBox>
+        <sdk:Label x:Name="labelFile"   TabIndex="0" Margin="9,16,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="程序集文件：" />
+		<TextBox Name="tbFile" Height="21" Width="337" TabIndex="1" Margin="79,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+		<Button x:Name="btnBrowser" Height="23" Width="75" TabIndex="2" Margin="0,13,12,0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="浏览..." Click="btnBrowser_Click" />
+		<sdk:Label Name="sp1" Height="2" Width="488"   TabIndex="3" Margin="9,48,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" ></sdk:Label>
+		<Button x:Name="btnOK" Height="23" Width="75" TabIndex="8" IsEnabled="False" Margin="0,0,97,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="安装" Click="btnOK_Click" />
+		<Button Name="btnCancel" Height="23" Width="75" TabIndex="9" Margin="0,0,12,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnCancel_Click">取消</Button>
+		<sdk:Label Name="labelCount"   TabIndex="10" Margin="9,0,0,13" HorizontalAlignment="Left" VerticalAlignment="Bottom" >已加载 0 个要安装的模块。</sdk:Label>
+        <sdk:DataGrid x:Name="moduleList" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="181" Margin="9,48,0,0" VerticalAlignment="Top" Width="487" SelectionChanged="moduleList_SelectionChanged">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Header="" Width="20" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Checked, Mode=TwoWay}" VerticalAlignment="Center" ClickMode="Release" Click="CheckBox_Checked" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Header="模块名称" IsReadOnly="True"  Width="120" Binding="{Binding Name}" />
+                <sdk:DataGridTextColumn Header="类型" IsReadOnly="True"  Width="240" Binding="{Binding Type}" />
+                <!--<sdk:DataGridTextColumn Header="程序集" IsReadOnly="True"  Width="120" Binding="{Binding Assembly}" />-->
+                <sdk:DataGridTextColumn Header="版本号" IsReadOnly="True"  Width="80" Binding="{Binding Version}" />
+                <sdk:DataGridTextColumn Header="开发者" IsReadOnly="True"  Width="85" Binding="{Binding Developer}" />
+                <sdk:DataGridTextColumn Header="说明" IsReadOnly="True"  Width="160" Binding="{Binding Description}" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</controls:ChildWindow>

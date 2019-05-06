@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.LuaScript</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.LuaScript.ILuaEngine">
+            <summary>  
+            Lua脚本解析引擎。  
+            </summary>  
+            <remarks>
+            用于完成程序之中嵌入的动态Lua脚本，Lua脚本在AgileEAS.NET SOA 中间件之中主要用于环境的各种参数的动态解析处理之中。
+            </remarks>
+        </member>
+        <member name="M:EAS.LuaScript.ILuaEngine.BindLuaFunctions(System.Object)">
+            <summary>  
+            注册lua函数，实现Lua绑定。
+            </summary>  
+            <param name="luaAPIClass">lua函数类</param>  
+        </member>
+        <member name="M:EAS.LuaScript.ILuaEngine.DoFile(System.String)">
+            <summary>  
+            执行lua脚本文件。 
+            </summary>  
+            <param name="luaFileName">脚本文件名。</param>  
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.ILuaEngine.DoString(System.String)">
+            <summary>  
+            执行lua脚本文本。
+            </summary>  
+            <param name="chunk">lua指令。</param>  
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.ILuaEngine.Invoke(System.String,System.Object[])">
+            <summary>
+            调用Lua函数。
+            </summary>
+            <param name="luaFunction">函数名称。</param>
+            <param name="args">调用参数。</param>
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="P:EAS.LuaScript.ILuaEngine.ScriptDirectory">
+            <summary>
+            脚本路径。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.ILuaEngine.OutAction">
+            <summary>
+            输出重定向方法/用于调试。
+            </summary>
+        </member>
+        <member name="T:EAS.LuaScript.LuaFunctionAttribute">
+            <summary>  
+            Lua函数描述特性。
+            </summary>  
+            <remarks>
+            用于标记Lua接口方法。
+            </remarks>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFunctionAttribute.#ctor(System.String)">
+            <summary>
+            初始化LuaFunctionAttribute对象实例。
+            </summary>
+            <param name="name">函数名称。</param>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFunctionAttribute.#ctor(System.String,System.String)">
+            <summary>
+            初始化LuaFunctionAttribute对象实例。
+            </summary>
+            <param name="name">函数名称。</param>
+            <param name="description">函数描述。</param>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFunctionAttribute.#ctor(System.String,System.String,System.String[])">
+            <summary>
+            初始化LuaFunctionAttribute对象实例。
+            </summary>
+            <param name="name">函数名称。</param>
+            <param name="description">函数描述。</param>
+            <param name="funcParams">参数说明。</param>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionAttribute.Name">
+            <summary>
+            函数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionAttribute.Description">
+            <summary>
+            函数描述。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionAttribute.Params">
+            <summary>
+            参数说明。
+            </summary>
+        </member>
+        <member name="T:EAS.LuaScript.LuaFunctionDescriptor">
+            <summary>  
+            Lua函数描述器。
+            </summary>  
+        </member>
+        <member name="M:EAS.LuaScript.LuaFunctionDescriptor.#ctor(System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            初始化LuaFunctionDescriptor对象实例。
+            </summary>
+            <param name="name">函数名称。</param>
+            <param name="description">函数描述。</param>
+            <param name="paramNames">参数名称。</param>
+            <param name="paramDescriptions">参数描述。</param>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionDescriptor.Name">
+            <summary>
+            函数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionDescriptor.Description">
+            <summary>
+            函数描述。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionDescriptor.ParamNames">
+            <summary>
+            参数名称。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionDescriptor.ParamDescriptions">
+            <summary>
+            参数描述。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionDescriptor.Header">
+            <summary>
+            函数头。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFunctionDescriptor.FullDocument">
+            <summary>
+            完整文档。
+            </summary>
+        </member>
+        <member name="T:EAS.LuaScript.LuaFramework">
+            <summary>
+            Lua脚本执行框架/上下文。
+            </summary>
+            <remarks>
+            应用系统之中调用Lua脚本的入口。
+            </remarks>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFramework.GetLuaEngine">
+            <summary>
+            Lua脚本引擎。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFramework.GetLuaEngine(System.String)">
+            <summary>
+            Lua脚本引擎。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFramework.BindLuaFunctions(System.Object)">
+            <summary>  
+            注册lua函数，实现Lua绑定。
+            </summary>  
+            <param name="luaAPIClass">lua函数类</param>  
+        </member>
+        <member name="M:EAS.LuaScript.LuaFramework.GetTime">
+            <summary>
+            取系统时间。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.LuaScript.LuaFramework.GetComponent(System.String)">
+            <summary>
+            从应用程序上下文环境之中获取指定名称的对象实例。
+            </summary>
+            <param name="componentKey">组件名称。</param>
+            <returns>对象实例。</returns>
+        </member>
+        <member name="P:EAS.LuaScript.LuaFramework.Instance">
+            <summary>
+            LuaFramework对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:EAS.LuaScript.LuaReflectionEngine">
+            <summary>  
+            Lua脚本解析引擎。  
+            </summary>  
+            <remarks>
+            用于完成程序之中嵌入的动态Lua脚本，Lua脚本在AgileEAS.NET SOA 中间件之中主要用于环境的各种参数的动态解析处理之中。
+            </remarks>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.#ctor">
+            <summary>
+            初始化AbstractLuaEngine对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.#ctor(System.String)">
+            <summary>
+            初始化LuaX86Engine对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.help(System.String)">
+            <summary>
+            Lua脚本交互方法，获取某一个命名的使用帮助。
+            </summary>
+            <param name="cmdName">命名名称。</param>
+            <returns>指定命名的使用帮助。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.help">
+            <summary>
+            脚本交互方法，获取所有命名的使用帮助。
+            </summary>
+            <returns>所有命名的使用帮助。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.BindLuaFunctions(System.Object)">
+            <summary>  
+            注册lua函数，实现Lua绑定。
+            </summary>  
+            <param name="luaAPIClass">lua函数类</param>  
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.AddFunction(System.String,System.Object,System.Reflection.MethodInfo)">
+            <summary>
+            注册方法。
+            </summary>
+            <param name="funcName"></param>
+            <param name="luaAPIClass"></param>
+            <param name="mInfo"></param>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.CreateLuaVM">
+            <summary>
+            创建虚拟机。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.Include(System.String)">
+            <summary>
+            预加载指定的脚本文件。
+            </summary>
+            <param name="luaFileName"></param>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.DoFile(System.String)">
+            <summary>  
+            执行lua脚本文件。 
+            </summary>  
+            <param name="luaFileName">脚本文件名。</param>  
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.Invoke(System.String,System.Object[])">
+            <summary>
+            调用Lua函数。
+            </summary>
+            <param name="luaFunction">函数名称。</param>
+            <param name="args">调用参数。</param>
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.DoString(System.String)">
+            <summary>  
+            执行lua脚本文本。
+            </summary>  
+            <param name="chunk">lua指令。</param>  
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.echo(System.Object)">
+            <summary>
+            输出Lua调试信息。
+            </summary>
+            <param name="message">输出对象。</param>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.Echo(System.Object)">
+            <summary>
+            输出Lua调试信息。
+            </summary>
+            <param name="message">输出对象。</param>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.WriteLog(System.String)">
+            <summary>
+            系统日志写入。
+            </summary>
+            <param name="message">日志信息。</param>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.Dispose">
+            <summary>
+            执行与释放或重置非托管资源相关的应用程序定义的任务。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.AbstractLuaEngine.Dispose(System.Boolean)">
+            <summary>
+            释放资源。
+            </summary>
+            <param name="disposing">为 true，则释放托管资源和非托管资源；为 false，则仅释放非托管资源。</param>
+        </member>
+        <member name="P:EAS.LuaScript.AbstractLuaEngine.ScriptDirectory">
+            <summary>
+            脚本路径。
+            </summary>
+        </member>
+        <member name="P:EAS.LuaScript.AbstractLuaEngine.OutAction">
+            <summary>
+            输出重定向方法/用于调试。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.LuaReflectionEngine.#ctor">
+            <summary>
+            初始化LuaReflectionEngine对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.LuaReflectionEngine.#ctor(System.String)">
+            <summary>
+            初始化LuaReflectionEngine对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.LuaScript.LuaReflectionEngine.DoFile(System.String)">
+            <summary>  
+            执行lua脚本文件。 
+            </summary>  
+            <param name="luaFileName">脚本文件名。</param>  
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.LuaReflectionEngine.Invoke(System.String,System.Object[])">
+            <summary>
+            调用Lua函数。
+            </summary>
+            <param name="luaFunction">函数名称。</param>
+            <param name="args">调用参数。</param>
+            <returns>lua脚本执行结果。</returns>
+        </member>
+        <member name="M:EAS.LuaScript.LuaReflectionEngine.DoString(System.String)">
+            <summary>  
+            执行lua脚本文本。
+            </summary>  
+            <param name="chunk">lua指令。</param>  
+            <returns>lua脚本执行结果。</returns>
+        </member>
+    </members>
+</doc>

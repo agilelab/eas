@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Explorer.Web</name>
+    </assembly>
+    <members>
+        <member name="M:EAS.Explorer.Web.SessionCollection.#ctor">
+            <summary>
+            初始化 WebSessionCollection 类的新实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.SessionCollection.Add(EAS.Sessions.ISession)">
+            <summary>
+            向会话集合添加一个新的会话对象。
+            </summary>
+            <param name="session">要向集合添加的会话对象。</param>
+            <returns>成功添加会话对象后在集合中的位置。</returns>
+        </member>
+        <member name="M:EAS.Explorer.Web.SessionCollection.Remove(EAS.Sessions.ISession)">
+            <summary>
+            从会话集合中删除一个会话对象。
+            </summary>
+            <param name="session">要删除的会话对象。</param>
+        </member>
+        <member name="P:EAS.Explorer.Web.SessionCollection.Item(EAS.Sessions.IClient)">
+            <summary>
+            获取指定的帐户（客户端）和服务器建立的 Session 对象的引用。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Web.SecurityDemandModule">
+            <summary>
+            安全验证Http模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityDemandModule.Init(System.Web.HttpApplication)">
+            <summary>
+            初始化模块。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityDemandModule.Dispose">
+            <summary>
+            释放资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityDemandModule.DemandSecurity(System.Web.UI.Page)">
+            <summary>
+            验证页面安全。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityDemandModule.DemandSecurity(System.Web.UI.Control)">
+            <summary>
+            验证控件安全。
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="P:EAS.Explorer.Web.SecurityDemandModule.ModuleName">
+            <summary>
+            模块名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Web.WebContext">
+            <summary>
+             Web Service上下文环境。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.WebContext.AddWebService(System.Type)">
+            <summary>
+            取得Web Service 对象实例。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+        </member>
+        <member name="M:EAS.Explorer.Web.WebContext.GetWebServiceInstance(System.Type)">
+            <summary>
+            取得Web Service 对象实例。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+        </member>
+        <member name="P:EAS.Explorer.Web.WebContext.Instance">
+            <summary>
+            WebServiceContext对象的唯一实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.WebContext.Account">
+            <summary>
+            取得系统账号。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Web.IApplication">
+            <summary>
+            AgileEAS.NET平台WebContainer应用程序接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.IApplication.Login(System.String,System.String)">
+            <summary>
+            账户登录。
+            </summary>
+            <param name="loginID">账户登录ID。</param>
+            <param name="password">账户密码。</param>
+        </member>
+        <member name="M:EAS.Explorer.Web.IApplication.Login(System.String,System.String,System.String)">
+            <summary>
+            账户登录。
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="loginID">账户登录ID。</param>
+            <param name="password">账户密码。</param>
+        </member>
+        <member name="M:EAS.Explorer.Web.IApplication.AnalogLogin(System.String,System.String)">
+            <summary>
+            模拟登录。
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="loginID">账户登录ID。</param>
+        </member>
+        <member name="M:EAS.Explorer.Web.IApplication.Logout">
+            <summary>
+            账户注销。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.Session.#ctor">
+            <summary>
+            初始化 Session 类实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.Session.Abandon">
+            <summary>
+            终止 Server 和 Client 会话。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.Session.StartGuest">
+            <summary>
+            开始一个访客会话。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.Session.Account">
+            <summary>
+            获取当前会话中的系统帐户。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.Web.HttpSessionStateExtensions">
+            <summary>
+            HttpSessionState扩展类，扩展HttpSessionState。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpSessionStateExtensions.GetSession(System.Web.SessionState.HttpSessionState)">
+            <summary>
+            求依附于当前HttpSessionState上的AgileEAS.NET SOA中间件会话对象。
+            </summary>
+            <param name="httpSession">HttpSessionState实例。</param>
+            <returns>AgileEAS.NET SOA中间件会话对象。</returns>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpSessionStateExtensions.GetAccount(System.Web.SessionState.HttpSessionState)">
+            <summary>
+            求依附于当前HttpSessionState上的AgileEAS.NET SOA中间件会话当前账号。
+            </summary>
+            <param name="httpSession">HttpSessionState实例。</param>
+            <returns>AgileEAS.NET SOA中间件会话当前账号对象。</returns>
+        </member>
+        <member name="T:EAS.Explorer.Web.Application">
+            <summary>
+            AgileEAS.NET SOA 中间件应用程序对象。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.Application.#ctor">
+            <summary>
+            初始化应用实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.Application.Sessions">
+            <summary>
+            会话集合。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityHelper.Demand(EAS.Modularization.IAddIn,System.Int32)">
+            <summary>
+            验证模块的权限。
+            </summary>
+            <param name="module">模块。</param>
+            <param name="privileges">权限值。</param>
+            <returns>通过返回true否则返回false。</returns>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityHelper.Demand(System.Guid,System.Int32)">
+            <summary>
+            验证模块的权限。
+            </summary>
+            <param name="pObject">模块。</param>
+            <param name="privileges">权限值。</param>
+            <returns>通过返回true否则返回false。</returns>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityHelper.Demand(System.Web.UI.Page,System.Guid,System.Int32)">
+            <summary>
+            验证权限(页面)。
+            </summary>
+            <param name="handler">页面。</param>
+            <param name="key">Guid。</param>
+            <param name="name">模块名称。</param>
+            <param name="privileges">权限。</param>
+        </member>
+        <member name="M:EAS.Explorer.Web.SecurityHelper.Demand(System.Web.UI.Control,System.Guid,System.Int32)">
+            <summary>
+            验证权限(控件)。
+            </summary>
+            <param name="handler">页面。</param>
+            <param name="key">Guid。</param>
+            <param name="name">模块名称。</param>
+            <param name="privileges">权限。</param>
+        </member>
+        <member name="T:EAS.Explorer.Web.HttpContext">
+            <summary>
+            AgileEAS.NET SOA 中间件Http应用上下文对象。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpContext.Initialize">
+            <summary>
+            初始化Http应用上下文。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpContext.appDomain_AssemblyResolve(System.Object,System.ResolveEventArgs)">
+            <summary>
+            动态加载程序集。
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpContext.InitializeCache">
+            <summary>
+            初始化缓存。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpContext.GetSessionID">
+            <summary>
+            求SessionID。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpContext.GetSession">
+            <summary>
+            取得系统会话。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.Web.HttpContext.GetSession(System.String)">
+            <summary>
+            求指定ID的会话。
+            </summary>
+            <param name="sessionID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Explorer.Web.HttpContext.Application">
+            <summary>
+            应用程序对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.HttpContext.Context">
+            <summary>
+            取得系统上下文。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.HttpContext.Sessions">
+            <summary>
+            取系统会话集合。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.HttpContext.Session">
+            <summary>
+            应用系统会话。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.Web.HttpContext.Account">
+            <summary>
+            取得系统账号。
+            </summary>
+        </member>
+    </members>
+</doc>

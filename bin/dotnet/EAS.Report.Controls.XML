@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Report.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Report.Controls.ReportViewer">
+            <summary>
+            报表打印控件。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.dataAccessor">
+            <summary>
+            内部私有变量，当前使用的数据库连接。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.report">
+            <summary>
+            内部私有变量，当前正在打印的文档。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.dataObject">
+            <summary>
+            内部私有变量，报表使用的数据对象。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.showPrintDialog">
+            <summary>
+            是否显示打印对象框。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.ReportViewer.#ctor">
+            <summary>
+            初始化RDLReportViewer实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.ReportViewer.OnClosed(System.EventArgs)">
+            <summary>
+            关闭时执行。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.Closed">
+            <summary>
+            公共事件，关闭打印对话框。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.ExtractData">
+            <summary>
+            公共事件，提取数据。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.ReportViewer.OnPrintCompleted(System.EventArgs)">
+            <summary>
+            触发PrintCompleted事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:EAS.Report.Controls.ReportViewer.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.ReportViewer.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Report.Controls.ReportViewer.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.DataAccessor">
+            <summary>
+            获取或设置一个值,指示数据访问器。
+            </summary>
+        </member>
+        <member name="E:EAS.Report.Controls.ReportViewer.PrintCompleted">
+            <summary>
+            当打印完成之后触发。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.Report">
+            <summary>
+            获取或设置一个值，指示当前的报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.SourceRdl">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.DataObject">
+            <summary>
+            获取或设置一个值，指示报表使用的数据对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.EnabledPrint">
+            <summary>
+            充许打印。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.ShowClose">
+            <summary>
+            是否显示关闭按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.ShowLoad">
+            <summary>
+            是否显示提取数据按钮。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.ShowPrintDialog">
+            <summary>
+            是否显示打印对话框。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.ToolBoxDockStyle">
+             <summary>
+            工具条显示位置。
+             </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ReportViewer.Allow">
+            <summary>
+            充许操作。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.DataTableConvert.ToDataTable(EAS.Data.ORM.ITable)">
+            <summary>
+            根据表对象生成数据表。
+            </summary>
+            <param name="table">数据表对象。</param>
+            <returns>数据表。</returns>
+        </member>
+        <member name="M:EAS.Report.Controls.DataTableConvert.ToDataTable(EAS.Data.ORM.IEntity)">
+            <summary>
+            根据实体记录生成数据表。
+            </summary>
+            <param name="row">实体行。</param>
+            <returns>数据表。</returns>
+        </member>
+        <member name="M:EAS.Report.Controls.DataTableConvert.ToDataTable(EAS.Data.ORM.BaseDataEntity)">
+            <summary>
+            根据实体记录生成数据表。
+            </summary>
+            <param name="row">实体行。</param>
+            <returns>数据表。</returns>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheMetadata.LoadCache">
+            <summary>
+            加载缓存。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheMetadata.UpdateCache">
+            <summary>
+            更新缓存。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.ID">
+            <summary>
+            输入ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.UpdateCycle">
+            <summary>
+            更新周期。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.TryTime">
+            <summary>
+            尝试更新时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.LastTime">
+            <summary>
+            最后更新时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Data.Caching.CacheMetadata.Metadata">
+            <summary>
+            元数据。
+            </summary>
+        </member>
+        <member name="T:EAS.Report.Controls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.FormCondition.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.FormCondition.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.Report.Controls.FormCondition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.FormCondition.Metadata">
+            <summary>
+             报表元数据。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.FormCondition.Values">
+            <summary>
+            选择参数。
+            </summary>
+        </member>
+        <member name="T:EAS.Report.Controls.PrintViewDialog">
+            <summary>
+            报表打印对话框。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.#ctor">
+            <summary>
+            初始化RDLViewDialog实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.Print">
+            <summary>
+            直接打印。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.Print(System.Boolean)">
+            <summary>
+            直接打印。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.PrintPreview">
+            <summary>
+            打印预览。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.Export">
+            <summary>
+            打印导出。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.Print(EAS.Report.Controls.PrintDestination)">
+            <summary>
+            打印报表。
+            </summary>
+            <param name="destination">打印目标。</param>
+        </member>
+        <member name="F:EAS.Report.Controls.PrintViewDialog.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Report.Controls.PrintViewDialog.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="E:EAS.Report.Controls.PrintViewDialog.PrintCompleted">
+            <summary>
+            当打印完成之后触发。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.PrintViewDialog.DataAccessor">
+            <summary>
+            获取或设置一个值,指示数据访问器。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.PrintViewDialog.Report">
+            <summary>
+            获取或设置一个值，指示当前的报表对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.PrintViewDialog.SourceRdl">
+            <summary>
+            报表定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.PrintViewDialog.DataObject">
+            <summary>
+            获取或设置一个值，指示报表使用的数据对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.PrintViewDialog.EnabledPrint">
+            <summary>
+            充许打印。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.PrintViewDialog.ShowPrintDialog">
+            <summary>
+            是否显示打印对话框。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.ConditionControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.ConditionControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EAS.Report.Controls.ConditionControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ConditionControl.Metadata">
+            <summary>
+             报表元数据。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.ConditionControl.Values">
+            <summary>
+            选择参数。
+            </summary>
+        </member>
+        <member name="T:EAS.Report.Controls.RDLReportViewer">
+            <summary>
+            报表打印控件。
+            </summary>
+        </member>
+        <member name="T:EAS.Report.Controls.DynamicReport">
+            <summary>
+            动态报表容器。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.DynamicReport.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.DynamicReport.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:EAS.Report.Controls.DynamicReport.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.DynamicReport.#ctor">
+            <summary>
+            初始化动态报表。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.DynamicReport.CreateConditionControl">
+            <summary>
+            创建条件控件。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.DynamicReport.ReportID">
+            <summary>
+            报表GUID。
+            </summary>
+        </member>
+        <member name="P:EAS.Report.Controls.DynamicReport.EAS#Modularization#IAddIn#Name">
+            <summary>
+            模块名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Report.Controls.PrintDestination">
+            <summary>
+            枚举PrintDestination，打印目标。
+            </summary>
+            <remarks>
+            打印结果输入何处，窗口/打印机/文件。
+            </remarks>
+        </member>
+        <member name="F:EAS.Report.Controls.PrintDestination.ToPrinter">
+            <summary>
+            打印结果送打印机，即直接打印。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.PrintDestination.ToWindow">
+            <summary>
+            打印结果送窗口，即打印预览。
+            </summary>
+        </member>
+        <member name="F:EAS.Report.Controls.PrintDestination.ToFile">
+            <summary>
+            打印结果送文件，即导出打印结果。
+            </summary>
+        </member>
+        <member name="T:EAS.Data.Caching.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Data.Caching.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Report.Controls.IniFile">
+            <summary>
+            Ini文件读写类。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.IniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入Ini指定配置节指定配置键的值。
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Report.Controls.IniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读取Ini指定配置节指定配置键的值
+            </summary>
+            <param name="section">节。</param>
+            <param name="key">键。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Report.Controls.IniFile.FilePath">
+            <summary>
+            路径。
+            </summary>
+        </member>
+        <member name="M:EAS.Report.Controls.IniFile.API.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            写Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Report.Controls.IniFile.API.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读Ini文件。
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.LoadMetadata(EAS.Data.Caching.CacheMetadata)">
+            <summary>
+            提取指定GUID的报表元数据。
+            </summary>
+            <param name="cacheMetadata">缓存元数据。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Data.Caching.CacheHelper.UpdateMetadata(EAS.Data.Caching.CacheMetadata)">
+            <summary>
+            更新指定GUID的报表元数据。
+            </summary>
+            <param name="ID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Report.Controls.MetadataHelper.GetMetadata(System.Guid)">
+            <summary>
+            获取指定GUID的报表元数据。
+            </summary>
+            <param name="reportID">ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Report.Controls.RDLViewDialog">
+            <summary>
+            报表打印对话框。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Controls</name>
+    </assembly>
+    <members>
+        <member name="M:EAS.Controls.Alert.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.Confirm.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="E:EAS.Controls.DataPager.PageChanged">
+            <summary>
+            当页码索引改变。
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataPager.Initialize(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            初始化分页控件。
+            </summary>
+            <param name="size1">页面大小1/20。</param>
+            <param name="size2">页面大小1/40。</param>
+            <param name="size3">页面大小1/80。</param>
+        </member>
+        <member name="P:EAS.Controls.DataPager.PageSize">
+            <summary> 
+            设置或获取每页记录数
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.PageCount">
+            <summary> 
+            获取记录总页数
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.RecordCount">
+            <summary> 
+            设置或获取记录总数
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.CurrentPage">
+            <summary> 
+            设置或获取每页记录数
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.Skip">
+            <summary>
+            跳过多少行。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.Take">
+            <summary>
+            取多少行。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.StartRecord">
+            <summary>
+            取得当前显示的开始记录号。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataPager.EndRecord">
+            <summary>
+            取得当前显示的结束记录号。
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataPager.InitPageInfo(System.Int32,System.Int32)">
+            <summary> 
+            初始化分页信息
+            <param name="pageSize">每页记录数</param>
+            <param name="recordCount">总记录数</param>
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataPager.InitPageInfo(System.Int32)">
+            <summary> 
+            初始化分页信息
+            <param name="recordCount">总记录数</param>
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataPager.InitPageInfo">
+            <summary> 
+            初始化分页信息
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataPager.RefreshData(System.Int32)">
+            <summary>
+            刷新显示指定页的数据。
+            </summary>
+            <param name="page">要显示数据的页。</param>
+        </member>
+        <member name="M:EAS.Controls.DataPager.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EAS.Controls.DataWindow">
+            <summary>
+            数据绑定子窗口。
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataWindow.OnDataEntityChanged(System.EventArgs)">
+            <summary>
+            触发 DataObjectChanged 事件。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="E:EAS.Controls.DataWindow.DataEntityChanged">
+            <summary>
+            数据对象发生改变时触发该事件。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataWindow.DataEntity">
+            <summary>
+            获取或者设置绑定目标对象的数据实体。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataWindow.TDataEntity">
+            <summary>
+            获取绑定目标对象的数据实体类型。
+            </summary>
+        </member>
+        <member name="T:EAS.Controls.GroupBox">
+            <summary>
+            GroupBox控件。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.GroupBox.Title">
+            <summary>
+            标题。
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.Loading.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EAS.Controls.DataControl">
+            <summary>
+            数据绑定控件。
+            </summary>
+        </member>
+        <member name="M:EAS.Controls.DataControl.OnDataEntityChanged(System.EventArgs)">
+            <summary>
+            触发 DataObjectChanged 事件。
+            </summary>
+            <param name="e">事件参数。</param>
+        </member>
+        <member name="E:EAS.Controls.DataControl.DataEntityChanged">
+            <summary>
+            数据对象发生改变时触发该事件。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataControl.DataEntity">
+            <summary>
+            获取或者设置绑定目标对象的数据实体。
+            </summary>
+        </member>
+        <member name="P:EAS.Controls.DataControl.TDataEntity">
+            <summary>
+            获取绑定目标对象的数据实体类型。
+            </summary>
+        </member>
+    </members>
+</doc>

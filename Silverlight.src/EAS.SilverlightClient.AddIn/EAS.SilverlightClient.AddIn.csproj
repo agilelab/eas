@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C3BCBC7-E42F-4D7C-AD88-EFCA6950819A}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EAS.SilverlightClient</RootNamespace>
+    <AssemblyName>EAS.SilverlightClient.AddIn</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Publish\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Publish\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EAS.Controls">
+      <HintPath>..\..\bin\Silverlight\EAS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Data">
+      <HintPath>..\..\bin\Silverlight\EAS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.MicroKernel">
+      <HintPath>..\..\bin\Silverlight\EAS.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>..\..\bin\Silverlight\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Toolkit">
+      <HintPath>..\..\bin\Silverlight\System.Windows.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DateConverter.cs" />
+    <Compile Include="Domain\ACLEx.cs" />
+    <Compile Include="ModuleLoader.xaml.cs">
+      <DependentUpon>ModuleLoader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ModuleConverter.cs" />
+    <Compile Include="ModuleEditor.xaml.cs">
+      <DependentUpon>ModuleEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleInstaller.xaml.cs">
+      <DependentUpon>ModuleInstaller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleList.xaml.cs">
+      <DependentUpon>ModuleList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleSelector.xaml.cs">
+      <DependentUpon>ModuleSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionValue.cs" />
+    <Compile Include="PrivilegerSelectorType.cs" />
+    <Compile Include="PrivilegersSelector.xaml.cs">
+      <DependentUpon>PrivilegersSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectedPrivileger.cs" />
+    <Compile Include="Services\MetaHelper.cs" />
+    <Compile Include="Services\ModuleManager.cs" />
+    <Compile Include="Services\SLContext.cs" />
+    <Compile Include="RoleList.xaml.cs">
+      <DependentUpon>RoleList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoleEditor.xaml.cs">
+      <DependentUpon>RoleEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupTree.xaml.cs">
+      <DependentUpon>GroupTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\TreeItem.cs" />
+    <Compile Include="GroupEditor.xaml.cs">
+      <DependentUpon>GroupEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AccountList.xaml.cs">
+      <DependentUpon>AccountList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AccountTypeEditor.xaml.cs">
+      <DependentUpon>AccountTypeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AccountEditor.xaml.cs">
+      <DependentUpon>AccountEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettingList.xaml.cs">
+      <DependentUpon>AppSettingList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettingEditor.xaml.cs">
+      <DependentUpon>AppSettingEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogList.xaml.cs">
+      <DependentUpon>LogList.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ModuleEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuleInstaller.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuleList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModuleLoader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ModuleSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PrivilegersSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RoleList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RoleEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GroupTree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GroupEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AccountList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AccountTypeEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AccountEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppSettingList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AppSettingEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LogList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Close.png" />
+    <Resource Include="Images\Copy.png" />
+    <Resource Include="Images\Cut.png" />
+    <Resource Include="Images\Split.png" />
+    <Resource Include="Images\Grid.png" />
+    <Resource Include="Images\New.png" />
+    <Resource Include="Images\Open.png" />
+    <Resource Include="Images\Paste.png" />
+    <Resource Include="Images\Print.png" />
+    <Resource Include="Images\Refresh.png" />
+    <Resource Include="Images\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Seach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Module.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Privileger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\role.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\floder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\folder2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\module.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\desktop16.png" />
+    <Resource Include="images2\folder_documents16.png" />
+    <Resource Include="images2\folder_groups16.png" />
+    <Resource Include="images2\smart_folder16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\program_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\smart_folder128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\my_music128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\add_files_to_archive.png" />
+    <Resource Include="images2\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\user_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\user_web20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\user_web20_rss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images2\config_boot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EAS.Explorer.BLL.Contracts\EAS.Explorer.BLL.Contracts.csproj">
+      <Project>{443662F4-40F4-4AAF-AFAA-177E6AEE6827}</Project>
+      <Name>EAS.Explorer.BLL.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EAS.Explorer.Entities\EAS.Explorer.Entities.csproj">
+      <Project>{2767B2EA-64B1-45F9-98F4-D21CC0C6E727}</Project>
+      <Name>EAS.Explorer.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EAS.Explorer\EAS.Explorer.csproj">
+      <Project>{9554CA97-31B4-4A79-802A-FC6C322A711F}</Project>
+      <Name>EAS.Explorer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

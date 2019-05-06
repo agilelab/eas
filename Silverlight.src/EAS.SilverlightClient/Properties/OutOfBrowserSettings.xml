@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="AgileEAS.NET SOA 平台" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>AgileEAS.NET SOA 平台 Silverlight 客户端程序</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="AgileEAS.NET SOA 平台" Height="768" Width="1366" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

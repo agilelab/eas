@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E54ECCF-C52E-4258-8BBF-BC0561670536}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WF.Demo.UI</RootNamespace>
+    <AssemblyName>WF.Demo.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\dotnet\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\dotnet\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EAS.Data">
+      <HintPath>..\..\..\bin\dotnet\EAS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Explorer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\dotnet\EAS.Explorer.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Explorer.BLL.Contracts, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\dotnet\EAS.Explorer.BLL.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.MicroKernel">
+      <HintPath>..\..\..\bin\dotnet\EAS.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="EAS.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a550803c4cd9dbb5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\dotnet\EAS.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LeaveApply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeaveApply.Designer.cs">
+      <DependentUpon>LeaveApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeaveList.designer.cs">
+      <DependentUpon>LeaveList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LeaveApply.resx">
+      <DependentUpon>LeaveApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveList.resx">
+      <DependentUpon>LeaveList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WF.Demo.DAL\WF.Demo.DAL.csproj">
+      <Project>{23D1F1A2-C0BD-47DD-B0CA-ED4F4A4571B0}</Project>
+      <Name>WF.Demo.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

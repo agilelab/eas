@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Explorer</name>
+    </assembly>
+    <members>
+        <member name="T:EAS.Explorer.IPasswordProvider">
+            <summary>
+            用户密码提供者接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IPasswordProvider.Encrypt(System.String)">
+             <summary>
+             加密指定的密码。
+             </summary>
+             <param name="password">要加密的密码。</param>
+            <returns>加载后的密码。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IPasswordProvider.Verify(System.String,System.Byte[])">
+            <summary>
+            验证给定的密码是否和指定的密钥匹配。
+            </summary>
+            <param name="password">要验证的密码。</param>
+            <param name="key">要验证的密钥。密钥的长度为64个字节。</param>
+            <returns>如果可以通过指定的密钥生成和key相匹配的密钥，则返回true；否则返回false。</returns>
+        </member>
+        <member name="T:EAS.Explorer.IOrganization">
+            <summary>
+            组织机构接口定义。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IOrganization.Guid">
+            <summary>
+            唯一Guid。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IOrganization.Name">
+            <summary>
+            组织机构名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IOrganization.Parent">
+            <summary>
+            上级组织机构。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.IAccountOriginal">
+            <summary>
+            账户原型接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IAccountOriginal.GetOriginalText(System.String)">
+            <summary>
+            查询原型对象完整信息。
+            </summary>
+            <param name="originalID">原型ID。</param>
+            <returns>原型对象文字说明。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IAccountOriginal.Select(System.String)">
+            <summary>
+            选择原型对象。
+            </summary>
+            <param name="originalID">原有原型ID。</param>
+            <returns>新的原型ID。</returns>
+        </member>
+        <member name="T:EAS.Explorer.IResource">
+            <summary>
+            运行容器的外壳资源。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetMainIcon">
+            <summary>
+            获取应用系统的图标，用于替换主界面的图标。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetModuleIcon">
+            <summary>
+            获取默认的模块图标，用于简约、经典风格的Tab页图标显示，也用于Desktop模式的桌面图标显示。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetDesktopImage">
+            <summary>
+            获取桌面背景图像，用于Desktop模式的桌面模块。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetNavigationControl">
+            <summary>
+            获取应用系统的导航控件，用于替换平台的导航控件。
+            </summary>
+            <returns>WinForm/WPF用户控件。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetBannerControl">
+            <summary>
+            获取应用系统的Banner控件，用于替换平台的Banner条。
+            </summary>
+            <returns>WinForm/WPF用户控件。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetBottomControl">
+            <summary>
+            获取应用系统的Bottom控件，用于替换平台的状态栏。
+            </summary>
+            <returns>WinForm/WPF用户控件。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetAboutForm">
+            <summary>
+            获取WinForm/WPF容器的关于对话框，用于替换平台的关于对话框。
+            </summary>
+            <returns>WinForm/WPF窗体。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetMainShell">
+            <summary>
+            获取WinForm/WPF容器的主界面，用于替换平台的主界面。
+            </summary>
+            <returns>WinForm/WPF窗体。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetLoginForm">
+            <summary>
+            获取WinForm/WPF/Silverlight容器的登录对话框，用于替换平台的登录对话框。
+            </summary>
+            <returns>WinForm/WPF/Silverlight窗体。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetStartModule">
+            <summary>
+            获取WinForm/WPF容器的起始页/初始模块，用于替换平台的起始页。
+            </summary>
+            <returns>WinForm/WPF用户控件。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetApplicationName">
+            <summary>
+            获取系统的名称，显示在运行环境的导航栏。
+            </summary>
+            <returns>应用系统名称。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetApplicationTitle">
+            <summary>
+            获取系统的标题，显示在运行环境的主窗口之上。
+            </summary>
+            <returns>应用系统名称。</returns>
+        </member>
+        <member name="M:EAS.Explorer.IResource.GetAccountOriginal">
+            <summary>
+            获取系统的账号原型选择器。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EAS.Explorer.IResource.DisplayMainMenu">
+            <summary>
+            是否显示主菜单。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IResource.DisplayNavigation">
+            <summary>
+            是否显示导航栏。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IResource.DisplayNavigationTool">
+            <summary>
+            是否显示导航工具条。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.ResourceManager">
+            <summary>
+            资源系统帮助类。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.ResourceManager.Resource">
+            <summary>
+            取得系统资源接口对象。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.IMainShell">
+            <summary>
+            定义主界面接口,用于实现自定义主界面。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IMainShell.InitializeShell(System.Collections.Generic.IList{EAS.Explorer.INavigateGroup},System.Collections.Generic.IList{EAS.Explorer.INavigateModule})">
+            <summary>
+            初始化主界面，根据平台传入的模块清单和相关的导航分组初始化主界面。
+            </summary>
+            <param name="m_GroupList">导航清单。</param>
+            <param name="m_ModuleList">模块清单。</param>
+        </member>
+        <member name="M:EAS.Explorer.IMainShell.OpenModule(System.Object)">
+            <summary>
+            加载/打开指定模块，响应系统的模块打开操作。
+            </summary>
+            <param name="module">模块实例。</param>
+        </member>
+        <member name="M:EAS.Explorer.IMainShell.CloseModule">
+            <summary>
+            关闭当前模块(活动的模块)。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.IMainShell.CloseModule(System.Object)">
+            <summary>
+            关闭指定模块。
+            </summary>
+            <param name="module">模块实例。</param>
+        </member>
+        <member name="M:EAS.Explorer.IMainShell.SwitchNavigation">
+            <summary>
+            切换导航，展开、隐藏导航，主界面没有导航的隐藏、展开需求可以不处理。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IMainShell.ActiveAddIn">
+            <summary>
+            当前活动插件/模块。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IMainShell.AddIns">
+            <summary>
+            已打开的插件/模块集合。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.INavigateModule">
+            <summary>
+            导航模块接口。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Guid">
+            <summary>
+            Guid。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Name">
+            <summary>
+            模块名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Assembly">
+            <summary>
+            程序集。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Type">
+            <summary>
+            类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Description">
+            <summary>
+            描述。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Developer">
+            <summary>
+            开发者。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.GroupID">
+            <summary>
+            所有组ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.GroupName">
+            <summary>
+            组名。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Icon">
+            <summary>
+            图标。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.LMTime">
+            <summary>
+            最后更新时间。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Package">
+            <summary>
+            所在程序包。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.SortCode">
+            <summary>
+            排序码。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Url">
+            <summary>
+            URL地址信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateModule.Version">
+            <summary>
+            版本号。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.INavigateGroup">
+            <summary>
+            导航分组接口。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.ID">
+            <summary>
+            ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.Name">
+            <summary>
+            名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.Attributes">
+            <summary>
+            属性。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.Description">
+            <summary>
+            说明。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.Icon">
+            <summary>
+            图标。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.ParentID">
+            <summary>
+            上级ID。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.SortCode">
+            <summary>
+            排序码。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.INavigateGroup.WFModule">
+            <summary>
+            关联流程模块。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.IAccount">
+            <summary>
+            系统账号接口。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.OriginalID">
+            <summary>
+            获取帐户对应的原始对象的标识。比如员工的工作证号。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.LoginID">
+            <summary>
+            获取登录ID，最大长度为 64 个字符。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.Attributes">
+            <summary>
+            获取帐户的属性信息。
+            </summary>
+            <remarks>该值由相应的信息系统确定并使用。</remarks>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.LoginCount">
+            <summary>
+            获取帐户已经登录应用程序的次数。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.Name">
+            <summary>
+            获取帐户的名称，最大长度为 64 个字符。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.Description">
+            <summary>
+            获取对帐户的描述信息。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.Organization">
+            <summary>
+            所在机构/部门。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.Certificate">
+            <summary>
+            获取系统账号的目录，即账号类型。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.EnableCertificate">
+            <summary>
+            启用数字证书。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.IsOnline">
+            <summary>
+            获取一个值，该值指示当前用户是否在线。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.IsLocked">
+            <summary>
+            获取一个值，该值指示当前用户是否已经被锁定。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IAccount.IsDisabled">
+            <summary>
+            获取一个值，该值指示当前用户是否已经被禁用。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.ILoginForm">
+            <summary>
+             定义登记对话框接口,用于实现自定义登录。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.ILoginForm.Passed">
+            <summary>
+            是否已经通过登录验证。
+            </summary>
+        </member>
+        <member name="T:EAS.Explorer.INavigation">
+            <summary>
+            导航控件接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Explorer.INavigation.Initialize(System.Collections.Generic.IList{EAS.Explorer.INavigateGroup},System.Collections.Generic.IList{EAS.Explorer.INavigateModule})">
+            <summary>
+            初始化导航。
+            </summary>
+            <param name="m_GroupList">导航清单。</param>
+            <param name="m_ModuleList">模块清单。</param>
+        </member>
+        <member name="T:EAS.Explorer.IUIActionController">
+            <summary>
+            界面方法制器接口。
+            </summary>
+        </member>
+        <member name="P:EAS.Explorer.IUIActionController.LoginAction">
+            <summary>
+            登录动作。
+            </summary>
+        </member>
+    </members>
+</doc>

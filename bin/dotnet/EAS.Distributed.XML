@@ -1,0 +1,1369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAS.Distributed</name>
+    </assembly>
+    <members>
+        <member name="F:EAS.Services.Locators.SocketPool.instance">
+            <summary>
+            单实例。
+            </summary>
+        </member>
+        <member name="F:EAS.Services.Locators.SocketPool._lock">
+            <summary>
+            对象锁。
+            </summary>
+        </member>
+        <member name="M:EAS.Services.Locators.SocketPool.GetSocketPool(System.String,System.Int32)">
+            <summary>
+            求出一个池对象。
+            </summary>
+            <param name="host"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Services.Locators.SocketPool.Pop(System.String,System.Int32)">
+            <summary>
+            获取一个SocketTcp对象。
+            </summary>
+            <param name="host">主机。</param>
+            <param name="port">端口。</param>
+            <returns>SocketTcp对象。</returns>
+        </member>
+        <member name="M:EAS.Services.Locators.SocketPool.Push(EAS.Sockets.SocketTcp)">
+            <summary>
+            压入堆栈。
+            </summary>
+            <param name="item">SocketTcp对象。</param>
+        </member>
+        <member name="P:EAS.Services.Locators.SocketPool.Instance">
+            <summary>
+            单例。
+            </summary>
+        </member>
+        <member name="T:EAS.Distributed.ServiceBridger">
+            <summary>
+            分布式ServiceBridger。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.#ctor">
+            <summary>
+            初始化 ServiceBridger 对象实例。
+            </summary> 
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.#ctor(EAS.Services.Locators.IServiceInfo)">
+            <summary>
+            通过服务配置初始化 ServiceBridger 对象实例。
+            </summary>
+            <param name="serviceInfo">服务配置。</param>
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.InvokeMethod(System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用对象方法。
+            </summary>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.InvokeMethod(System.Type,System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用对象方法。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.InvokeMethod(System.Object@,System.Type,System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用远程对象方法。
+            </summary>
+            <param name="target">调用的目标。</param>
+            <param name="serviceType">服务类型。</param>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.Dispose">
+            <summary>
+            已重写。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.ServiceBridger.GetHashCode">
+            <summary>
+            已重写，获取哈希码。
+            </summary>
+            <returns>哈希码。</returns>
+        </member>
+        <member name="P:EAS.Distributed.ServiceBridger.ServiceName">
+            <summary>
+            服务名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.ServiceBridger.EnableLogging">
+            <summary>
+            是否启用日志记录
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.ServiceBridger.SessionID">
+            <summary>
+            获取当前会话Guid。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.Service_Proxy.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:EAS.Distributed.Service_Proxy.GetSmartUpdateTime">
+            <remarks/>
+        </member>
+        <member name="M:EAS.Distributed.Service_Proxy.GetSmartFileCount(System.DateTime)">
+            <remarks/>
+        </member>
+        <member name="M:EAS.Distributed.Service_Proxy.GetSmartUpdateConfig">
+            <remarks/>
+        </member>
+        <member name="M:EAS.Distributed.Service_Proxy.DownloadSmartFile(System.String)">
+            <remarks/>
+        </member>
+        <member name="P:EAS.Distributed.Context.SessionID">
+            <summary>
+            获取当前会话Guid。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.Context.UserToken">
+            <summary>
+            通信令牌。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.Context.SecurityCode">
+            <summary>
+            安全码。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.FileHelper.WritFile(System.String,System.Byte[])">
+            <summary>
+            写文件。
+            </summary>
+            <param name="fileName"></param>
+            <param name="buffer"></param>
+        </member>
+        <member name="M:EAS.Distributed.FileHelper.ReadFile(System.String)">
+            <summary>
+            读文件。
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Distributed.OrmAccessor">
+            <summary>
+            分布式ORM访问器。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.#ctor">
+            <summary>
+            初始化 OrmAccessor 类对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.ExistsInDb(EAS.Data.ORM.IEntity)">
+            <summary>
+            数据实体是否在数据库存在。
+            </summary>
+             <param name="dataEntity">实体对象。</param>
+            <returns>存在返回true,否则返回false。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Query(EAS.Data.ORM.IEntity)">
+            <summary>
+            读数据实体。
+            </summary>
+            <param name="dataEntity">实体类型。</param>
+            <returns>查询结果实体。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Insert(EAS.Data.ORM.IEntity)">
+            <summary>
+            插入数据实体。
+            </summary>
+            <param name="dataEntity">实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update(EAS.Data.ORM.IEntity)">
+            <summary>
+            修改数据实体。
+            </summary>
+            <param name="dataEntity">实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete(EAS.Data.ORM.IEntity)">
+            <summary>
+            删除数据实体。
+            </summary>
+            <param name="dataEntity">实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select(EAS.Data.ORM.ITable)">
+            <summary>
+            表查询。
+            </summary>
+             <param name="table">表对象。</param>
+             <returns>数据表。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select(EAS.Data.ORM.ITable,EAS.Data.ORM.Condition)">
+            <summary>
+            表查询。
+            </summary>
+             <param name="table">表对象。</param>
+            <param name="condition">数据查询条件。</param>
+             <returns>数据表。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete(EAS.Data.ORM.ITable)">
+            <summary>
+            删除数据表中记录。
+            </summary>
+            <param name="table">数据表。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete(EAS.Data.ORM.ITable,EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件删除数据表中记录。
+            </summary>
+            <param name="table">数据表。</param>
+            <param name="condition">数据过滤条件。</param> 
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update(EAS.Data.ORM.ITable,EAS.Data.ORM.ColumnCollection,EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件更新数据库表中的指定列的值。
+            </summary>
+            <param name="table">数据表。</param>
+            <param name="condition">数据查询条件，为空引用则更新全部表。</param>
+            <param name="colValues">要更新的列及指定的值。</param>
+            <remarks>更新操作所影响的数据行数。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update(EAS.Data.ORM.ITable,System.Collections.Generic.IDictionary{System.String,System.Object},EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件更新数据库表中的指定列的值。
+            </summary>
+            <param name="table">数据表。</param>
+            <param name="condition">数据查询条件，为空引用则更新全部表。</param>
+            <param name="colValues">要更新的列及指定的值。</param>
+            <remarks>更新操作所影响的数据行数。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.ExistsInDb``1(EAS.Data.ORM.IDataEntity{``0})">
+            <summary>
+            数据实体是否在数据库存在。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="dataEntity">主键值。</param>
+            <returns>指定键值的实体存在返回true,否则返回false。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Read``1(EAS.Data.ORM.IDataEntity{``0})">
+            <summary>
+            读数据实体。
+            </summary>
+            <typeparam name="T">实体类型。</typeparam>
+            <param name="dataEntity">数据实体。</param>
+            <returns>从数据库读出的数据对象。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Insert``1(EAS.Data.ORM.IDataEntity{``0})">
+            <summary>
+            插入数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update``1(EAS.Data.ORM.IDataEntity{``0})">
+            <summary>
+            修改数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+            <returns>更新影响的行数。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete``1(EAS.Data.ORM.IDataEntity{``0})">
+            <summary>
+            删除数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+            <returns>删除影响的行数。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete``1">
+            <summary>
+            删除数据表中记录。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <remarks>删除的记录数。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete``1(EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件删除数据表中记录。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据过滤条件。</param> 
+            <returns>删除的记录数。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update``1(System.Collections.Generic.Dictionary{System.String,System.Object},EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件更新数据库表中的指定列的值。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件，为空引用则更新全部表。</param>
+            <param name="colValues">要更新的列及指定的值。</param>
+            <returns>更新操作所影响的数据行数。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select``1">
+            <summary>
+            表查询。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select``1(EAS.Data.ORM.Condition)">
+            <summary>
+            表查询。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select``1(EAS.Data.ORM.Condition,System.Collections.Generic.List{System.String})">
+            <summary>
+            表查询。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件。</param>
+            <param name="propertys">要选择的属性集合，为空则取所有与数据库映射的属性。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select``1(EAS.Data.ORM.Condition,System.Int32,System.Int32)">
+            <summary>
+            表查询。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件。</param>
+            <param name="skip">跳过开始的N条记录,小于等于0则忽略。</param>
+            <param name="count">要返回的记录总数,小于等于0则忽略。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select``1(EAS.Data.ORM.Condition,System.Collections.Generic.List{System.String},System.Int32,System.Int32)">
+            <summary>
+            表查询。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件。</param>
+            <param name="propertys">要选择的属性集合，为空则取所有与数据库映射的属性。</param>
+            <param name="skip">跳过开始的N条记录,小于等于0则忽略。</param>
+            <param name="count">要返回的记录总数,小于等于0则忽略。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Count``1">
+            <summary>
+            计算表的记录总数。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Count``1(EAS.Data.ORM.Condition)">
+            <summary>
+            计算表的记录总数。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Count``1(EAS.Data.ORM.Condition,System.Collections.Generic.List{System.String})">
+            <summary>
+            计算表的记录总数。
+            </summary>
+            <typeparam name="T">表类型。</typeparam>
+            <param name="condition">数据查询条件。</param>
+            <param name="propertys">要选择的属性集合，为空则取所有与数据库映射的属性。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Count2(System.Type,EAS.Data.ORM.Condition,System.Collections.Generic.List{System.String})">
+            <summary>
+            计算记录总数。
+            </summary>
+            <param name="T">实体类型。</param>
+            <param name="condition">数据查询条件。</param>
+            <param name="propertys">要选择的属性集合，为空则取所有与数据库映射的属性。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.ExistsInDb2(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            数据实体是否在数据库存在。
+            </summary>
+            <param name="dataEntity">主键值。</param>
+            <returns>指定键值的实体存在返回true,否则返回false。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Read2(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            读数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+            <returns>从数据库读出的数据对象。</returns>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Insert2(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            插入数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update2(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            修改数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Save2(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            保存数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete2(EAS.Data.ORM.IDataEntity)">
+            <summary>
+            删除数据实体。
+            </summary>
+            <param name="dataEntity">数据实体。</param>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Delete2(System.Type,EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件删除数据表中记录。
+            </summary>
+            <param name="T">实体类型。</param>
+            <param name="condition">数据过滤条件。</param> 
+            <remarks>删除的记录数。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Update2(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object},EAS.Data.ORM.Condition)">
+            <summary>
+            根据条件更新数据库表中的指定列的值。
+            </summary>
+            <param name="T">实体类型。</param>
+            <param name="condition">数据查询条件，为空引用则更新全部表。</param>
+            <param name="colValues">要更新的列及指定的值。</param>
+            <remarks>更新操作所影响的数据行数。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.OrmAccessor.Select2(System.Type,EAS.Data.ORM.Condition,System.Collections.Generic.List{System.String},System.Int32,System.Int32)">
+            <summary>
+            表查询。
+            </summary>
+            <param name="T">实体类型。</param>
+            <param name="condition">数据查询条件。</param>
+            <param name="propertys">要选择的属性集合，为空则取所有与数据库映射的属性。</param>
+            <param name="skip">跳过开始的N条记录,小于等于0则忽略。</param>
+            <param name="count">要返回的记录总数,小于等于0则忽略。</param>
+            <returns>查询结果。</returns>
+        </member>
+        <member name="P:EAS.Distributed.OrmAccessor.ServiceBridger">
+            <summary>
+            服务名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.OrmAccessor.DataAccessor">
+            <summary>
+            数据访问对象。
+            </summary>
+        </member>
+        <member name="P:EAS.Threading.ObjectPool`1.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EAS.ExceptionHandler.Handle(System.Exception)">
+            <summary>
+            处理错误异常。
+            </summary>
+            <param name="exc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.ExceptionHandler.Handle(System.Exception,System.String)">
+            <summary>
+            处理错误异常。
+            </summary>
+            <param name="exc"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Distributed.SmartUpdateServiceFactory">
+            <summary>
+            智能升级服务工厂。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.SmartUpdateServiceFactory.CreateSmartUpdateService(System.String)">
+            <summary>
+            创建一个 智能更新服务。
+            </summary>
+            <param name="url">url。</param>
+            <returns>更新器实例。</returns>
+        </member>
+        <member name="M:EAS.Distributed.MethodText.GetText(System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            求出方法调用参数。
+            </summary>
+            <param name="method"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAS.Distributed.SocketBridger">
+            <summary>
+            分布式ServiceBridger。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.SocketBridger.#ctor">
+            <summary>
+            初始化 SocketBridger 对象实例。
+            </summary> 
+        </member>
+        <member name="M:EAS.Distributed.SocketBridger.InvokeMethod(System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用对象方法。
+            </summary>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.SocketBridger.InvokeMethod(System.Type,System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用对象方法。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.SocketBridger.InvokeMethod(System.Object@,System.Type,System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用远程对象方法。
+            </summary>
+            <param name="target">调用的目标。</param>
+            <param name="serviceType">服务类型。</param>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.SocketBridger.Dispose">
+            <summary>
+            已重写。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.SocketBridger.GetHashCode">
+            <summary>
+            已重写，获取哈希码。
+            </summary>
+            <returns>哈希码。</returns>
+        </member>
+        <member name="P:EAS.Distributed.SocketBridger.Url">
+            <summary>
+            服务url。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.SocketBridger.ConnectionTimeout">
+            <summary>
+            连接超时。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.SocketBridger.CommandTimeout">
+            <summary>
+            命令超时。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.SocketBridger.EnableLogging">
+            <summary>
+            超时设置。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.SocketBridger.AllowCompress">
+            <summary>
+            是否压缩消息。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.SocketBridger.SessionID">
+            <summary>
+            获取当前会话Guid。
+            </summary>
+        </member>
+        <member name="T:EAS.Distributed.DataAccessor">
+            <summary>
+            分布式数据访问器。
+            </summary>
+            <remarks>
+            提供基于分布式环境下的数据访问服务。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.#ctor">
+            <summary>
+            初始化 DataAccessor 类对象实例。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Execute(System.String)">
+            <summary>
+            执行指定的非查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句。该语句必须是标准的数据库语句。</param>
+            <returns>返回命令影响的行数。</returns>
+            <remarks>如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Execute(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行指定的非查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句。该语句必须是标准的数据库语句。</param>
+            <param name="parameters">要执行的命令的参数集合。</param>
+            <returns>返回命令影响的行数。</returns>
+            <remarks>如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Execute(System.String,System.Data.CommandType)">
+            <summary>
+            执行指定的非查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句。该语句必须是标准的数据库语句。</param>
+            <param name="commandType">要执行的命令类型。</param>
+            <returns>返回命令影响的行数。</returns>
+            <remarks>如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Execute(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行指定的非查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句。该语句必须是标准的数据库语句。</param>
+            <param name="commandType">要执行的命令类型。</param>
+            <param name="parameters">要执行的命令的参数集合。</param>
+            <returns>返回命令影响的行数。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+            <remarks>如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Execute(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行指定的非查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装。</param>		
+            <returns>返回命令影响的行数。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">command 是空引用或者命令字符串空。</exception>
+            <remarks>如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。</remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Query(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询到的数据结果。</returns>
+            <remarks>
+            如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。
+            如果要求的结果为DataReader，则必须由调用方在外部打开数据访问环境，当DataReader执行完毕后再关闭访问环境；否则该方法将自动打开访问环境，并在DataReader返回前自动关闭访问环境，这样会导致在外部无法使用（因为该DataReader所依赖的数据连接已经关闭）DataReader读取数据。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Query(System.String,EAS.Data.Access.ResultType)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="resultType">调用方要求的返回结果的类型。</param>
+            <returns>返回查询到的数据结果。</returns>
+            <remarks>
+            如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。
+            如果要求的结果为DataReader，则必须由调用方在外部打开数据访问环境，当DataReader执行完毕后再关闭访问环境；否则该方法将自动打开访问环境，并在DataReader返回前自动关闭访问环境，这样会导致在外部无法使用（因为该DataReader所依赖的数据连接已经关闭）DataReader读取数据。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Query(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询到的数据结果。</returns>
+            <remarks>
+            如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。
+            如果要求的结果为DataReader，则必须由调用方在外部打开数据访问环境，当DataReader执行完毕后再关闭访问环境；否则该方法将自动打开访问环境，并在DataReader返回前自动关闭访问环境，这样会导致在外部无法使用（因为该DataReader所依赖的数据连接已经关闭）DataReader读取数据。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Query(System.String,EAS.Data.Access.ParameterCollection,EAS.Data.Access.ResultType)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <param name="resultType">调用方要求的返回结果的类型。</param>
+            <returns>返回查询到的数据结果。</returns>
+            <remarks>
+            如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。
+            如果要求的结果为DataReader，则必须由调用方在外部打开数据访问环境，当DataReader执行完毕后再关闭访问环境；否则该方法将自动打开访问环境，并在DataReader返回前自动关闭访问环境，这样会导致在外部无法使用（因为该DataReader所依赖的数据连接已经关闭）DataReader读取数据。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Query(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection,EAS.Data.Access.ResultType)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <param name="resultType">调用方要求的返回结果的类型。</param>
+            <returns>返回查询到的数据结果。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+            <remarks>
+            如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。
+            如果要求的结果为DataReader，则必须由调用方在外部打开数据访问环境，当DataReader执行完毕后再关闭访问环境；否则该方法将自动打开访问环境，并在DataReader返回前自动关闭访问环境，这样会导致在外部无法使用（因为该DataReader所依赖的数据连接已经关闭）DataReader读取数据。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Query(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询到的数据结果。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">command 是空引用或者命令字符串空。</exception>
+            <remarks>
+            如果命令执行时数据访问环境还没有打开，则内部会自动打开数据访问环境，当执行完毕后自动关闭访问环境；如果命令执行时数据访问环境已经打开，则命令执行完毕后该方法不会关闭访问环境，而是保持其打开状态。
+            如果要求的结果为DataReader，则必须由调用方在外部打开数据访问环境，当DataReader执行完毕后再关闭访问环境；否则该方法将自动打开访问环境，并在DataReader返回前自动关闭访问环境，这样会导致在外部无法使用（因为该DataReader所依赖的数据连接已经关闭）DataReader读取数据。
+            </remarks>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.TransactionExecute(EAS.Data.Access.TransactionHandler)">
+            <summary>
+            在事务环境中执行给定的 TransactionHandler，该TransactionHandler中包括了要在事务中执行的所有数据库操作。
+            </summary>
+            <param name="handler">要执行的 EAS.Data.Access.TransactionHandler 对象。</param>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.TransactionExecute(EAS.Data.Access.TransactionHandler2,System.Object[])">
+            <summary>
+            在事务环境中执行给定的 TransactionHandler，该TransactionHandler中包括了要在事务中执行的所有数据库操作。
+            </summary>
+            <param name="handler">要执行的 EAS.Data.Access.TransactionHandler 对象。</param>
+            <param name="parameters">委托参数。</param>
+        </member>
+        <!-- 对于成员“M:EAS.Distributed.DataAccessor.TransactionExecute(System.Action{EAS.Data.Access.IDataAccessor})”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:EAS.Distributed.DataAccessor.DelegateQuery(System.Action{System.Data.IDataReader},System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)”忽略有格式错误的 XML 注释 -->
+        <member name="M:EAS.Distributed.DataAccessor.DelegateQuery(EAS.Data.Access.DataReaderHandler,System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            委托查询。当调用方需要返回DataReader时，如果使用Query，则必须自行打开环境和关闭环境以及DataReader的关闭。
+            </summary>
+            <param name="handler">需要由DelegateQuery方法代为调用的DataReaderHandler委托对象。</param>
+            <param name="commandText">要执行的查询命令文本。</param>
+            <param name="commandType">查询命令类型。</param>
+            <param name="parameters">命令参数。</param>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.DelegateQuery(EAS.Data.Access.DataReaderHandler,System.String)">
+            <summary>
+            委托查询。当调用方需要返回DataReader时，如果使用Query，则必须自行打开环境和关闭环境以及DataReader的关闭。
+            调用方可以将处理DataReader结果的代码包装在DataReaderHandler委托中，由DelegateQuery方法代表调用方调用数据处理程序，并在DelegateQuery的内部管理数据访问环境和DataReader的生存周期。
+            </summary>
+            <param name="handler">需要由DelegateQuery方法代为调用的EAS.Data.Access.DataReaderHandler委托对象。handler中的方法可以关闭DataReader对象，也可以不关闭DataReader对象。</param>
+            <param name="commandText">要执行的查询命令文本。</param>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryScalar(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果的第一行第一列。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryScalar(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询结果的第一行第一列。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryScalar(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果的第一行第一列。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryScalar(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询结果的第一行第一列。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataReader(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>查询结果的 System.Data.IDataReader对象。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataReader(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>查询结果的 System.Data.IDataReader对象。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataReader(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>查询结果的 System.Data.IDataReader对象。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataReader(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>查询结果的 System.Data.IDataReader对象。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataSet(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果集。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataSet(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询结果集。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataSet(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果集。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataSet(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询结果集。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataTable(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果集的第一个DataTable。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataTable(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询结果集的第一个DataTable。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataTable(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回查询结果集的第一个DataTable。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDataTable(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回查询结果集的第一个DataTable。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDictionary(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一行的Key-Value。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDictionary(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一行的Key-Value。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDictionary(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一行的Key-Value。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryDictionary(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一行的Key-Value。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryList(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一列的值。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryList(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一列的值。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryList(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一列的值。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryList(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一列的值。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryMatrix(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一个查询结果Matrix。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryMatrix(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一个查询结果Matrix。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryMatrix(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一个查询结果Matrix。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QueryMatrix(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一个查询结果Matrix。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QuerySchema(System.String)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一个查询结果的ER架构定义。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QuerySchema(System.String,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一个查询结果的ER架构定义。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QuerySchema(System.String,System.Data.CommandType,EAS.Data.Access.ParameterCollection)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="commandText">要执行的命令语句，可能是select语句，也可能是存储过程名称。</param>
+            <param name="commandType">要执行的命令的类型。</param>
+            <param name="parameters">命令执行需要的参数。</param>
+            <returns>返回第一个查询结果的ER架构定义。</returns>
+            <exception cref="T:System.InvalidOperationException">还没有设置数据访问环境。</exception>
+            <exception cref="T:System.ArgumentNullException">commandText 是空引用或者空字符串。</exception>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.QuerySchema(EAS.Data.Access.DbCommand)">
+            <summary>
+            执行给定的数据库查询命令。
+            </summary>
+            <param name="command">要执行的数据库访问命令。该命令必须是有效的数据库访问参数的封装，可能是select语句，也可能是存储过程名称。</param>
+            <returns>返回第一个查询结果的ER架构定义。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.CreateDataAccessor">
+            <summary>
+            创建数据访问器。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Close">
+            <summary>
+            关闭数据连接。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Open">
+            <summary>
+            打开数据连接。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.Dispose">
+            <summary>
+            已重写。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.CreateTransaction">
+            <summary>
+            在当前操作环境中启动一个事务，显式的支持简单的事务调用。 
+            </summary>
+            <returns>事务对象，事务启动成功返回事务对象实例。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.CreateTransaction(System.Data.IsolationLevel)">
+            <summary>
+            在当前操作环境中启动一个事务，显式的支持简单的事务调用。 
+            </summary>
+            <param name="il">事务隔离级别。</param>
+            <returns>事务对象，事务启动成功返回事务对象实例。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.EAS#Data#Access#IDataAccessor#GetQueryLanguage">
+            <summary>
+            获取相关的查询语言。
+            </summary>
+            <returns>查询语言类型。</returns>
+        </member>
+        <member name="M:EAS.Distributed.DataAccessor.GetHashCode">
+            <summary>
+            已重写，获取哈希码。
+            </summary>
+            <returns>哈希码。</returns>
+        </member>
+        <member name="P:EAS.Distributed.DataAccessor.ServiceBridger">
+            <summary>
+            服务名称。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.DataAccessor.Language">
+            <summary>
+            查询语言/用于Linq解析。
+            </summary>
+        </member>
+        <member name="T:EAS.Distributed.CachedClient">
+            <summary>
+            缓存API接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.#ctor">
+            <summary>
+            初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.#ctor(System.String)">
+            <summary>
+            初始化CachedClient对象实体。
+            </summary>
+            <param name="url">socket连接地址。</param>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Set(System.String,System.Byte[])">
+            <summary>
+            添加缓存。
+            </summary>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Get(System.String)">
+            <summary>
+            获取缓存。
+            </summary>
+            <param name="key">键。</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Remove(System.String)">
+            <summary>
+            删除对象。
+            </summary>
+            <param name="key">键。</param>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Exist(System.String)">
+            <summary>
+            是否存在。
+            </summary>
+            <param name="key">键。</param>
+            <returns>存在返回true。</returns>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Memory">
+            <summary>
+            占用内存。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Count">
+            <summary>
+            对象数量。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.SetString(System.String,System.String)">
+            <summary>
+            添加缓存。
+            </summary>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.GetString(System.String)">
+            <summary>
+            获取缓存。
+            </summary>
+            <param name="key">键。</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.SetObject(System.String,System.Object)">
+            <summary>
+            添加缓存。
+            </summary>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.GetObject(System.String)">
+            <summary>
+            获取缓存。
+            </summary>
+            <param name="key">键。</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Set``1(System.String,``0)">
+            <summary>
+            添加缓存。
+            </summary>
+            <param name="key">键。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:EAS.Distributed.CachedClient.Get``1(System.String)">
+            <summary>
+            获取缓存。
+            </summary>
+            <param name="key">键。</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="P:EAS.Distributed.CachedClient.Url">
+            <summary>
+            服务url。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.CachedClient.ConnectionTimeout">
+            <summary>
+            连接超时。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.CachedClient.CommandTimeout">
+            <summary>
+            命令超时。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.CachedClient.EnableLogging">
+            <summary>
+            超时设置。
+            </summary>
+        </member>
+        <member name="T:EAS.Distributed.StorageClient">
+            <summary>
+            文件存储服务接口。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.#ctor">
+            <summary>
+            初始化。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.FileIsExists(System.String,System.String,System.String)">
+            <summary>
+            判断文件是否已经存在。
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.GetFile(System.String,System.String,System.String)">
+            <summary>
+            从服务器读取文件。
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.SaveFile(System.String,System.String,System.String,System.Byte[])">
+            <summary>
+            把文件保存到服务器。
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <param name="data">文件内容。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.DeleteFile(System.String,System.String,System.String)">
+            <summary>
+            删除服务器文件。
+            </summary>
+            <param name="organization">组织机构。</param>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.FileIsExists(System.String,System.String)">
+            <summary>
+            判断文件是否已经存在。
+            </summary>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.GetFile(System.String,System.String)">
+            <summary>
+            从服务器读取文件。
+            </summary>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.SaveFile(System.String,System.String,System.Byte[])">
+            <summary>
+            把文件保存到服务器。
+            </summary>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <param name="data">文件内容。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.DeleteFile(System.String,System.String)">
+            <summary>
+            删除服务器文件。
+            </summary>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.DownFile(System.String,System.String)">
+            <summary>
+            从服务器下载文件。
+            </summary>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <returns>下载到本地后的文件名。</returns>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.UpFile(System.String,System.String,System.String)">
+            <summary>
+            把病历文件保存到服务器。
+            </summary>
+            <param name="directory">目录。</param>
+            <param name="fileName">文件名称。</param>
+            <param name="localFile">本地文件。</param>
+        </member>
+        <member name="M:EAS.Distributed.StorageClient.ClearCache">
+            <summary>
+            清空文件缓存。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.StorageClient.ServiceName">
+            <summary>
+            服务名称。
+            </summary>
+        </member>
+        <member name="T:EAS.Distributed.WcfBridger">
+            <summary>
+            分布式WcfBridger。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.#ctor">
+            <summary>
+            初始化 WcfBridger 对象实例。
+            </summary> 
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.#ctor(EAS.Services.Locators.IServiceInfo)">
+            <summary>
+            通过服务配置初始化 ServiceBridger 对象实例。
+            </summary>
+            <param name="serviceInfo">服务配置。</param>
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.InvokeMethod(System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用对象方法。
+            </summary>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.InvokeMethod(System.Type,System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用对象方法。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.InvokeMethod(System.Object@,System.Type,System.Reflection.MethodBase,System.Object[])">
+            <summary>
+            调用远程对象方法。
+            </summary>
+            <param name="target">调用的目标。</param>
+            <param name="serviceType">服务类型。</param>
+            <param name="method">方法信息。</param>
+            <param name="args">参数。</param>
+            <returns>调用结果。</returns>
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.Dispose">
+            <summary>
+            已重写。
+            </summary>
+        </member>
+        <member name="M:EAS.Distributed.WcfBridger.GetHashCode">
+            <summary>
+            已重写，获取哈希码。
+            </summary>
+            <returns>哈希码。</returns>
+        </member>
+        <member name="P:EAS.Distributed.WcfBridger.Url">
+            <summary>
+            服务url。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.WcfBridger.ConnectionTimeout">
+            <summary>
+            连接超时。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.WcfBridger.CommandTimeout">
+            <summary>
+            命令超时。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.WcfBridger.EnableLogging">
+            <summary>
+            超时设置。
+            </summary>
+        </member>
+        <member name="P:EAS.Distributed.WcfBridger.SessionID">
+            <summary>
+            获取当前会话Guid。
+            </summary>
+        </member>
+    </members>
+</doc>

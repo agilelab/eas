@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="EAS.SilverlightClient.UI.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:common="clr-namespace:System.Windows;assembly=System.Windows.Controls"
+             d:DesignHeight="600" d:DesignWidth="1024" VerticalContentAlignment="Center" xmlns:my="clr-namespace:EAS.Controls;assembly=EAS.Controls">
+    <UserControl.Resources>
+        <Storyboard x:Name="hideMenu">
+            <DoubleAnimation Storyboard.TargetName="leftPanel" Storyboard.TargetProperty="Width" To="26" Duration="0:0:0.3"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="collapse" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.1"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="expand" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="leftMenuPanel" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2"></DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="showMenu">
+            <DoubleAnimation Storyboard.TargetName="leftPanel" Storyboard.TargetProperty="Width" To="220" Duration="0:0:0.3"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="collapse" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="expand" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.1"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="leftMenuPanel" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2"></DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White" >
+        <Grid  Margin="0,0,0,0" Width="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="vbBanner" Grid.Row="0" Margin="0" Height="70"/>
+            <Grid x:Name="main" Background="White"  Grid.Row="1" Grid.Column="0" >
+                <Grid  Margin="0,0,0,0" Width="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,0,1">
+                        <Border x:Name="leftPanel" Width="220" BorderBrush="#99bbe8" BorderThickness="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid Height="26" Grid.Row="0">
+                                    <Image Source="images/leftTitle_bg.png" Stretch="Fill"></Image>
+                                    <TextBlock Margin="6">功能导航</TextBlock>
+                                    <Image x:Name="expand" Source="images/leftHide_icon.png" Stretch="None" Margin="3" HorizontalAlignment="Right" Opacity="0"></Image>
+                                    <Image x:Name="collapse" Source="images/leftShow_icon.png" Stretch="None" Margin="3" HorizontalAlignment="Right" Opacity="1" Cursor="Hand"></Image>
+                                </Grid>
+                                <Border Height="1" Grid.Row="1" Background="#99bbe8" />
+                                <Grid Grid.Row="2" Background="White" x:Name="leftMenuPanel">
+                                    <Grid x:Name="vbMenu" Grid.Row="0" Margin="0" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="0" Grid.Column="1" Margin="1,0,0,0">
+                        <my:TabControlEx x:Name="tabMain"  Margin="0,0,0,0" >
+                            <my:TabItemEx Header="起始页"></my:TabItemEx>
+                        </my:TabControlEx>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid x:Name="vbFooter" Grid.Row="2" Margin="0" Height="30"/>
+        </Grid>
+    </Grid>
+</UserControl>

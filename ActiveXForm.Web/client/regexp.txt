@@ -1,0 +1,15 @@
+Telphone No.:(\(0\d{2}\)|0\d{2}-|\(0\d{3}\)|0\d{3}-)?(\d{8}|\d{7})
+ZIP:\d{6}
+idcard:\d{18}|\d{15}
+email:\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+url:http://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?
+mobile:13\d{9}
+id:([_a-zA-Z]+)(\w*)
+number:[0-9]+
+lowercase:[a-z]*
+uppercase:[A-Z]*
+alpha:[a-zA-Z]*
+binary:[01]+
+decimal:[0-9]+
+hex:0x[0-9a-fA-F]+
+//DateTime:(2d{3})-((d+)|(1[012]+)|(0d+))-([0-3]+d+)
