@@ -1,0 +1,6 @@
+Copyright (c) 2005-2013 AgileEAS.NET SOA 中间件平台
+
+    AgileEAS.NET SOA 中间件平台是一套免费的快速开发工具，可以不受限制的用于各种非商业开发之中，商业应用请向作者获取商业授权，商业授权也是免费的，但是对于非授权的商业应用视为侵权，开发人员可以参考官方网站和博客园等专业网站获取公开的技术资料，也可以向AgileEAS.NET SOA 中间件平台官方团队请求技术支持。
+    
+AgileEAS.NET 官方网站：http://www.smarteas.net
+AgileEAS.NET 团队网站：http://www.agilelab.cn

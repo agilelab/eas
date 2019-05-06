@@ -1,0 +1,23 @@
+AgileEAS.NET SOA 5.3 发布包包括了以下三个开源部分
+1.Silverlight.src:Silverlight运行容器的代码。
+2.RDL Project 3.96：汉化、改进的RDL报表系统。
+2.EAS.WebShell：基于FinUI 4.3的Web管理功能：账号、模块、角色、权限。
+4.DataUIMapper.src：DataUIMapper源码
+
+有关这部分内容，请参考我的博客：
+http://www.cnblogs.com/eastjade
+
+
+Silverlight企业应用开发实践-AgileEAS.NET平台5.0 Silverlight支撑预览 
+http://www.cnblogs.com/eastjade/archive/2011/08/15/2139120.html
+
+基于DotNet构件技术的企业级敏捷软件开发平台 - AgileEAS.NET - 报表系统介绍 
+http://www.cnblogs.com/eastjade/archive/2010/07/02/1770132.html
+
+基于DotNet构件技术的企业级敏捷软件开发平台 - AgileEAS.NET平台开发指南 - 处理报表 
+http://www.cnblogs.com/eastjade/archive/2010/09/14/1825973.html
+
+魏琼东
+2013/10/08
+
+
