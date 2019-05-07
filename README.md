@@ -81,6 +81,97 @@ AgileEAS.NET SOA 中间件适用范围
 
   AgileEAS.NET SOA中间件平台适用于所有基于Microsoft .Net技术构架的分布式应用，它为企业级应用提供了基于完成的分布式多层模式的灵活可扩展的软件架构，并提供基于模型驱动的快速开发和部署、运维工具，以及基于软件工程思想支撑的AgilePM.NET项目管理体系，极大的提高了软件的有效生产效率和软件质量。
 
+AgileEAS.NET SOA 中间件最新下载
+-----------------------------------
+
+1、AgileEAS.NET SOA 5.2最新版本下载
+      包含AgileEAS.NET SOA 平台的最新程序集，SQLServer\Oracle\MySQL\SQLite数据库的初始化工上，平台最新文档。
+
+      直接下载：AgileEAS.NET SOA 5.2 下载，http://118.24.209.136/downloads/eas/agileeas.net.5.rar。
+
+      SVN更新：https://118.24.209.136/svn/eas/5.0，登录用户:eas，密码eas.
+
+      AgileEAS.NET SOA 中间件平台管理员：Administrator，登录密码sa。
+
+2、案例源代码-药店管理系统
+      基于AgileEAS.NET平台开发的一个药店管理系统，包含所有源代码、文档、数据库，可直接运行，有关这个案例的文章请参考AgileEAS.NET平台开发Step By Step系列-药店系统-索引。
+
+      直接下载：AgileEAS.NET SOA  案例（药店管理系统）源码下载，http://118.24.209.136/downloads/eas/drugshop.rar。
+
+      SVN更新：https://118.24.209.136/svn/drugshop，登录用户:eas，密码eas.
+
+      源代码下载,最好请通过SVN进行下载。
+
+      管理员：Administrator，登录密码sa。
+
+3、案例源代码-小型分销EPR系统
+      基于AgileEAS.NET平台开发的一个小型分销ERP系统，包含所有源代码、文档、数据库，可直接运行，有关这个案例的文章请参考AgileEAS.NET平台开发Step By Step系列-药店系统-索引。
+
+      直接下载：AgileEAS.NET SOA 5.0 案例（分诊ERP系统）源码下载，http://118.24.209.136/downloads/eas/smarterp.rar。
+
+      SVN更新：https://118.24.209.136/svn/smarterp，登录用户:eas，密码eas.
+      
+      github:https://github.com/agilelab/eas
+
+      源代码下载,最好请通过SVN进行下载。
+
+      管理员：Administrator，登录密码sa。
+
+      ERP操作员：erp-admin，登录密码为空。
+
+4、案例源代码-Northwind
+        基于AgileEAS.NET平台开发的一个简单的MIS项目，Northwind案例（源自于SQLServer数据库系统并且做了一些改动），包含所有源代码、文档、数据库，可直接运行，有关这个案例的文章请参考3小时搞定一个简单的MIS系统案例Northwind，有视频、有源代码下载、有真相。
+
+     直接下载：AgileEAS.NET SOA  案例（Northwind）源码下载，http://118.24.209.136/downloads/eas/Northwind.rar。
+
+     SVN更新：https://118.24.209.136/svn/Northwind，登录用户:eas，密码eas.
+     
+     github:https://github.com/agilelab/northwind
+
+     源代码下载,最好请通过SVN进行下载。
+
+     Administrator,james,demo1用户登录密码均为：sa
+
+5、案例源代码-在线聊天室系统
+        基于AgileEAS.NET SOA 中间件平台Socket通信框架的一个多人在线聊天室系统，包括所有的源代码、文档、数据库，可直接运行，有关于本案例请参考AgileEAS.NET SOA 中间件平台.Net Socket通信框架-完整应用例子-在线聊天室系统-下载配置、AgileEAS.NET SOA 中间件平台.Net Socket通信框架-完整应用例子-在线聊天室系统-代码解析。
+
+      直接下载：AgileEAS.NET SOA 中间件平台Socket通信框架 案例（在线聊天室系统）源码下载，http://118.24.209.136/downloads/eas/Chat.src.rar。
+
+      SVN更新：https://118.24.209.136/svn/chat，登录用户:eas，密码eas.
+
+      源代码下载,请通过进行下载。
+
+      同时，我们在服务器上部署好了一套可运行的案例，客户端下载：http://118.24.209.136/downloads/eas/examples/chat.client.rar。
+
+6、Grid++报表
+      最新版本的AgileEAS.NET SOA 平台中集成了Grid++报表，如需要使用Grid++报表进行开发，请先下载Grid++报表，下载地址：http://www.rubylong.cn/Download/Grid++Report5.zip。
+
+7、AgileEAS.NET SOA 5 培训视频
+      2014-04-13（星期天）下午2：30-6：30进行的AgileEAS.NET SOA中间件平台配置 及 Northwind案例培训开发所录制的视频，共有2.1G的高清视屏，视频时长4小时，请大家耐性观看。
+
+     视频下载地址，百度云链接：https://pan.baidu.com/s/1V0akBerwzdPNm6ug2nffzw 提取码：4w9f
+
+     1.AgileEASNET SOA 5平台配置.avi
+
+     2.AgileEAS.NET SOA 5元数据设计器.avi
+
+     3.Northwind.WinForm案例.第1段.avi
+
+     4.Northwind.WinForm案例.第2段.avi
+
+     5.Northwind.WinForm案例.第3段.avi
+
+     6.Northwind.WinForm案例.第4段.avi
+
+8、视频会议培训下载
+      包含历次的视频会议培训过程所录制的学习视频，请大家及时下载。
+
+      第一辑-AgileEAS.NET平台介绍及药品系统的SAAS搭建演练：下载地址：http://118.24.209.136/downloads/video/AgileEAS.NET 4.0 Video1.rar
+
+      第二辑-简单插件开发应用演练：下载地址：http://118.24.209.136/downloads/video/AgileEAS.NET 4.0 Video2.rar
+
+      第三辑 插件的安装、配置以及账户权限系统演练.wmv http://118.24.209.136/downloads/video/AgileEAS.NET 4.0 Video3.rar
+
 联系我们
 -----------------------------------
 
