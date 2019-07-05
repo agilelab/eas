@@ -174,7 +174,8 @@ AgileEAS.NET SOA 中间件最新下载
      6.Northwind.WinForm案例.第4段.avi
      
      如果视频失效，请通过优酷观看：
-     https://i.youku.com/i/UMzA5ODE2MTA4
+     (https://i.youku.com/i/UMzA5ODE2MTA4)<br />   
+    
 
 8、视频会议培训下载
       包含历次的视频会议培训过程所录制的学习视频，请大家及时下载。
