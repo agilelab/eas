@@ -157,8 +157,8 @@ AgileEAS.NET SOA 中间件最新下载
       最新版本的AgileEAS.NET SOA 平台中集成了Grid++报表，如需要使用Grid++报表进行开发，请先下载Grid++报表，下载地址：http://www.rubylong.cn/Download/Grid++Report5.zip。
 
 7、AgileEAS.NET SOA 5 培训视频
-      2014-04-13（星期天）下午2：30-6：30进行的AgileEAS.NET SOA中间件平台配置 及 Northwind案例培训开发所录制的视频，共有2.1G的高清视屏，视频时长4小时，请大家耐性观看。
-
+      2014-04-13（星期天）下午2：30-6：30进行的AgileEAS.NET SOA中间件平台配置 及 Northwind案例培训开发所录制的视频，共有2.1G的高清视屏，视频时长4小时，请大家耐性观看。     
+     
      视频下载地址，百度云链接：https://pan.baidu.com/s/1V0akBerwzdPNm6ug2nffzw 提取码：4w9f
 
      1.AgileEASNET SOA 5平台配置.avi
@@ -172,6 +172,9 @@ AgileEAS.NET SOA 中间件最新下载
      5.Northwind.WinForm案例.第3段.avi
 
      6.Northwind.WinForm案例.第4段.avi
+     
+     如果视频失效，请通过优酷观看：
+     https://i.youku.com/i/UMzA5ODE2MTA4
 
 8、视频会议培训下载
       包含历次的视频会议培训过程所录制的学习视频，请大家及时下载。
