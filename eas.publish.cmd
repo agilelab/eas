@@ -135,3 +135,5 @@ copy @RootDirectory\bin\dotnet\EAS.Explorer.BLL.Contracts.dll @RootDirectory\Act
 copy @RootDirectory\bin\dotnet\EAS.Explorer.dll @RootDirectory\ActiveXForm.Web\bin\EAS.Explorer.dll /y
 copy @RootDirectory\bin\dotnet\EAS.Explorer.Entities.dll @RootDirectory\ActiveXForm.Web\bin\EAS.Explorer.Entities.dll /y
 copy @RootDirectory\bin\dotnet\EAS.Explorer.Web.dll @RootDirectory\ActiveXForm.Web\bin\EAS.Explorer.Web.dll /y
+
+pause
